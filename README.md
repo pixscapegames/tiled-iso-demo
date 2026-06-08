@@ -14,14 +14,6 @@ The project can run on:
 
 The project was generated with **LibGDX LiftOff**.
 
-## Open in Pixscape Studio
-
-To open the project in **Pixscape Studio**, load the following file:
-
-```text
-studio-projet/tiled-iso-demo.json
-```
-
 ## Links
 
 - Pixscape website: https://pixscape.games/
