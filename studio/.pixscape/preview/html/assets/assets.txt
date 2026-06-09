@@ -1,0 +1,106 @@
+d:font:font:0:text/plain:1
+d:pixscape-project/atlases:pixscape-project/atlases:0:text/plain:1
+d:pixscape-project/audio:pixscape-project/audio:0:text/plain:1
+d:pixscape-project/effects:pixscape-project/effects:0:text/plain:1
+d:pixscape-project/prefabs:pixscape-project/prefabs:0:text/plain:1
+d:pixscape-project/scenes:pixscape-project/scenes:0:text/plain:1
+d:pixscape-project/shaders/core/desktop-gl30:pixscape-project/shaders/core/desktop-gl30:0:text/plain:1
+d:pixscape-project/shaders/core/es3-webgl2:pixscape-project/shaders/core/es3-webgl2:0:text/plain:1
+d:pixscape-project/shaders/core:pixscape-project/shaders/core:0:text/plain:1
+d:pixscape-project/shaders/examples/fx/desktop-gl30:pixscape-project/shaders/examples/fx/desktop-gl30:0:text/plain:1
+d:pixscape-project/shaders/examples/fx/es3-webgl2:pixscape-project/shaders/examples/fx/es3-webgl2:0:text/plain:1
+d:pixscape-project/shaders/examples/fx:pixscape-project/shaders/examples/fx:0:text/plain:1
+d:pixscape-project/shaders/examples/material/desktop-gl30:pixscape-project/shaders/examples/material/desktop-gl30:0:text/plain:1
+d:pixscape-project/shaders/examples/material/es3-webgl2:pixscape-project/shaders/examples/material/es3-webgl2:0:text/plain:1
+d:pixscape-project/shaders/examples/material:pixscape-project/shaders/examples/material:0:text/plain:1
+d:pixscape-project/shaders/examples:pixscape-project/shaders/examples:0:text/plain:1
+d:pixscape-project/shaders/includes:pixscape-project/shaders/includes:0:text/plain:1
+d:pixscape-project/shaders:pixscape-project/shaders:0:text/plain:1
+d:pixscape-project:pixscape-project:0:text/plain:1
+i:font/default.png:font/default.png:30184:image/png:1
+i:pixscape-project/atlases/scene2-2.png:pixscape-project/atlases/scene2-2.png:760517:image/png:1
+i:pixscape-project/atlases/scene2.png:pixscape-project/atlases/scene2.png:953061:image/png:1
+i:pixscape-project/atlases/scene3-2.png:pixscape-project/atlases/scene3-2.png:921753:image/png:1
+i:pixscape-project/atlases/scene3-3.png:pixscape-project/atlases/scene3-3.png:961183:image/png:1
+i:pixscape-project/atlases/scene3-4.png:pixscape-project/atlases/scene3-4.png:479688:image/png:1
+i:pixscape-project/atlases/scene3.png:pixscape-project/atlases/scene3.png:1946857:image/png:1
+t:font/default.fnt:font/default.fnt:36910:text/plain:1
+t:pixscape-project/animations.json:pixscape-project/animations.json:1329:application/json:1
+t:pixscape-project/atlases/scene2.atlas:pixscape-project/atlases/scene2.atlas:1500:text/plain:1
+t:pixscape-project/atlases/scene3.atlas:pixscape-project/atlases/scene3.atlas:3646:text/plain:1
+t:pixscape-project/effects/Blood.p:pixscape-project/effects/Blood.p:4351:text/plain:1
+t:pixscape-project/effects/Burnout.p:pixscape-project/effects/Burnout.p:2303:text/plain:1
+t:pixscape-project/effects/Dust Left.p:pixscape-project/effects/Dust Left.p:2019:text/plain:1
+t:pixscape-project/effects/Dust Right.p:pixscape-project/effects/Dust Right.p:2018:text/plain:1
+t:pixscape-project/effects/Dust.p:pixscape-project/effects/Dust.p:4343:text/plain:1
+t:pixscape-project/effects/Explosion Enemy.p:pixscape-project/effects/Explosion Enemy.p:10917:text/plain:1
+t:pixscape-project/effects/Fireball Blue.p:pixscape-project/effects/Fireball Blue.p:4853:text/plain:1
+t:pixscape-project/effects/Fireball.p:pixscape-project/effects/Fireball.p:4715:text/plain:1
+t:pixscape-project/effects/Fireworks Tracer With Dazzler.p:pixscape-project/effects/Fireworks Tracer With Dazzler.p:13415:text/plain:1
+t:pixscape-project/effects/Fireworks Tracer.p:pixscape-project/effects/Fireworks Tracer.p:3965:text/plain:1
+t:pixscape-project/effects/Fireworks.p:pixscape-project/effects/Fireworks.p:4259:text/plain:1
+t:pixscape-project/effects/Flame Pixel.p:pixscape-project/effects/Flame Pixel.p:2200:text/plain:1
+t:pixscape-project/effects/Flame.p:pixscape-project/effects/Flame.p:4449:text/plain:1
+t:pixscape-project/effects/Glass.p:pixscape-project/effects/Glass.p:2357:text/plain:1
+t:pixscape-project/effects/Hallucinogen Full.p:pixscape-project/effects/Hallucinogen Full.p:2440:text/plain:1
+t:pixscape-project/effects/Hallucinogen.p:pixscape-project/effects/Hallucinogen.p:2457:text/plain:1
+t:pixscape-project/effects/Laser.p:pixscape-project/effects/Laser.p:1917:text/plain:1
+t:pixscape-project/effects/Muzzle Flash With Smoke.p:pixscape-project/effects/Muzzle Flash With Smoke.p:4398:text/plain:1
+t:pixscape-project/effects/Muzzle Flash.p:pixscape-project/effects/Muzzle Flash.p:2065:text/plain:1
+t:pixscape-project/effects/Pentagram Glitchy.p:pixscape-project/effects/Pentagram Glitchy.p:1826:text/plain:1
+t:pixscape-project/effects/Pentagram.p:pixscape-project/effects/Pentagram.p:1831:text/plain:1
+t:pixscape-project/effects/Rain Cinematic.p:pixscape-project/effects/Rain Cinematic.p:2194:text/plain:1
+t:pixscape-project/effects/Rain.p:pixscape-project/effects/Rain.p:2085:text/plain:1
+t:pixscape-project/effects/Smoke Trail.p:pixscape-project/effects/Smoke Trail.p:2323:text/plain:1
+t:pixscape-project/effects/Smoke Train.p:pixscape-project/effects/Smoke Train.p:2406:text/plain:1
+t:pixscape-project/effects/Smoke.p:pixscape-project/effects/Smoke.p:2211:text/plain:1
+t:pixscape-project/effects/Snow Flakes.p:pixscape-project/effects/Snow Flakes.p:2107:text/plain:1
+t:pixscape-project/effects/Sparks.p:pixscape-project/effects/Sparks.p:4192:text/plain:1
+t:pixscape-project/effects/Splash Pixel.p:pixscape-project/effects/Splash Pixel.p:4096:text/plain:1
+t:pixscape-project/effects/Splash.p:pixscape-project/effects/Splash.p:4324:text/plain:1
+t:pixscape-project/effects/Star Trail.p:pixscape-project/effects/Star Trail.p:1773:text/plain:1
+t:pixscape-project/effects/Star.p:pixscape-project/effects/Star.p:2712:text/plain:1
+t:pixscape-project/effects/Starlight.p:pixscape-project/effects/Starlight.p:4254:text/plain:1
+t:pixscape-project/effects/Stink.p:pixscape-project/effects/Stink.p:1928:text/plain:1
+t:pixscape-project/effects/Thrust.p:pixscape-project/effects/Thrust.p:2044:text/plain:1
+t:pixscape-project/effects/Thruster Pixel.p:pixscape-project/effects/Thruster Pixel.p:4051:text/plain:1
+t:pixscape-project/effects/Thruster.p:pixscape-project/effects/Thruster.p:2200:text/plain:1
+t:pixscape-project/effects/Trail Fart.p:pixscape-project/effects/Trail Fart.p:1883:text/plain:1
+t:pixscape-project/effects/Trail Pixel.p:pixscape-project/effects/Trail Pixel.p:1541:text/plain:1
+t:pixscape-project/effects/Trail.p:pixscape-project/effects/Trail.p:1575:text/plain:1
+t:pixscape-project/project.json:pixscape-project/project.json:1596:application/json:1
+t:pixscape-project/scenes/scene2.json:pixscape-project/scenes/scene2.json:36845:application/json:1
+t:pixscape-project/scenes/scene3.json:pixscape-project/scenes/scene3.json:106790:application/json:1
+t:pixscape-project/shaders/core/desktop-gl30/multi-texture.frag:pixscape-project/shaders/core/desktop-gl30/multi-texture.frag:1295:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/multi-texture.vert:pixscape-project/shaders/core/desktop-gl30/multi-texture.vert:364:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/texture-array-conelight.frag:pixscape-project/shaders/core/desktop-gl30/texture-array-conelight.frag:734:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/texture-array-conelight.vert:pixscape-project/shaders/core/desktop-gl30/texture-array-conelight.vert:408:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/texture-array-pointlight.frag:pixscape-project/shaders/core/desktop-gl30/texture-array-pointlight.frag:405:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/texture-array-pointlight.vert:pixscape-project/shaders/core/desktop-gl30/texture-array-pointlight.vert:361:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/texture-array.frag:pixscape-project/shaders/core/desktop-gl30/texture-array.frag:448:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/texture-array.vert:pixscape-project/shaders/core/desktop-gl30/texture-array.vert:363:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/texture2d.frag:pixscape-project/shaders/core/desktop-gl30/texture2d.frag:205:text/plain:1
+t:pixscape-project/shaders/core/desktop-gl30/texture2d.vert:pixscape-project/shaders/core/desktop-gl30/texture2d.vert:278:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/multi-texture.frag:pixscape-project/shaders/core/es3-webgl2/multi-texture.frag:1429:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/multi-texture.vert:pixscape-project/shaders/core/es3-webgl2/multi-texture.vert:411:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/texture-array-conelight.frag:pixscape-project/shaders/core/es3-webgl2/texture-array-conelight.frag:756:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/texture-array-conelight.vert:pixscape-project/shaders/core/es3-webgl2/texture-array-conelight.vert:454:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/texture-array-pointlight.frag:pixscape-project/shaders/core/es3-webgl2/texture-array-pointlight.frag:393:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/texture-array-pointlight.vert:pixscape-project/shaders/core/es3-webgl2/texture-array-pointlight.vert:402:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/texture-array.frag:pixscape-project/shaders/core/es3-webgl2/texture-array.frag:534:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/texture-array.vert:pixscape-project/shaders/core/es3-webgl2/texture-array.vert:409:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/texture2d.frag:pixscape-project/shaders/core/es3-webgl2/texture2d.frag:229:text/plain:1
+t:pixscape-project/shaders/core/es3-webgl2/texture2d.vert:pixscape-project/shaders/core/es3-webgl2/texture2d.vert:300:text/plain:1
+t:pixscape-project/shaders/examples/fx/desktop-gl30/camera_postfx.frag:pixscape-project/shaders/examples/fx/desktop-gl30/camera_postfx.frag:504:text/plain:1
+t:pixscape-project/shaders/examples/fx/desktop-gl30/camera_postfx.vert:pixscape-project/shaders/examples/fx/desktop-gl30/camera_postfx.vert:274:text/plain:1
+t:pixscape-project/shaders/examples/fx/es3-webgl2/camera_postfx.frag:pixscape-project/shaders/examples/fx/es3-webgl2/camera_postfx.frag:528:text/plain:1
+t:pixscape-project/shaders/examples/fx/es3-webgl2/camera_postfx.vert:pixscape-project/shaders/examples/fx/es3-webgl2/camera_postfx.vert:298:text/plain:1
+t:pixscape-project/shaders/examples/material/desktop-gl30/glow_pulse.frag:pixscape-project/shaders/examples/material/desktop-gl30/glow_pulse.frag:810:text/plain:1
+t:pixscape-project/shaders/examples/material/desktop-gl30/outline_soft.frag:pixscape-project/shaders/examples/material/desktop-gl30/outline_soft.frag:1423:text/plain:1
+t:pixscape-project/shaders/examples/material/desktop-gl30/wave_uv.frag:pixscape-project/shaders/examples/material/desktop-gl30/wave_uv.frag:746:text/plain:1
+t:pixscape-project/shaders/examples/material/es3-webgl2/glow_pulse.frag:pixscape-project/shaders/examples/material/es3-webgl2/glow_pulse.frag:893:text/plain:1
+t:pixscape-project/shaders/examples/material/es3-webgl2/outline_soft.frag:pixscape-project/shaders/examples/material/es3-webgl2/outline_soft.frag:1506:text/plain:1
+t:pixscape-project/shaders/examples/material/es3-webgl2/wave_uv.frag:pixscape-project/shaders/examples/material/es3-webgl2/wave_uv.frag:829:text/plain:1
+t:pixscape-project/shaders/examples/params.json:pixscape-project/shaders/examples/params.json:353:application/json:1
+t:pixscape-project/shaders/includes/pixscape_common.glsl:pixscape-project/shaders/includes/pixscape_common.glsl:232:text/plain:1
+t:pixscape-project/tiled-animations.json:pixscape-project/tiled-animations.json:36:application/json:1

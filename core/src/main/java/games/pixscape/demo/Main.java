@@ -238,7 +238,7 @@ public class Main extends ApplicationAdapter {
         if (animation == null) return;
 
         Vector2 velocity = runtimeBody.body.getLinearVelocity();
-        updateHeroAnimationFlip(currentBox2d, animation, velocity);
+//        updateHeroAnimationFlip(currentBox2d, animation, velocity);
 
         float speedPixels = currentBox2d.mToPx(velocity.len());
         if (speedPixels < HERO_ANIMATION_STOP_SPEED_PIXELS) {
@@ -250,24 +250,24 @@ public class Main extends ApplicationAdapter {
         animation.stateTime += speedPixels * Math.min(dt, CAMERA_DT_MAX) / HERO_ANIMATION_PIXELS_PER_FRAME - Math.min(dt, CAMERA_DT_MAX);
     }
 
-    private void updateHeroAnimationFlip(Box2dWorldService currentBox2d,
-                                         AnimationComponent animation,
-                                         Vector2 velocity) {
-        AnimationComponent.Clip clip = animation.getClip();
-        if (clip == null) return;
-
-        float vxPixels = currentBox2d.mToPx(velocity.x);
-        float vyPixels = currentBox2d.mToPx(velocity.y);
-        if (Math.abs(vxPixels) < HERO_FLIP_SPEED_PIXELS && Math.abs(vyPixels) < HERO_FLIP_SPEED_PIXELS) {
-            return;
-        }
-
-        boolean flip = vxPixels < -HERO_FLIP_SPEED_PIXELS || vyPixels > HERO_FLIP_SPEED_PIXELS;
-        if (clip.flipX != flip) {
-            clip.flipX = flip;
-            animation.frame = -1;
-        }
-    }
+//    private void updateHeroAnimationFlip(Box2dWorldService currentBox2d,
+//                                         AnimationComponent animation,
+//                                         Vector2 velocity) {
+//        AnimationComponent.Clip clip = animation.getClip();
+//        if (clip == null) return;
+//
+//        float vxPixels = currentBox2d.mToPx(velocity.x);
+//        float vyPixels = currentBox2d.mToPx(velocity.y);
+//        if (Math.abs(vxPixels) < HERO_FLIP_SPEED_PIXELS && Math.abs(vyPixels) < HERO_FLIP_SPEED_PIXELS) {
+//            return;
+//        }
+//
+//        boolean flip = vxPixels < -HERO_FLIP_SPEED_PIXELS || vyPixels > HERO_FLIP_SPEED_PIXELS;
+//        if (clip.flipX != flip) {
+//            clip.flipX = flip;
+//            animation.frame = -1;
+//        }
+//    }
 
     private PhysicsRuntimeBodyComponent heroRuntimeBody() {
         int hero = engine.firstEntityByName("hero");
