@@ -14,6 +14,10 @@ The project can run on:
 
 The project was generated with **LibGDX LiftOff**.
 
+The studio project is in the **studio** directory.
+
+If you wish to modify the scene or add scenes, use Pixscape Studio free (see link below).
+
 ## Links
 
 - Pixscape website: https://pixscape.games/
