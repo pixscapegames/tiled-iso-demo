@@ -3,16 +3,49 @@ package games.pixscape.demo.lwjgl3;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import games.pixscape.demo.Main;
+import games.pixscape.demo.RuntimeProfilerConfig;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
+    private static final String PROFILER_ENABLED_PROPERTY = "pixscape.runtime.profiler";
+    private static final String PROFILER_WINDOW_SECONDS_PROPERTY = "pixscape.runtime.profiler.windowSeconds";
+    private static final String PROFILER_WARMUP_SECONDS_PROPERTY = "pixscape.runtime.profiler.warmupSeconds";
+
     public static void main(String[] args) {
         if (StartupHelper.startNewJvmIfRequired()) return; // This handles macOS support and helps on Windows.
         createApplication();
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new Main(), getDefaultConfiguration());
+        RuntimeProfilerConfig profilerConfig = runtimeProfilerConfig();
+        if (profilerConfig.enabled) {
+            System.out.println("[RuntimeProfiler] enabled window="
+                    + profilerConfig.windowSeconds
+                    + "s warmup="
+                    + profilerConfig.warmupSeconds
+                    + "s");
+        }
+        return new Lwjgl3Application(new Main(profilerConfig), getDefaultConfiguration());
+    }
+
+    private static RuntimeProfilerConfig runtimeProfilerConfig() {
+        boolean enabled = Boolean.getBoolean(PROFILER_ENABLED_PROPERTY);
+        float windowSeconds = floatProperty(PROFILER_WINDOW_SECONDS_PROPERTY, 5f);
+        float warmupSeconds = floatProperty(PROFILER_WARMUP_SECONDS_PROPERTY, 3f);
+        return new RuntimeProfilerConfig(enabled, windowSeconds, warmupSeconds);
+    }
+
+    private static float floatProperty(String propertyName, float fallback) {
+        String value = System.getProperty(propertyName);
+        if (value == null || value.trim().isEmpty()) {
+            return fallback;
+        }
+        try {
+            float parsed = Float.parseFloat(value.trim());
+            return Float.isNaN(parsed) || Float.isInfinite(parsed) ? fallback : parsed;
+        } catch (NumberFormatException ignored) {
+            return fallback;
+        }
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {

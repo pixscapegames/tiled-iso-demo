@@ -1,6 +1,6 @@
 {
 "version": 2,
-"nextId": 911,
+"nextId": 912,
 "assets": [
 	{
 		"class": "games.pixscape.studio.asset.ImageAssetMeta",
@@ -27,28 +27,12 @@
 		"scope": "INTERNAL"
 	},
 	{
-		"class": "games.pixscape.studio.asset.ParticleAssetMeta",
-		"id": 4,
-		"type": "PARTICLE",
-		"logicalPath": "effects/Blood",
-		"sourceRelPath": "orig/effects/Blood.p",
-		"scope": "USER"
-	},
-	{
 		"class": "games.pixscape.studio.asset.ImageAssetMeta",
 		"id": 5,
 		"type": "IMAGE",
 		"logicalPath": "images/cloud_1",
 		"sourceRelPath": "orig/images/cloud_1__a5.png",
 		"scope": "INTERNAL"
-	},
-	{
-		"class": "games.pixscape.studio.asset.ParticleAssetMeta",
-		"id": 6,
-		"type": "PARTICLE",
-		"logicalPath": "effects/Burnout",
-		"sourceRelPath": "orig/effects/Burnout.p",
-		"scope": "USER"
 	},
 	{
 		"class": "games.pixscape.studio.asset.ImageAssetMeta",
@@ -4049,22 +4033,6 @@
 		"sheetIndex": 287,
 		"cellX": 287,
 		"cellY": 0
-	},
-	{
-		"class": "games.pixscape.studio.asset.ImageAssetMeta",
-		"id": 362,
-		"type": "IMAGE",
-		"logicalPath": "images/tux",
-		"sourceRelPath": "orig/images/tux__a362.png",
-		"scope": "USER"
-	},
-	{
-		"class": "games.pixscape.studio.asset.ImageAssetMeta",
-		"id": 363,
-		"type": "IMAGE",
-		"logicalPath": "images/ground",
-		"sourceRelPath": "orig/images/ground__a363.png",
-		"scope": "USER"
 	},
 	{
 		"class": "games.pixscape.studio.asset.TilesetAssetMeta",
@@ -9098,42 +9066,6 @@
 		"tilesetId": 763,
 		"sheetIndex": 19,
 		"cellX": 19,
-		"cellY": 0
-	},
-	{
-		"class": "games.pixscape.studio.asset.TileAssetMeta",
-		"id": 784,
-		"type": "TILE",
-		"logicalPath": "tiles/isometric 4/20",
-		"sourceRelPath": "orig/tiles/isometric 4/20__a784.png",
-		"scope": "USER",
-		"tilesetId": 763,
-		"sheetIndex": 20,
-		"cellX": 20,
-		"cellY": 0
-	},
-	{
-		"class": "games.pixscape.studio.asset.TileAssetMeta",
-		"id": 785,
-		"type": "TILE",
-		"logicalPath": "tiles/isometric 4/21",
-		"sourceRelPath": "orig/tiles/isometric 4/21__a785.png",
-		"scope": "USER",
-		"tilesetId": 763,
-		"sheetIndex": 21,
-		"cellX": 21,
-		"cellY": 0
-	},
-	{
-		"class": "games.pixscape.studio.asset.TileAssetMeta",
-		"id": 786,
-		"type": "TILE",
-		"logicalPath": "tiles/isometric 4/22",
-		"sourceRelPath": "orig/tiles/isometric 4/22__a786.png",
-		"scope": "USER",
-		"tilesetId": 763,
-		"sheetIndex": 22,
-		"cellX": 22,
 		"cellY": 0
 	},
 	{

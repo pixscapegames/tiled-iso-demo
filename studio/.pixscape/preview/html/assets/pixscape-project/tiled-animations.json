@@ -1,4 +1,11 @@
 {
 "version": "1",
-"animations": []
+"animations": [
+	{
+		"name": "test",
+		"id": 911,
+		"frameAssetIds": [ 142, 143, 144, 145 ],
+		"frameDurationsMs": [ 300, 300, 300, 300 ]
+	}
+]
 }

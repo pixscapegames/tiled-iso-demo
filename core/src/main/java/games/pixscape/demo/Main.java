@@ -20,6 +20,7 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import games.pixscape.runtime.component.AnimationComponent;
 import games.pixscape.runtime.configuration.PlatformTarget;
 import games.pixscape.runtime.engine.PixscapeEngine;
+import games.pixscape.runtime.profiling.FrameSystemProfiler;
 import games.pixscape.runtime.render.LayerStateSOA;
 import games.pixscape.runtime.service.Box2dWorldService;
 import games.pixscape.runtime.system.optional.PhysicsMouseDragSystem;
@@ -41,8 +42,21 @@ public class Main extends ApplicationAdapter {
     private static final float HERO_FLIP_SPEED_PIXELS = 5f;
 
     private PixscapeEngine engine;
+    private final RuntimeProfilerConfig runtimeProfilerConfig;
+    private FrameSystemProfiler runtimeProfiler;
+    private RuntimeProfilerReporter runtimeProfilerReporter;
     @SuppressWarnings("unused")
     private Box2dWorldService box2d;
+
+    public Main() {
+        this(RuntimeProfilerConfig.DISABLED);
+    }
+
+    public Main(RuntimeProfilerConfig runtimeProfilerConfig) {
+        this.runtimeProfilerConfig = runtimeProfilerConfig != null
+                ? runtimeProfilerConfig
+                : RuntimeProfilerConfig.DISABLED;
+    }
 
     @Override
     public void create() {
@@ -68,6 +82,7 @@ public class Main extends ApplicationAdapter {
         engine = new PixscapeEngine()
                 .setWorldCamera(worldCamera)
                 .setConfigurationCustomizer(builder -> builder.with(dragSystem));
+        attachRuntimeProfiler();
         engine.setPlatformTarget(platformTarget());
         engine.loadProject(projectJson.parent().parent());
         engine.loadScene(SCENE_NAME);
@@ -82,6 +97,13 @@ public class Main extends ApplicationAdapter {
 
     @Override
     public void render() {
+        long appFrameStartNs = 0L;
+        long engineUpdateNs = 0L;
+        long engineRenderNs = 0L;
+        if (runtimeProfilerReporter != null) {
+            appFrameStartNs = com.badlogic.gdx.utils.TimeUtils.nanoTime();
+        }
+
         float dt = Gdx.graphics.getDeltaTime();
         if (engine != null) {
             handleHeroControls(dt);
@@ -94,8 +116,26 @@ public class Main extends ApplicationAdapter {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         if (engine != null) {
+            long engineUpdateStartNs = runtimeProfilerReporter != null
+                    ? com.badlogic.gdx.utils.TimeUtils.nanoTime()
+                    : 0L;
             engine.update(dt);
+            if (runtimeProfilerReporter != null) {
+                engineUpdateNs = com.badlogic.gdx.utils.TimeUtils.nanoTime() - engineUpdateStartNs;
+            }
+
+            long engineRenderStartNs = runtimeProfilerReporter != null
+                    ? com.badlogic.gdx.utils.TimeUtils.nanoTime()
+                    : 0L;
             engine.render();
+            if (runtimeProfilerReporter != null) {
+                engineRenderNs = com.badlogic.gdx.utils.TimeUtils.nanoTime() - engineRenderStartNs;
+            }
+        }
+
+        if (runtimeProfilerReporter != null) {
+            long appFrameNs = com.badlogic.gdx.utils.TimeUtils.nanoTime() - appFrameStartNs;
+            runtimeProfilerReporter.afterFrame(dt, appFrameNs, engineUpdateNs, engineRenderNs);
         }
     }
 
@@ -112,6 +152,19 @@ public class Main extends ApplicationAdapter {
             engine.dispose();
             engine = null;
         }
+        runtimeProfiler = null;
+        runtimeProfilerReporter = null;
+    }
+
+    private void attachRuntimeProfiler() {
+        if (!runtimeProfilerConfig.enabled) {
+            return;
+        }
+
+        runtimeProfiler = new FrameSystemProfiler();
+        runtimeProfiler.setEnabled(true);
+        runtimeProfilerReporter = new RuntimeProfilerReporter(runtimeProfiler, runtimeProfilerConfig);
+        engine.setSystemProfiler(runtimeProfiler);
     }
 
     private static PlatformTarget platformTarget() {

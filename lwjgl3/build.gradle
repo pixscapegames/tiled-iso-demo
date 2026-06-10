@@ -57,6 +57,17 @@ run {
   workingDir = rootProject.file('assets').path
 // You can uncomment the next line if your IDE claims a build failure even when the app closed properly.
   //setIgnoreExitValue(true)
+  // Runtime profiler VM options for desktop runs:
+  // -Dpixscape.runtime.profiler=true -Dpixscape.runtime.profiler.windowSeconds=5 -Dpixscape.runtime.profiler.warmupSeconds=3
+  [
+    'pixscape.runtime.profiler',
+    'pixscape.runtime.profiler.windowSeconds',
+    'pixscape.runtime.profiler.warmupSeconds'
+  ].each { propertyName ->
+    if (System.getProperty(propertyName) != null) {
+      jvmArgs += "-D${propertyName}=${System.getProperty(propertyName)}"
+    }
+  }
   jvmArgs += "--enable-native-access=ALL-UNNAMED"
   if (os.contains('mac')) jvmArgs += "-XstartOnFirstThread"
 }

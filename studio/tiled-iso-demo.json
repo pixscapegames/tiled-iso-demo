@@ -72,11 +72,11 @@
 		"ambientIntensity": 0.29,
 		"runtimeAvailability": {
 			"spriteAssetIds": [],
-			"animationAssetIds": [ 526 ],
+			"animationAssetIds": [ 526, 527 ],
 			"particleEffectPaths": [],
 			"prefabIds": [],
-			"tiledTileAssetIds": [],
-			"tiledAnimationIds": []
+			"tiledTileAssetIds": [ 154, 156, 211 ],
+			"tiledAnimationIds": [ 911 ]
 		}
 	}
 },

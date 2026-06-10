@@ -59,11 +59,11 @@
 		"mainCameraOffscreen": false,
 		"runtimeAvailability": {
 			"sprites": [],
-			"animations": [ 526 ],
+			"animations": [ 526, 527 ],
 			"particles": [],
 			"prefabs": [],
-			"tiledTiles": [],
-			"tiledAnimations": []
+			"tiledTiles": [ 154, 156, 211 ],
+			"tiledAnimations": [ 911 ]
 		}
 	}
 },
