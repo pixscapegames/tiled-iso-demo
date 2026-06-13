@@ -13,7 +13,7 @@
 	"iso": {
 		"name": "iso",
 		"file": "scene2.json",
-		"physicsEnabled": false,
+		"physicsEnabled": true,
 		"pixelsPerMeter": 100,
 		"gravityX": 0,
 		"gravityY": -9.81,

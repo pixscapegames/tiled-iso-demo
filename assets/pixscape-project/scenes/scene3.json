@@ -2,21 +2,21 @@
 "metadata": { "version": 1 },
 "componentIdentifiers": {
 	"games.pixscape.runtime.component.AABBComponent": "AABBComponent",
-	"games.pixscape.runtime.component.SpatialBlocksComponent": "SpatialBlocksComponent",
+	"games.pixscape.runtime.component.EntityIndexComponent": "EntityIndexComponent",
 	"games.pixscape.runtime.component.TextureRegionComponent": "TextureRegionComponent",
-	"games.pixscape.runtime.component.TransformComponent": "TransformComponent",
-	"games.pixscape.runtime.component.physics.PhysicsBodyComponent": "PhysicsBodyComponent",
 	"games.pixscape.runtime.component.DimensionsComponent": "DimensionsComponent",
 	"games.pixscape.runtime.component.ShaderParamsComponent": "ShaderParamsComponent",
+	"games.pixscape.runtime.component.physics.PhysicsBodyComponent": "PhysicsBodyComponent",
 	"games.pixscape.runtime.component.TintComponent": "TintComponent",
+	"games.pixscape.runtime.component.PixscapeIdentityComponent": "PixscapeIdentityComponent",
+	"games.pixscape.runtime.component.physics.PhysicsFixturesComponent": "PhysicsFixturesComponent",
+	"games.pixscape.runtime.component.SpatialBlocksComponent": "SpatialBlocksComponent",
 	"games.pixscape.runtime.component.OrientedBoundsComponent": "OrientedBoundsComponent",
 	"games.pixscape.runtime.component.SpatialHeightComponent": "SpatialHeightComponent",
-	"games.pixscape.runtime.component.EntityIndexComponent": "EntityIndexComponent",
-	"games.pixscape.runtime.component.PixscapeIdentityComponent": "PixscapeIdentityComponent",
 	"games.pixscape.runtime.component.AnimationComponent": "AnimationComponent",
 	"games.pixscape.runtime.component.RenderMaterialComponent": "RenderMaterialComponent",
 	"games.pixscape.runtime.component.TiledLayerComponent": "TiledLayerComponent",
-	"games.pixscape.runtime.component.physics.PhysicsFixturesComponent": "PhysicsFixturesComponent",
+	"games.pixscape.runtime.component.TransformComponent": "TransformComponent",
 	"games.pixscape.runtime.component.AssetRefComponent": "AssetRefComponent",
 	"games.pixscape.runtime.component.VisibilityComponent": "VisibilityComponent",
 	"games.pixscape.runtime.component.LayerComponent": "LayerComponent"
@@ -52,26 +52,20 @@
 	"1": {
 		"archetype": 2,
 		"components": {
-			"LayerComponent": { "layerIndex": 1, "type": 3, "spatialEnabled": true },
+			"LayerComponent": { "layerIndex": 2, "type": 3, "spatialEnabled": true },
 			"PhysicsBodyComponent": { "type": 0 },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{
 						"fixtureId": 1000006,
 						"shapeType": 2,
-						"polyVerts": [ 4.14646, 7.524087, 7.8751235, 9.388418, 7.532339, 9.559811, 3.8036757, 7.695479 ],
+						"polyVerts": [ 3.9316754, 7.6314793, 7.977879, 9.654581, 7.8498793, 9.718581, 3.8036757, 7.695479 ],
 						"polyCount": 4
 					},
 					{
 						"fixtureId": 1000005,
 						"shapeType": 2,
-						"polyVerts": [ -14.988523, 14.535065, -4.715994, 19.67133, -4.9891233, 19.807894, -15.261653, 14.67163 ],
-						"polyCount": 4
-					},
-					{
-						"fixtureId": 1000007,
-						"shapeType": 2,
-						"polyVerts": [ 3.827854, 15.04007, 4.129878, 15.191082, -4.7376466, 19.624844, -5.0396705, 19.473831 ],
+						"polyVerts": [ -15.004851, 14.543229, -4.7656593, 19.662825, -5.022461, 19.791225, -15.261653, 14.67163 ],
 						"polyCount": 4
 					},
 					{
@@ -81,21 +75,9 @@
 						"polyCount": 4
 					},
 					{
-						"fixtureId": 1000012,
-						"shapeType": 2,
-						"polyVerts": [ 1.12164, 7.4649644, 1.4288244, 7.6185565, -0.0111016845, 8.338519, -0.31828612, 8.184927 ],
-						"polyCount": 4
-					},
-					{
-						"fixtureId": 1000013,
-						"shapeType": 2,
-						"polyVerts": [ -6.3854585, 10.235198, -6.1435595, 10.356148, -14.7291355, 14.648935, -14.971035, 14.527986 ],
-						"polyCount": 4
-					},
-					{
 						"fixtureId": 1000015,
 						"shapeType": 2,
-						"polyVerts": [ -1.5926917, 8.801792, -1.2980237, 8.949126, -5.4012365, 11.000732, -5.6959047, 10.853398 ],
+						"polyVerts": [ -1.5882208, 8.8040285, -1.2980237, 8.949126, -5.4413843, 11.020807, -5.731581, 10.875708 ],
 						"polyCount": 4
 					},
 					{
@@ -127,19 +109,48 @@
 						"shapeType": 2,
 						"polyVerts": [ -19.222027, 19.212902, -15.382025, 21.132902, -19.222027, 23.052902, -23.062027, 21.132902 ],
 						"polyCount": 4
+					},
+					{
+						"fixtureId": 1000025,
+						"shapeType": 2,
+						"polyVerts": [ 2.9124463, 14.633693, 3.7702868, 15.062613, 3.4527318, 15.221391, 2.5948913, 14.792471 ],
+						"polyCount": 4
+					},
+					{
+						"fixtureId": 1000014,
+						"shapeType": 2,
+						"polyVerts": [ -6.4055495, 10.249621, -6.1063814, 10.399205, -14.80771, 14.74987, -15.106878, 14.600286 ],
+						"polyCount": 4
 					}
 				]
 			},
 			"SpatialBlocksComponent": {
 				"blocks": [
 					{
-						"id": 5,
-						"x": 5.000628,
-						"y": 17.710411,
-						"width": 8.0254135,
-						"depth": 0.21338272,
-						"height": 164.78809,
-						"physicsCollision": true,
+						"id": 9,
+						"x": 12.7727375,
+						"y": 11.051527,
+						"width": 0.23315907,
+						"depth": 6.749758,
+						"height": 156.50891,
+						"linkedTileRefsAuthored": true,
+						"linkedTileRefs": [
+							{ "gx": 15, "gy": 14, "tileAssetId": 200 },
+							{ "gx": 15, "gy": 15, "tileAssetId": 296 },
+							{ "gx": 15, "gy": 16, "tileAssetId": 220 },
+							{ "gx": 15, "gy": 17, "tileAssetId": 200 },
+							{ "gx": 15, "gy": 18, "tileAssetId": 224 },
+							{ "gx": 15, "gy": 19, "tileAssetId": 212 },
+							{ "gx": 15, "gy": 20, "tileAssetId": 240 }
+						]
+					},
+					{
+						"id": 10,
+						"x": 5.017639,
+						"y": 17.807234,
+						"width": 7.9948006,
+						"depth": 0.22384834,
+						"height": 153.82068,
 						"linkedTileRefsAuthored": true,
 						"linkedTileRefs": [
 							{ "gx": 8, "gy": 20, "tileAssetId": 238 },
@@ -153,77 +164,31 @@
 						]
 					},
 					{
-						"id": 6,
-						"x": 6.997904,
-						"y": 4.758482,
-						"width": 2.9130182,
-						"depth": 0.26780033,
-						"height": 153.1842,
-						"physicsCollision": true,
+						"id": 11,
+						"x": 7.014264,
+						"y": 22.990475,
+						"width": 3,
+						"depth": 3,
+						"height": 161.49731,
 						"linkedTileRefsAuthored": true,
 						"linkedTileRefs": [
-							{ "gx": 10, "gy": 7, "tileAssetId": 234 },
-							{ "gx": 11, "gy": 7, "tileAssetId": 250 },
-							{ "gx": 12, "gy": 7, "tileAssetId": 226 }
+							{ "gx": 10, "gy": 26, "tileAssetId": 239 },
+							{ "gx": 11, "gy": 26, "tileAssetId": 237 },
+							{ "gx": 12, "gy": 26, "tileAssetId": 241 },
+							{ "gx": 10, "gy": 27, "tileAssetId": 235 },
+							{ "gx": 12, "gy": 27, "tileAssetId": 236 },
+							{ "gx": 10, "gy": 28, "tileAssetId": 238 },
+							{ "gx": 11, "gy": 28, "tileAssetId": 234 },
+							{ "gx": 12, "gy": 28, "tileAssetId": 240 }
 						]
 					},
 					{
-						"id": 7,
-						"x": 12.74531,
-						"y": 10.754799,
-						"width": 0.23595619,
-						"depth": 6.9277525,
-						"height": 156.99426,
-						"physicsCollision": true,
-						"linkedTileRefsAuthored": true,
-						"linkedTileRefs": [
-							{ "gx": 15, "gy": 13, "tileAssetId": 238 },
-							{ "gx": 15, "gy": 14, "tileAssetId": 200 },
-							{ "gx": 15, "gy": 15, "tileAssetId": 296 },
-							{ "gx": 15, "gy": 16, "tileAssetId": 220 },
-							{ "gx": 15, "gy": 17, "tileAssetId": 200 },
-							{ "gx": 15, "gy": 18, "tileAssetId": 224 },
-							{ "gx": 15, "gy": 19, "tileAssetId": 212 },
-							{ "gx": 15, "gy": 20, "tileAssetId": 240 }
-						]
-					},
-					{
-						"id": 9,
-						"x": 12.017429,
-						"y": 5.7706347,
-						"width": 0.23374557,
-						"depth": 5.013995,
-						"height": 154.66833,
-						"physicsCollision": true,
-						"linkedTileRefsAuthored": true,
-						"linkedTileRefs": [
-							{ "gx": 15, "gy": 9, "tileAssetId": 235 },
-							{ "gx": 15, "gy": 10, "tileAssetId": 235 },
-							{ "gx": 15, "gy": 11, "tileAssetId": 227 },
-							{ "gx": 15, "gy": 12, "tileAssetId": 223 },
-							{ "gx": 15, "gy": 13, "tileAssetId": 238 }
-						]
-					},
-					{
-						"id": 12,
-						"x": 5.770144,
-						"y": 5.8938627,
-						"width": 0.23998785,
-						"depth": 1.1249423,
-						"height": 155.83856,
-						"physicsCollision": true,
-						"linkedTileRefsAuthored": true,
-						"linkedTileRefs": [
-							{ "gx": 8, "gy": 9, "tileAssetId": 224 }
-						]
-					},
-					{
-						"id": 13,
-						"x": 5.001929,
-						"y": 10.990568,
-						"width": 0.18898344,
-						"depth": 6.7074814,
-						"height": 160.14099,
+						"id": 14,
+						"x": 5.005349,
+						"y": 11.009685,
+						"width": 0.23372507,
+						"depth": 6.7979136,
+						"height": 159.40015,
 						"physicsCollision": true,
 						"linkedTileRefsAuthored": true,
 						"linkedTileRefs": [
@@ -238,42 +203,28 @@
 					},
 					{
 						"id": 15,
-						"x": 5.7542553,
-						"y": 7.9985456,
-						"width": 0.23020935,
-						"depth": 3.205635,
-						"height": 157.76453,
-						"physicsCollision": true,
-						"linkedTileRefsAuthored": true,
-						"linkedTileRefs": [
-							{ "gx": 8, "gy": 11, "tileAssetId": 212 },
-							{ "gx": 8, "gy": 12, "tileAssetId": 220 },
-							{ "gx": 8, "gy": 13, "tileAssetId": 200 }
-						]
-					},
-					{
-						"id": 19,
-						"x": 5.1920977,
-						"y": 13.766821,
-						"width": 4.8271675,
-						"depth": 0.24366283,
-						"height": 154.97412,
+						"x": 5.242452,
+						"y": 13.799141,
+						"width": 5.786306,
+						"depth": 0.27779865,
+						"height": 148.09814,
 						"linkedTileRefsAuthored": true,
 						"linkedTileRefs": [
 							{ "gx": 8, "gy": 16, "tileAssetId": 238 },
 							{ "gx": 9, "gy": 16, "tileAssetId": 198 },
 							{ "gx": 10, "gy": 16, "tileAssetId": 214 },
-							{ "gx": 11, "gy": 16, "tileAssetId": 198 },
-							{ "gx": 12, "gy": 16, "tileAssetId": 210 }
+							{ "gx": 11, "gy": 16, "tileAssetId": 234 },
+							{ "gx": 12, "gy": 16, "tileAssetId": 202 },
+							{ "gx": 13, "gy": 16, "tileAssetId": 226 }
 						]
 					},
 					{
-						"id": 20,
-						"x": 5.9930625,
-						"y": 10.033812,
-						"width": 6.008387,
-						"depth": 0.25286865,
-						"height": 153.64941,
+						"id": 17,
+						"x": 6.026016,
+						"y": 10.009417,
+						"width": 6.082094,
+						"depth": 0.24464989,
+						"height": 154.21716,
 						"linkedTileRefsAuthored": true,
 						"linkedTileRefs": [
 							{ "gx": 9, "gy": 13, "tileAssetId": 205 },
@@ -285,48 +236,17 @@
 						]
 					},
 					{
-						"id": 21,
-						"x": 4.9433575,
-						"y": 4.042747,
-						"width": 2.0433002,
-						"depth": 1.8417802,
+						"id": 18,
+						"x": 5.7533636,
+						"y": 8.040685,
+						"width": 0.27286053,
+						"depth": 3.5471935,
+						"height": 159.54626,
 						"linkedTileRefsAuthored": true,
 						"linkedTileRefs": [
-							{ "gx": 8, "gy": 7, "tileAssetId": 289 },
-							{ "gx": 9, "gy": 7, "tileAssetId": 284 }
-						]
-					},
-					{
-						"id": 22,
-						"x": 11.013315,
-						"y": 3.9973612,
-						"width": 2.2081823,
-						"depth": 1.7715917,
-						"height": 157.1814,
-						"linkedTileRefsAuthored": true,
-						"linkedTileRefs": [
-							{ "gx": 14, "gy": 7, "tileAssetId": 285 },
-							{ "gx": 15, "gy": 7, "tileAssetId": 288 }
-						]
-					},
-					{
-						"id": 23,
-						"x": 7.0014772,
-						"y": 23.018684,
-						"width": 3,
-						"depth": 3,
-						"height": 154.50098,
-						"physicsCollision": true,
-						"linkedTileRefsAuthored": true,
-						"linkedTileRefs": [
-							{ "gx": 10, "gy": 26, "tileAssetId": 239 },
-							{ "gx": 11, "gy": 26, "tileAssetId": 237 },
-							{ "gx": 12, "gy": 26, "tileAssetId": 241 },
-							{ "gx": 10, "gy": 27, "tileAssetId": 235 },
-							{ "gx": 12, "gy": 27, "tileAssetId": 236 },
-							{ "gx": 10, "gy": 28, "tileAssetId": 238 },
-							{ "gx": 11, "gy": 28, "tileAssetId": 234 },
-							{ "gx": 12, "gy": 28, "tileAssetId": 240 }
+							{ "gx": 8, "gy": 11, "tileAssetId": 212 },
+							{ "gx": 8, "gy": 12, "tileAssetId": 220 },
+							{ "gx": 8, "gy": 13, "tileAssetId": 200 }
 						]
 					}
 				]
@@ -338,20 +258,20 @@
 				"spatialEnabled": true,
 				"defaultTileHeight": 128,
 				"tileXs": {
-					"items": [ 0, 1, 0, 1, 2, 3, 4, 5, 7, 8, 9, 0, 1, 2, 3, 4, 5, 7, 8, 9, 0, 1, 2, 3, 7, 8, 9, 0, 1, 2, 3, 0, 1, 2, 3, 6, 0, 1, 2, 3, 0, 1, 5, 8, 9, 10, 11, 12, 14, 15, 8, 9, 14, 15, 8, 15, 14, 15, 8, 14, 15, 8, 15, 8, 9, 10, 11, 12, 13, 14, 15, 8, 15, 8, 15, 8, 9, 10, 11, 12, 15, 8, 14, 15, 8, 15, 8, 15, 8, 9, 10, 11, 12, 13, 14, 15, 10, 11, 12, 10, 12, 10, 11, 12, 12, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-					"size": 104
+					"items": [ 0, 1, 0, 1, 2, 3, 4, 5, 7, 8, 9, 0, 1, 2, 3, 4, 5, 7, 8, 9, 0, 1, 2, 3, 7, 8, 9, 0, 1, 2, 3, 0, 1, 2, 3, 6, 0, 1, 2, 3, 0, 1, 5, 8, 9, 10, 11, 12, 14, 15, 8, 9, 14, 15, 8, 15, 14, 15, 8, 14, 15, 8, 15, 8, 9, 10, 11, 12, 13, 14, 15, 8, 15, 8, 15, 8, 9, 10, 11, 12, 13, 15, 8, 14, 15, 8, 15, 8, 15, 8, 9, 10, 11, 12, 13, 14, 15, 10, 11, 12, 10, 12, 10, 11, 12, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+					"size": 105
 				},
 				"tileYs": {
-					"items": [ 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 10, 10, 11, 11, 11, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 15, 15, 16, 16, 16, 16, 16, 16, 17, 17, 17, 18, 18, 19, 19, 20, 20, 20, 20, 20, 20, 20, 20, 26, 26, 26, 27, 27, 28, 28, 28, 28, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-					"size": 104
+					"items": [ 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 10, 10, 11, 11, 11, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 15, 15, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 18, 18, 19, 19, 20, 20, 20, 20, 20, 20, 20, 20, 26, 26, 26, 27, 27, 28, 28, 28, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+					"size": 105
 				},
 				"tileAssetIds": {
-					"items": [ 554, 554, 554, 554, 548, 548, 548, 548, 557, 557, 557, 554, 554, 548, 548, 548, 548, 557, 557, 557, 554, 554, 546, 547, 557, 557, 557, 554, 554, 546, 547, 554, 554, 546, 547, 536, 554, 554, 546, 547, 554, 554, 911, 289, 284, 234, 250, 226, 285, 288, 283, 282, 283, 282, 224, 235, 81, 235, 212, 83, 227, 220, 223, 200, 205, 261, 201, 265, 265, 269, 238, 239, 200, 235, 296, 238, 198, 214, 202, 210, 220, 203, 78, 200, 203, 224, 235, 212, 238, 202, 218, 254, 254, 254, 202, 240, 239, 237, 241, 235, 236, 238, 234, 240, 240, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-					"size": 104
+					"items": [ 554, 554, 554, 554, 548, 548, 548, 548, 557, 557, 557, 554, 554, 548, 548, 548, 548, 557, 557, 557, 554, 554, 546, 547, 557, 557, 557, 554, 554, 546, 547, 554, 554, 546, 547, 536, 554, 554, 546, 547, 554, 554, 911, 289, 284, 234, 250, 226, 285, 288, 283, 282, 283, 282, 224, 235, 81, 235, 212, 83, 227, 220, 223, 200, 205, 261, 201, 265, 265, 269, 238, 239, 200, 235, 296, 238, 198, 214, 234, 202, 226, 220, 203, 78, 200, 203, 224, 235, 212, 238, 202, 218, 254, 254, 254, 202, 240, 239, 237, 241, 235, 236, 238, 234, 240, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+					"size": 105
 				},
 				"tileTransformFlags": {
 					"items": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-					"size": 104
+					"size": 105
 				}
 			}
 		}
@@ -359,7 +279,7 @@
 	"2": {
 		"archetype": 3,
 		"components": {
-			"LayerComponent": { "layerIndex": 2, "type": 3, "spatialEnabled": true },
+			"LayerComponent": { "layerIndex": 3, "type": 3, "spatialEnabled": true },
 			"TiledLayerComponent": {
 				"atlasTag": "scene3",
 				"mapWidthCells": 50,
@@ -382,13 +302,14 @@
 					"items": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 					"size": 39
 				}
-			}
+			},
+			"VisibilityComponent": { "visible": false }
 		}
 	},
 	"3": {
 		"archetype": 4,
 		"components": {
-			"LayerComponent": { "layerIndex": 3, "type": 3 },
+			"LayerComponent": { "layerIndex": 4, "type": 3 },
 			"PhysicsBodyComponent": { "type": 0 },
 			"TiledLayerComponent": {
 				"atlasTag": "scene3",
@@ -410,32 +331,33 @@
 					"items": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 					"size": 2
 				}
-			}
+			},
+			"VisibilityComponent": { "visible": false }
 		}
 	},
 	"4": {
 		"archetype": 5,
 		"components": {
-			"LayerComponent": { "layerIndex": 4, "type": 1, "spatialEnabled": true }
+			"LayerComponent": { "layerIndex": 1, "type": 1, "spatialEnabled": true }
 		}
 	},
 	"5": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -724.8895, "minY": 1001.871, "maxX": -555.9071, "maxY": 1170.8534 },
+			"AABBComponent": { "minX": 771.452, "minY": 2169.3752, "maxX": 940.43445, "maxY": 2338.3577 },
 			"AnimationComponent": {
 				"animation": "Attack 1__a531",
 				"clips": {
 					"default": { "end": 4 }
 				},
 				"currentClip": "default",
-				"stateTime": 33427.684,
+				"stateTime": 49921.844,
 				"frame": 2
 			},
 			"AssetRefComponent": { "assetId": 531, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4 },
-			"OrientedBoundsComponent": { "cx": -640.3983, "cy": 1086.3622, "ux": 1, "vx": 0, "vy": 1, "hx": 84.49121, "hy": 84.49121 },
+			"EntityIndexComponent": { "layerIndex": 1 },
+			"OrientedBoundsComponent": { "cx": 855.94324, "cy": 2253.8665, "ux": 1, "vx": 0, "vy": 1, "hx": 84.49121, "hy": 84.49121 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -447,8 +369,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -640.3983,
-				"y": 1086.3622,
+				"x": 855.94324,
+				"y": 2253.8665,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.3201752,
@@ -461,11 +383,11 @@
 	"6": {
 		"archetype": 7,
 		"components": {
-			"AABBComponent": { "minX": 303.07465, "minY": 1416.0785, "maxX": 1327.0747, "maxY": 2099.0786 },
+			"AABBComponent": { "minX": 481.96484, "minY": 1535.3386, "maxX": 1505.9648, "maxY": 2218.3386 },
 			"AssetRefComponent": { "assetId": 909, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 1024, "height": 683 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 39 },
-			"OrientedBoundsComponent": { "cx": 815.07465, "cy": 1757.5785, "ux": 1, "vx": 0, "vy": 1, "hx": 512, "hy": 341.5 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 39 },
+			"OrientedBoundsComponent": { "cx": 993.96484, "cy": 1876.8386, "ux": 1, "vx": 0, "vy": 1, "hx": 512, "hy": 341.5 },
 			"PhysicsBodyComponent": { "type": 0 },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -476,26 +398,26 @@
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
-			"TransformComponent": { "x": 815.07465, "y": 1757.5785, "originX": 512, "originY": 341.5 }
+			"TransformComponent": { "x": 993.96484, "y": 1876.8386, "originX": 512, "originY": 341.5 }
 		}
 	},
 	"7": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -1303.2341, "minY": 1270.7726, "maxX": -1132.1501, "maxY": 1441.8566 },
+			"AABBComponent": { "minX": 336.56543, "minY": 1829.5499, "maxX": 507.6494, "maxY": 2000.6339 },
 			"AnimationComponent": {
 				"animation": "Run__a530",
 				"clips": {
 					"default": { "end": 6 }
 				},
 				"currentClip": "default",
-				"stateTime": 33413.52,
-				"frame": 2
+				"stateTime": 49907.68,
+				"frame": 0
 			},
 			"AssetRefComponent": { "assetId": 530, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 2 },
-			"OrientedBoundsComponent": { "cx": -1217.6921, "cy": 1356.3146, "ux": 1, "vx": 0, "vy": 1, "hx": 85.54199, "hy": 85.54199 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 2 },
+			"OrientedBoundsComponent": { "cx": 422.10742, "cy": 1915.0919, "ux": 1, "vx": 0, "vy": 1, "hx": 85.54199, "hy": 85.54199 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -507,8 +429,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -1217.6921,
-				"y": 1356.3146,
+				"x": 422.10742,
+				"y": 1915.0919,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.3365936,
@@ -521,33 +443,33 @@
 	"8": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -93.882195, "minY": 1037.2821, "maxX": 102.396675, "maxY": 1233.5609 },
+			"AABBComponent": { "minX": 824.4735, "minY": 2716.2173, "maxX": 1020.7523, "maxY": 2912.496 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33410.75,
-				"frame": 1
+				"stateTime": 49904.91,
+				"frame": 2
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 3 },
-			"OrientedBoundsComponent": { "cx": 4.2572403, "cy": 1135.4215, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 3 },
+			"OrientedBoundsComponent": { "cx": 922.6129, "cy": 2814.3567, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.50248605, "offsetY": -0.7239539 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 101, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 101, "name": "Toto9" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 4.2572403,
-				"y": 1135.4215,
+				"x": 922.6129,
+				"y": 2814.3567,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -560,33 +482,33 @@
 	"9": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -223.78178, "minY": 1510.51, "maxX": -44.085342, "maxY": 1690.2065 },
+			"AABBComponent": { "minX": 614.2004, "minY": 2796.9875, "maxX": 793.8968, "maxY": 2976.6838 },
 			"AnimationComponent": {
 				"animation": "Attack 2__a529",
 				"clips": {
 					"default": { "end": 3 }
 				},
 				"currentClip": "default",
-				"stateTime": 33423.95,
-				"frame": 3
+				"stateTime": 49918.11,
+				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 529, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 1 },
-			"OrientedBoundsComponent": { "cx": -133.93356, "cy": 1600.3583, "ux": 1, "vx": 0, "vy": 1, "hx": 89.84822, "hy": 89.84822 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 1 },
+			"OrientedBoundsComponent": { "cx": 704.0486, "cy": 2886.8357, "ux": 1, "vx": 0, "vy": 1, "hx": 89.84822, "hy": 89.84822 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000032, "shapeType": 1, "radius": 0.27581894, "offsetX": -0.3355262, "offsetY": -0.7030213 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 98, "name": "Attack 2__a529" },
+			"PixscapeIdentityComponent": { "stableId": 98, "name": "Toto8" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -133.93356,
-				"y": 1600.3583,
+				"x": 704.0486,
+				"y": 2886.8357,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.4038785,
@@ -602,7 +524,7 @@
 			"AABBComponent": { "minX": -940.34924, "minY": 2136.8208, "maxX": -140.34924, "maxY": 2665.9473 },
 			"AssetRefComponent": { "assetId": 908, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 800, "height": 533 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 43 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 43 },
 			"OrientedBoundsComponent": { "cx": -540.34924, "cy": 2401.384, "ux": 1, "vx": 0, "vy": 1, "hx": 400, "hy": 264.56335 },
 			"PhysicsBodyComponent": { "type": 0 },
 			"PhysicsFixturesComponent": {
@@ -620,11 +542,11 @@
 	"11": {
 		"archetype": 8,
 		"components": {
-			"AABBComponent": { "minX": 54.755737, "minY": 1807.5345, "maxX": 854.75574, "maxY": 2447.0513 },
+			"AABBComponent": { "minX": 266.65918, "minY": 1904.9974, "maxX": 1066.6592, "maxY": 2544.5142 },
 			"AssetRefComponent": { "assetId": 908, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 800, "height": 533 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 41 },
-			"OrientedBoundsComponent": { "cx": 454.75574, "cy": 2127.293, "ux": 1, "vx": 0, "vy": 1, "hx": 400, "hy": 319.75842 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 41 },
+			"OrientedBoundsComponent": { "cx": 666.6592, "cy": 2224.7559, "ux": 1, "vx": 0, "vy": 1, "hx": 400, "hy": 319.75842 },
 			"PhysicsBodyComponent": { "type": 0 },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -636,8 +558,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 454.75574,
-				"y": 2127.293,
+				"x": 666.6592,
+				"y": 2224.7559,
 				"originX": 400,
 				"originY": 266.5,
 				"scaleX": -1,
@@ -650,11 +572,11 @@
 	"12": {
 		"archetype": 8,
 		"components": {
-			"AABBComponent": { "minX": -1827.3566, "minY": 835.28235, "maxX": -1027.3566, "maxY": 1364.409 },
+			"AABBComponent": { "minX": -1970.8146, "minY": 781.00085, "maxX": -1170.8146, "maxY": 1310.1276 },
 			"AssetRefComponent": { "assetId": 908, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 800, "height": 533 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 44 },
-			"OrientedBoundsComponent": { "cx": -1427.3566, "cy": 1099.8457, "ux": 1, "vx": 0, "vy": 1, "hx": 400, "hy": 264.56335 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 44 },
+			"OrientedBoundsComponent": { "cx": -1570.8146, "cy": 1045.5642, "ux": 1, "vx": 0, "vy": 1, "hx": 400, "hy": 264.56335 },
 			"PhysicsBodyComponent": { "type": 0 },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -665,7 +587,7 @@
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -1427.3566, "y": 1099.8457, "originX": 400, "originY": 266.5, "scaleY": 0.99273306, "invScaleY": 1.0073202 }
+			"TransformComponent": { "x": -1570.8146, "y": 1045.5642, "originX": 400, "originY": 266.5, "scaleY": 0.99273306, "invScaleY": 1.0073202 }
 		}
 	},
 	"13": {
@@ -674,7 +596,7 @@
 			"AABBComponent": { "minX": -685.71936, "minY": 2172.3726, "maxX": 114.28061, "maxY": 2811.8896 },
 			"AssetRefComponent": { "assetId": 908, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 800, "height": 533 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 45 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 45 },
 			"OrientedBoundsComponent": { "cx": -285.7194, "cy": 2492.131, "ux": 1, "vx": 0, "vy": 1, "hx": 400, "hy": 319.75842 },
 			"PhysicsBodyComponent": { "type": 0 },
 			"PhysicsFixturesComponent": {
@@ -704,7 +626,7 @@
 			"AABBComponent": { "minX": -203.90608, "minY": 1926.4292, "maxX": 567.5548, "maxY": 2609.4292 },
 			"AssetRefComponent": { "assetId": 909, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 1024, "height": 683 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 42 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 42 },
 			"OrientedBoundsComponent": { "cx": 181.82436, "cy": 2267.9292, "ux": 1, "vx": 0, "vy": 1, "hx": 385.73044, "hy": 341.5 },
 			"PhysicsBodyComponent": { "type": 0 },
 			"PhysicsFixturesComponent": {
@@ -722,11 +644,11 @@
 	"15": {
 		"archetype": 7,
 		"components": {
-			"AABBComponent": { "minX": -918.1256, "minY": 387.03802, "maxX": -146.66476, "maxY": 1070.0381 },
+			"AABBComponent": { "minX": -1720.0204, "minY": 494.32294, "maxX": -948.55945, "maxY": 1177.323 },
 			"AssetRefComponent": { "assetId": 909, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 1024, "height": 683 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 46 },
-			"OrientedBoundsComponent": { "cx": -532.3952, "cy": 728.538, "ux": 1, "vx": 0, "vy": 1, "hx": 385.73044, "hy": 341.5 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 46 },
+			"OrientedBoundsComponent": { "cx": -1334.2899, "cy": 835.82294, "ux": 1, "vx": 0, "vy": 1, "hx": 385.73044, "hy": 341.5 },
 			"PhysicsBodyComponent": { "type": 0 },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -737,26 +659,26 @@
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -532.3952, "y": 728.538, "originX": 512, "originY": 341.5, "scaleX": 0.75337976, "invScaleX": 1.3273518 }
+			"TransformComponent": { "x": -1334.2899, "y": 835.82294, "originX": 512, "originY": 341.5, "scaleX": 0.75337976, "invScaleX": 1.3273518 }
 		}
 	},
 	"16": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -1330.4673, "minY": 1513.4385, "maxX": -1177.093, "maxY": 1666.8127 },
+			"AABBComponent": { "minX": 674.7973, "minY": 2388.0017, "maxX": 828.17145, "maxY": 2541.3757 },
 			"AnimationComponent": {
 				"animation": "Attack 2__a529",
 				"clips": {
 					"default": { "end": 3 }
 				},
 				"currentClip": "default",
-				"stateTime": 29760.834,
-				"frame": 2
+				"stateTime": 46921.094,
+				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 529, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 30 },
-			"OrientedBoundsComponent": { "cx": -1253.7802, "cy": 1590.1256, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 30 },
+			"OrientedBoundsComponent": { "cx": 751.4844, "cy": 2464.6887, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -768,8 +690,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -1253.7802,
-				"y": 1590.1256,
+				"x": 751.4844,
+				"y": 2464.6887,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.1982355,
@@ -782,20 +704,20 @@
 	"17": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -1416.7166, "minY": 1351.4062, "maxX": -1254.8843, "maxY": 1513.2385 },
+			"AABBComponent": { "minX": 147.02258, "minY": 1983.6233, "maxX": 308.85474, "maxY": 2145.4553 },
 			"AnimationComponent": {
 				"animation": "Idle2__a528",
 				"clips": {
 					"default": { "end": 3 }
 				},
 				"currentClip": "default",
-				"stateTime": 29757.072,
+				"stateTime": 46917.7,
 				"frame": 0
 			},
 			"AssetRefComponent": { "assetId": 528, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 35 },
-			"OrientedBoundsComponent": { "cx": -1335.8004, "cy": 1432.3224, "ux": 1, "vx": 0, "vy": 1, "hx": 80.91608, "hy": 80.91608 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 35 },
+			"OrientedBoundsComponent": { "cx": 227.93866, "cy": 2064.5393, "ux": 1, "vx": 0, "vy": 1, "hx": 80.91608, "hy": 80.91608 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -807,8 +729,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -1335.8004,
-				"y": 1432.3224,
+				"x": 227.93866,
+				"y": 2064.5393,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.2643137,
@@ -821,20 +743,20 @@
 	"18": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -896.00323, "minY": 1092.0474, "maxX": -729.0961, "maxY": 1258.9546 },
+			"AABBComponent": { "minX": 458.81866, "minY": 2110.2776, "maxX": 625.72577, "maxY": 2277.1848 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 29754.139,
-				"frame": 1
+				"stateTime": 46915.04,
+				"frame": 4
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 36 },
-			"OrientedBoundsComponent": { "cx": -812.5497, "cy": 1175.501, "ux": 1, "vx": 0, "vy": 1, "hx": 83.45355, "hy": 83.45355 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 36 },
+			"OrientedBoundsComponent": { "cx": 542.2722, "cy": 2193.7312, "ux": 1, "vx": 0, "vy": 1, "hx": 83.45355, "hy": 83.45355 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -846,8 +768,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -812.5497,
-				"y": 1175.501,
+				"x": 542.2722,
+				"y": 2193.7312,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.3039618,
@@ -860,33 +782,33 @@
 	"19": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": 241.92749, "minY": 1103.7627, "maxX": 425.7506, "maxY": 1287.5859 },
+			"AABBComponent": { "minX": -1077.7112, "minY": 1434.9666, "maxX": -893.888, "maxY": 1618.7896 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 29752.047,
-				"frame": 0
+				"stateTime": 46913.145,
+				"frame": 5
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 37 },
-			"OrientedBoundsComponent": { "cx": 333.83905, "cy": 1195.6743, "ux": 1, "vx": 0, "vy": 1, "hx": 91.91156, "hy": 91.91156 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 37 },
+			"OrientedBoundsComponent": { "cx": -985.79956, "cy": 1526.878, "ux": 1, "vx": 0, "vy": 1, "hx": 91.91156, "hy": 91.91156 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000042, "shapeType": 1, "radius": 0.32184964, "offsetX": -0.4567358, "offsetY": -0.79505736 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 105, "name": "hero" },
+			"PixscapeIdentityComponent": { "stableId": 105, "name": "Toto3" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 333.83905,
-				"y": 1195.6743,
+				"x": -985.79956,
+				"y": 1526.878,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.4361181,
@@ -899,20 +821,20 @@
 	"20": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -998.0749, "minY": 1138.0339, "maxX": -832.85944, "maxY": 1303.2493 },
+			"AABBComponent": { "minX": 598.03033, "minY": 2127.81, "maxX": 763.2458, "maxY": 2293.0254 },
 			"AnimationComponent": {
 				"animation": "Idle2__a528",
 				"clips": {
 					"default": { "end": 3 }
 				},
 				"currentClip": "default",
-				"stateTime": 29748.645,
-				"frame": 3
+				"stateTime": 46910.055,
+				"frame": 0
 			},
 			"AssetRefComponent": { "assetId": 528, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 38 },
-			"OrientedBoundsComponent": { "cx": -915.46716, "cy": 1220.6416, "ux": 1, "vx": 0, "vy": 1, "hx": 82.60773, "hy": 82.60773 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 38 },
+			"OrientedBoundsComponent": { "cx": 680.63806, "cy": 2210.4177, "ux": 1, "vx": 0, "vy": 1, "hx": 82.60773, "hy": 82.60773 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -924,8 +846,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -915.46716,
-				"y": 1220.6416,
+				"x": 680.63806,
+				"y": 2210.4177,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.2907457,
@@ -938,20 +860,20 @@
 	"21": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -337.7422, "minY": 890.45557, "maxX": -141.46332, "maxY": 1086.7344 },
+			"AABBComponent": { "minX": -422.67416, "minY": 1828.803, "maxX": -226.3953, "maxY": 2025.0818 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33409.68,
-				"frame": 4
+				"stateTime": 49903.84,
+				"frame": 6
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 4 },
-			"OrientedBoundsComponent": { "cx": -239.60275, "cy": 988.595, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 4 },
+			"OrientedBoundsComponent": { "cx": -324.53473, "cy": 1926.9424, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -963,8 +885,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -239.60275,
-				"y": 988.595,
+				"x": -324.53473,
+				"y": 1926.9424,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -977,20 +899,20 @@
 	"22": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -600.9203, "minY": 1346.9836, "maxX": -404.6414, "maxY": 1543.2625 },
+			"AABBComponent": { "minX": 363.30338, "minY": 2365.005, "maxX": 559.5823, "maxY": 2561.2837 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33409.457,
-				"frame": 1
+				"stateTime": 49903.617,
+				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 5 },
-			"OrientedBoundsComponent": { "cx": -502.78082, "cy": 1445.123, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 5 },
+			"OrientedBoundsComponent": { "cx": 461.4428, "cy": 2463.1443, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1002,8 +924,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -502.78082,
-				"y": 1445.123,
+				"x": 461.4428,
+				"y": 2463.1443,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1016,33 +938,33 @@
 	"23": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -189.97966, "minY": 903.6007, "maxX": 6.2992096, "maxY": 1099.8796 },
+			"AABBComponent": { "minX": -365.9154, "minY": 1603.074, "maxX": -169.63654, "maxY": 1799.3528 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33409.28,
-				"frame": 7
+				"stateTime": 49903.44,
+				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 6 },
-			"OrientedBoundsComponent": { "cx": -91.840225, "cy": 1001.7402, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 6 },
+			"OrientedBoundsComponent": { "cx": -267.77597, "cy": 1701.2134, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 109, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 109, "name": "Toto3" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -91.840225,
-				"y": 1001.7402,
+				"x": -267.77597,
+				"y": 1701.2134,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1055,33 +977,33 @@
 	"24": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": 56.04532, "minY": 1153.7064, "maxX": 252.32419, "maxY": 1349.9852 },
+			"AABBComponent": { "minX": 409.45984, "minY": 2857.642, "maxX": 605.7387, "maxY": 3053.921 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33410.508,
-				"frame": 6
+				"stateTime": 49904.668,
+				"frame": 0
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 7 },
-			"OrientedBoundsComponent": { "cx": 154.18475, "cy": 1251.8458, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 7 },
+			"OrientedBoundsComponent": { "cx": 507.59927, "cy": 2955.7815, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 110, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 110, "name": "Toto7" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 154.18475,
-				"y": 1251.8458,
+				"x": 507.59927,
+				"y": 2955.7815,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1094,33 +1016,33 @@
 	"25": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -138.55624, "minY": 1491.4176, "maxX": 57.722626, "maxY": 1687.6964 },
+			"AABBComponent": { "minX": 366.3898, "minY": 2545.812, "maxX": 562.6687, "maxY": 2742.0908 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7, "flipX": true }
 				},
 				"currentClip": "default",
-				"stateTime": 10234.391,
-				"frame": 4
+				"stateTime": 28377.568,
+				"frame": 2
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 8 },
-			"OrientedBoundsComponent": { "cx": -40.41681, "cy": 1589.557, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 8 },
+			"OrientedBoundsComponent": { "cx": 464.52924, "cy": 2643.9514, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
-					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
+					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": 0.43996385, "offsetY": -0.8225942 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 111, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 111, "name": "problem" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -40.41681,
-				"y": 1589.557,
+				"x": 464.52924,
+				"y": 2643.9514,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1133,33 +1055,33 @@
 	"26": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -718.6456, "minY": 1820.5852, "maxX": -522.3668, "maxY": 2016.864 },
+			"AABBComponent": { "minX": 436.75363, "minY": 1946.2826, "maxX": 633.0325, "maxY": 2142.5615 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.543,
-				"frame": 6
+				"stateTime": 49902.703,
+				"frame": 0
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 9 },
-			"OrientedBoundsComponent": { "cx": -620.5062, "cy": 1918.7246, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 9 },
+			"OrientedBoundsComponent": { "cx": 534.89307, "cy": 2044.422, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 112, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 112, "name": "Toto99" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -620.5062,
-				"y": 1918.7246,
+				"x": 534.89307,
+				"y": 2044.422,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1172,20 +1094,20 @@
 	"27": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": 395.11124, "minY": 1767.2516, "maxX": 591.39014, "maxY": 1963.5304 },
+			"AABBComponent": { "minX": -475.9101, "minY": 1275.7726, "maxX": -279.63123, "maxY": 1472.0514 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.816,
-				"frame": 1
+				"stateTime": 49902.977,
+				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 10 },
-			"OrientedBoundsComponent": { "cx": 493.25067, "cy": 1865.391, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 10 },
+			"OrientedBoundsComponent": { "cx": -377.77066, "cy": 1373.912, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1197,8 +1119,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 493.25067,
-				"y": 1865.391,
+				"x": -377.77066,
+				"y": 1373.912,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1211,20 +1133,20 @@
 	"28": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -669.4966, "minY": 1608.2136, "maxX": -473.21774, "maxY": 1804.4924 },
+			"AABBComponent": { "minX": 294.72705, "minY": 2626.2349, "maxX": 491.00592, "maxY": 2822.5137 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.363,
-				"frame": 4
+				"stateTime": 49902.523,
+				"frame": 6
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 11 },
-			"OrientedBoundsComponent": { "cx": -571.3572, "cy": 1706.353, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 11 },
+			"OrientedBoundsComponent": { "cx": 392.8665, "cy": 2724.3743, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1236,8 +1158,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -571.3572,
-				"y": 1706.353,
+				"x": 392.8665,
+				"y": 2724.3743,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1250,20 +1172,20 @@
 	"29": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -417.85654, "minY": 1284.0054, "maxX": -221.57767, "maxY": 1480.2842 },
+			"AABBComponent": { "minX": -104.82147, "minY": 2482.9126, "maxX": 91.4574, "maxY": 2679.1914 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.8,
-				"frame": 1
+				"stateTime": 49902.96,
+				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 12 },
-			"OrientedBoundsComponent": { "cx": -319.7171, "cy": 1382.1448, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 12 },
+			"OrientedBoundsComponent": { "cx": -6.6820374, "cy": 2581.052, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1275,8 +1197,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -319.7171,
-				"y": 1382.1448,
+				"x": -6.6820374,
+				"y": 2581.052,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1289,33 +1211,33 @@
 	"30": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -430.74704, "minY": 1436.239, "maxX": -234.46817, "maxY": 1632.5178 },
+			"AABBComponent": { "minX": 162.32675, "minY": 2262.01, "maxX": 358.60562, "maxY": 2458.2888 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.625,
-				"frame": 7
+				"stateTime": 49902.785,
+				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 13 },
-			"OrientedBoundsComponent": { "cx": -332.6076, "cy": 1534.3784, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 13 },
+			"OrientedBoundsComponent": { "cx": 260.4662, "cy": 2360.1494, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000049, "shapeType": 1, "radius": 0.26719546, "offsetX": -0.45822018, "offsetY": -0.70495474 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 116, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 116, "name": "Toto2" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -332.6076,
-				"y": 1534.3784,
+				"x": 260.4662,
+				"y": 2360.1494,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1328,33 +1250,33 @@
 	"31": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -419.94394, "minY": 1369.8165, "maxX": -223.66507, "maxY": 1566.0953 },
+			"AABBComponent": { "minX": 571.8473, "minY": 2596.5645, "maxX": 768.1261, "maxY": 2792.8433 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.414,
-				"frame": 4
+				"stateTime": 49902.574,
+				"frame": 6
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 14 },
-			"OrientedBoundsComponent": { "cx": -321.8045, "cy": 1467.9559, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 14 },
+			"OrientedBoundsComponent": { "cx": 669.9867, "cy": 2694.7039, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 117, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 117, "name": "Toto" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -321.8045,
-				"y": 1467.9559,
+				"x": 669.9867,
+				"y": 2694.7039,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1367,33 +1289,33 @@
 	"32": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": 282.74142, "minY": 1333.3325, "maxX": 479.0203, "maxY": 1529.6113 },
+			"AABBComponent": { "minX": -78.56123, "minY": 1556.3129, "maxX": 117.717636, "maxY": 1752.5917 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.24,
-				"frame": 2
+				"stateTime": 49902.4,
+				"frame": 4
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 15 },
-			"OrientedBoundsComponent": { "cx": 380.88086, "cy": 1431.4719, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 15 },
+			"OrientedBoundsComponent": { "cx": 19.578201, "cy": 1654.4523, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 118, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 118, "name": "Toto10" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 380.88086,
-				"y": 1431.4719,
+				"x": 19.578201,
+				"y": 1654.4523,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1406,20 +1328,20 @@
 	"33": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -198.69238, "minY": 1677.561, "maxX": -2.4135132, "maxY": 1873.8398 },
+			"AABBComponent": { "minX": 765.5314, "minY": 2695.582, "maxX": 961.8102, "maxY": 2891.8608 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.125,
-				"frame": 1
+				"stateTime": 49902.285,
+				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 16 },
-			"OrientedBoundsComponent": { "cx": -100.55295, "cy": 1775.7004, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 16 },
+			"OrientedBoundsComponent": { "cx": 863.6708, "cy": 2793.7214, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1431,8 +1353,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -100.55295,
-				"y": 1775.7004,
+				"x": 863.6708,
+				"y": 2793.7214,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1452,12 +1374,12 @@
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.19,
-				"frame": 2
+				"stateTime": 49902.35,
+				"frame": 4
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 17 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 17 },
 			"OrientedBoundsComponent": { "cx": 83.78032, "cy": 2160.4392, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
@@ -1484,20 +1406,20 @@
 	"35": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -105.464386, "minY": 1873.1454, "maxX": 90.81448, "maxY": 2069.4243 },
+			"AABBComponent": { "minX": 514.3109, "minY": 2779.0205, "maxX": 710.5897, "maxY": 2975.2993 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408,
-				"frame": 0
+				"stateTime": 49902.16,
+				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 18 },
-			"OrientedBoundsComponent": { "cx": -7.324951, "cy": 1971.2848, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 18 },
+			"OrientedBoundsComponent": { "cx": 612.4503, "cy": 2877.16, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1509,8 +1431,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -7.324951,
-				"y": 1971.2848,
+				"x": 612.4503,
+				"y": 2877.16,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1523,20 +1445,20 @@
 	"36": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": 263.39542, "minY": 1671.0726, "maxX": 459.6743, "maxY": 1867.3514 },
+			"AABBComponent": { "minX": -1429.8654, "minY": 1994.8083, "maxX": -1233.5865, "maxY": 2191.0872 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33407.82,
-				"frame": 5
+				"stateTime": 49901.98,
+				"frame": 7
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 19 },
-			"OrientedBoundsComponent": { "cx": 361.53485, "cy": 1769.212, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 19 },
+			"OrientedBoundsComponent": { "cx": -1331.726, "cy": 2092.9478, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1548,8 +1470,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 361.53485,
-				"y": 1769.212,
+				"x": -1331.726,
+				"y": 2092.9478,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1569,12 +1491,12 @@
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33407.63,
-				"frame": 3
+				"stateTime": 49901.79,
+				"frame": 5
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 20 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 20 },
 			"OrientedBoundsComponent": { "cx": 750.6904, "cy": 2131.9736, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
@@ -1608,12 +1530,12 @@
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33407.434,
-				"frame": 1
+				"stateTime": 49901.594,
+				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 21 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 21 },
 			"OrientedBoundsComponent": { "cx": -0.13073349, "cy": 2187.3809, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
@@ -1640,20 +1562,20 @@
 	"39": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": 779.1471, "minY": 1325.6433, "maxX": 975.4259, "maxY": 1521.9221 },
+			"AABBComponent": { "minX": -344.25302, "minY": 1808.8436, "maxX": -147.97415, "maxY": 2005.1224 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33407.258,
-				"frame": 7
+				"stateTime": 49901.418,
+				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 22 },
-			"OrientedBoundsComponent": { "cx": 877.2865, "cy": 1423.7827, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 22 },
+			"OrientedBoundsComponent": { "cx": -246.11359, "cy": 1906.983, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1665,8 +1587,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 877.2865,
-				"y": 1423.7827,
+				"x": -246.11359,
+				"y": 1906.983,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1679,33 +1601,33 @@
 	"40": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": 343.08432, "minY": 1040.2057, "maxX": 539.36316, "maxY": 1236.4845 },
+			"AABBComponent": { "minX": 651.5062, "minY": 1985.3809, "maxX": 847.78503, "maxY": 2181.6597 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33407.09,
-				"frame": 5
+				"stateTime": 49901.25,
+				"frame": 7
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 23 },
-			"OrientedBoundsComponent": { "cx": 441.22375, "cy": 1138.3451, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 23 },
+			"OrientedBoundsComponent": { "cx": 749.6456, "cy": 2083.5203, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 126, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 126, "name": "Toto4" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 441.22375,
-				"y": 1138.3451,
+				"x": 749.6456,
+				"y": 2083.5203,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1725,12 +1647,12 @@
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33406.895,
-				"frame": 2
+				"stateTime": 49901.055,
+				"frame": 4
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 40 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 40 },
 			"OrientedBoundsComponent": { "cx": -249.74696, "cy": 620.9655, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
@@ -1757,33 +1679,33 @@
 	"42": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": 184.4878, "minY": 1283.8671, "maxX": 380.76666, "maxY": 1480.1459 },
+			"AABBComponent": { "minX": -196.49783, "minY": 1623.859, "maxX": -0.21896362, "maxY": 1820.1378 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33406.91,
-				"frame": 2
+				"stateTime": 49901.07,
+				"frame": 4
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 24 },
-			"OrientedBoundsComponent": { "cx": 282.62723, "cy": 1382.0065, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 24 },
+			"OrientedBoundsComponent": { "cx": -98.3584, "cy": 1721.9984, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 128, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 128, "name": "Toto98" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 282.62723,
-				"y": 1382.0065,
+				"x": -98.3584,
+				"y": 1721.9984,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1796,20 +1718,20 @@
 	"43": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -823.7794, "minY": 784.5239, "maxX": -627.5006, "maxY": 980.80286 },
+			"AABBComponent": { "minX": 205.98013, "minY": 1169.8389, "maxX": 402.259, "maxY": 1366.1177 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33406.703,
-				"frame": 0
+				"stateTime": 49900.863,
+				"frame": 2
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 25 },
-			"OrientedBoundsComponent": { "cx": -725.64, "cy": 882.6634, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 25 },
+			"OrientedBoundsComponent": { "cx": 304.11957, "cy": 1267.9783, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1821,8 +1743,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -725.64,
-				"y": 882.6634,
+				"x": 304.11957,
+				"y": 1267.9783,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1835,33 +1757,33 @@
 	"44": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -666.09045, "minY": 2084.9, "maxX": -469.81155, "maxY": 2281.1787 },
+			"AABBComponent": { "minX": 288.91815, "minY": 2870.6357, "maxX": 485.19702, "maxY": 3066.9146 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.332,
-				"frame": 3
+				"stateTime": 49902.492,
+				"frame": 5
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 26 },
-			"OrientedBoundsComponent": { "cx": -567.951, "cy": 2183.0393, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 26 },
+			"OrientedBoundsComponent": { "cx": 387.0576, "cy": 2968.7751, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 130, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 130, "name": "Toto6" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -567.951,
-				"y": 2183.0393,
+				"x": 387.0576,
+				"y": 2968.7751,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1874,20 +1796,20 @@
 	"45": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -1219.2273, "minY": 1754.615, "maxX": -1022.9485, "maxY": 1950.8938 },
+			"AABBComponent": { "minX": 157.92331, "minY": 2793.961, "maxX": 354.20218, "maxY": 2990.2397 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.832,
-				"frame": 1
+				"stateTime": 49902.992,
+				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 27 },
-			"OrientedBoundsComponent": { "cx": -1121.0879, "cy": 1852.7544, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 27 },
+			"OrientedBoundsComponent": { "cx": 256.06274, "cy": 2892.1003, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1899,8 +1821,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -1121.0879,
-				"y": 1852.7544,
+				"x": 256.06274,
+				"y": 2892.1003,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -1913,20 +1835,20 @@
 	"46": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -1204.0515, "minY": 1451.218, "maxX": -1050.6775, "maxY": 1604.592 },
+			"AABBComponent": { "minX": 305.89874, "minY": 2170.8318, "maxX": 459.2729, "maxY": 2324.2058 },
 			"AnimationComponent": {
 				"animation": "Attack 2__a529",
 				"clips": {
 					"default": { "end": 3 }
 				},
 				"currentClip": "default",
-				"stateTime": 29760.52,
-				"frame": 2
+				"stateTime": 46920.812,
+				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 529, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 31 },
-			"OrientedBoundsComponent": { "cx": -1127.3645, "cy": 1527.905, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 31 },
+			"OrientedBoundsComponent": { "cx": 382.58582, "cy": 2247.5188, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1938,8 +1860,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -1127.3645,
-				"y": 1527.905,
+				"x": 382.58582,
+				"y": 2247.5188,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.1982355,
@@ -1952,20 +1874,20 @@
 	"47": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -1082.7715, "minY": 1394.133, "maxX": -929.3974, "maxY": 1547.5073 },
+			"AABBComponent": { "minX": 316.63873, "minY": 2032.3933, "maxX": 470.01288, "maxY": 2185.7673 },
 			"AnimationComponent": {
 				"animation": "Attack 2__a529",
 				"clips": {
 					"default": { "end": 3 }
 				},
 				"currentClip": "default",
-				"stateTime": 29760.32,
+				"stateTime": 46920.633,
 				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 529, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 32 },
-			"OrientedBoundsComponent": { "cx": -1006.0845, "cy": 1470.8202, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 32 },
+			"OrientedBoundsComponent": { "cx": 393.3258, "cy": 2109.0803, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -1977,8 +1899,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -1006.0845,
-				"y": 1470.8202,
+				"x": 393.3258,
+				"y": 2109.0803,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.1982355,
@@ -1991,20 +1913,20 @@
 	"48": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -785.7245, "minY": 1279.8071, "maxX": -632.35034, "maxY": 1433.1814 },
+			"AABBComponent": { "minX": 380.9256, "minY": 2661.5813, "maxX": 534.29974, "maxY": 2814.9553 },
 			"AnimationComponent": {
 				"animation": "Attack 2__a529",
 				"clips": {
 					"default": { "end": 3 }
 				},
 				"currentClip": "default",
-				"stateTime": 29760.123,
+				"stateTime": 46920.453,
 				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 529, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 33 },
-			"OrientedBoundsComponent": { "cx": -709.0374, "cy": 1356.4943, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 33 },
+			"OrientedBoundsComponent": { "cx": 457.61267, "cy": 2738.2683, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -2016,8 +1938,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -709.0374,
-				"y": 1356.4943,
+				"x": 457.61267,
+				"y": 2738.2683,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.1982355,
@@ -2030,33 +1952,33 @@
 	"49": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -568.0621, "minY": 1723.4832, "maxX": -414.68793, "maxY": 1876.8574 },
+			"AABBComponent": { "minX": 469.03705, "minY": 2315.956, "maxX": 622.4112, "maxY": 2469.33 },
 			"AnimationComponent": {
 				"animation": "Attack 2__a529",
 				"clips": {
 					"default": { "end": 3 }
 				},
 				"currentClip": "default",
-				"stateTime": 29759.926,
+				"stateTime": 46920.277,
 				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 529, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 34 },
-			"OrientedBoundsComponent": { "cx": -491.375, "cy": 1800.1703, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 34 },
+			"OrientedBoundsComponent": { "cx": 545.7241, "cy": 2392.643, "ux": 1, "vx": 0, "vy": 1, "hx": 76.68707, "hy": 76.68707 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
-					{ "fixtureId": 1000040, "shapeType": 1, "radius": 0.2422033, "offsetX": -0.25374144, "offsetY": -0.5582312 }
+					{ "fixtureId": 1000040, "shapeType": 1, "radius": 0.2422033, "offsetX": -0.3389786, "offsetY": -0.63636637 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 135, "name": "Attack 2__a529" },
+			"PixscapeIdentityComponent": { "stableId": 135, "name": "Toto5" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -491.375,
-				"y": 1800.1703,
+				"x": 545.7241,
+				"y": 2392.643,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.1982355,
@@ -2069,20 +1991,20 @@
 	"50": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -24.362946, "minY": 822.81274, "maxX": 171.91592, "maxY": 1019.09155 },
+			"AABBComponent": { "minX": -701.9004, "minY": 1118.9758, "maxX": -505.62155, "maxY": 1315.2546 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33408.004,
-				"frame": 0
+				"stateTime": 49902.164,
+				"frame": 1
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 28 },
-			"OrientedBoundsComponent": { "cx": 73.77649, "cy": 920.95215, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 28 },
+			"OrientedBoundsComponent": { "cx": -603.761, "cy": 1217.1152, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
@@ -2094,8 +2016,8 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 73.77649,
-				"y": 920.95215,
+				"x": -603.761,
+				"y": 1217.1152,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -2108,33 +2030,33 @@
 	"51": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -219.59363, "minY": 839.3474, "maxX": -23.314758, "maxY": 1035.6262 },
+			"AABBComponent": { "minX": 769.0072, "minY": 2539.6577, "maxX": 965.286, "maxY": 2735.9365 },
 			"AnimationComponent": {
 				"animation": "Walk__a526",
 				"clips": {
 					"default": { "end": 7 }
 				},
 				"currentClip": "default",
-				"stateTime": 33407.426,
-				"frame": 1
+				"stateTime": 49901.586,
+				"frame": 3
 			},
 			"AssetRefComponent": { "assetId": 526, "atlasTag": "scene3" },
 			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 29 },
-			"OrientedBoundsComponent": { "cx": -121.45419, "cy": 937.4868, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
+			"EntityIndexComponent": { "layerIndex": 1, "zIndex": 29 },
+			"OrientedBoundsComponent": { "cx": 867.1466, "cy": 2637.797, "ux": 1, "vx": 0, "vy": 1, "hx": 98.139435, "hy": 98.139435 },
 			"PhysicsBodyComponent": { "fixedRotation": true },
 			"PhysicsFixturesComponent": {
 				"fixtures": [
 					{ "fixtureId": 1000036, "shapeType": 1, "radius": 0.28179026, "offsetX": -0.416334, "offsetY": -0.7885681 }
 				]
 			},
-			"PixscapeIdentityComponent": { "stableId": 137, "name": "Walk__a526" },
+			"PixscapeIdentityComponent": { "stableId": 137, "name": "Toto1" },
 			"RenderMaterialComponent": {},
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": -121.45419,
-				"y": 937.4868,
+				"x": 867.1466,
+				"y": 2637.797,
 				"originX": 64,
 				"originY": 64,
 				"scaleX": 1.5334287,
@@ -2180,8 +2102,8 @@
 		"OrientedBoundsComponent",
 		"EntityIndexComponent",
 		"TintComponent",
-		"SpatialHeightComponent",
-		"PixscapeIdentityComponent"
+		"PixscapeIdentityComponent",
+		"SpatialHeightComponent"
 	],
 	"7": [
 		"TextureRegionComponent",
@@ -2196,8 +2118,8 @@
 		"OrientedBoundsComponent",
 		"EntityIndexComponent",
 		"TintComponent",
-		"SpatialHeightComponent",
-		"PixscapeIdentityComponent"
+		"PixscapeIdentityComponent",
+		"SpatialHeightComponent"
 	],
 	"8": [
 		"TextureRegionComponent",
@@ -2213,8 +2135,8 @@
 		"EntityIndexComponent",
 		"TintComponent",
 		"ShaderParamsComponent",
-		"SpatialHeightComponent",
-		"PixscapeIdentityComponent"
+		"PixscapeIdentityComponent",
+		"SpatialHeightComponent"
 	]
 }
 }

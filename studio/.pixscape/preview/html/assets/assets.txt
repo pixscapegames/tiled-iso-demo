@@ -18,18 +18,17 @@ d:pixscape-project/shaders/includes:pixscape-project/shaders/includes:0:text/pla
 d:pixscape-project/shaders:pixscape-project/shaders:0:text/plain:1
 d:pixscape-project:pixscape-project:0:text/plain:1
 i:font/default.png:font/default.png:30184:image/png:1
-i:pixscape-project/atlases/scene2-2.png:pixscape-project/atlases/scene2-2.png:760517:image/png:1
+i:pixscape-project/atlases/scene2-2.png:pixscape-project/atlases/scene2-2.png:778293:image/png:1
 i:pixscape-project/atlases/scene2.png:pixscape-project/atlases/scene2.png:953061:image/png:1
-i:pixscape-project/atlases/scene3-2.png:pixscape-project/atlases/scene3-2.png:889466:image/png:1
-i:pixscape-project/atlases/scene3-3.png:pixscape-project/atlases/scene3-3.png:1051706:image/png:1
-i:pixscape-project/atlases/scene3-4.png:pixscape-project/atlases/scene3-4.png:752087:image/png:1
-i:pixscape-project/atlases/scene3.png:pixscape-project/atlases/scene3.png:1946857:image/png:1
+i:pixscape-project/atlases/scene3-2.png:pixscape-project/atlases/scene3-2.png:915571:image/png:1
+i:pixscape-project/atlases/scene3-3.png:pixscape-project/atlases/scene3-3.png:1015436:image/png:1
+i:pixscape-project/atlases/scene3-4.png:pixscape-project/atlases/scene3-4.png:812247:image/png:1
+i:pixscape-project/atlases/scene3-5.png:pixscape-project/atlases/scene3-5.png:151916:image/png:1
+i:pixscape-project/atlases/scene3.png:pixscape-project/atlases/scene3.png:1935886:image/png:1
 t:font/default.fnt:font/default.fnt:36910:text/plain:1
 t:pixscape-project/animations.json:pixscape-project/animations.json:1329:application/json:1
-t:pixscape-project/atlases/scene2.atlas:pixscape-project/atlases/scene2.atlas:1500:text/plain:1
-t:pixscape-project/atlases/scene3.atlas:pixscape-project/atlases/scene3.atlas:4032:text/plain:1
-t:pixscape-project/effects/Blood.p:pixscape-project/effects/Blood.p:4351:text/plain:1
-t:pixscape-project/effects/Burnout.p:pixscape-project/effects/Burnout.p:2303:text/plain:1
+t:pixscape-project/atlases/scene2.atlas:pixscape-project/atlases/scene2.atlas:1792:text/plain:1
+t:pixscape-project/atlases/scene3.atlas:pixscape-project/atlases/scene3.atlas:4221:text/plain:1
 t:pixscape-project/effects/Dust Left.p:pixscape-project/effects/Dust Left.p:2019:text/plain:1
 t:pixscape-project/effects/Dust Right.p:pixscape-project/effects/Dust Right.p:2018:text/plain:1
 t:pixscape-project/effects/Dust.p:pixscape-project/effects/Dust.p:4343:text/plain:1
@@ -68,9 +67,9 @@ t:pixscape-project/effects/Thruster.p:pixscape-project/effects/Thruster.p:2200:t
 t:pixscape-project/effects/Trail Fart.p:pixscape-project/effects/Trail Fart.p:1883:text/plain:1
 t:pixscape-project/effects/Trail Pixel.p:pixscape-project/effects/Trail Pixel.p:1541:text/plain:1
 t:pixscape-project/effects/Trail.p:pixscape-project/effects/Trail.p:1575:text/plain:1
-t:pixscape-project/project.json:pixscape-project/project.json:1621:application/json:1
-t:pixscape-project/scenes/scene2.json:pixscape-project/scenes/scene2.json:36845:application/json:1
-t:pixscape-project/scenes/scene3.json:pixscape-project/scenes/scene3.json:154551:application/json:1
+t:pixscape-project/project.json:pixscape-project/project.json:1620:application/json:1
+t:pixscape-project/scenes/scene2.json:pixscape-project/scenes/scene2.json:40483:application/json:1
+t:pixscape-project/scenes/scene3.json:pixscape-project/scenes/scene3.json:153611:application/json:1
 t:pixscape-project/shaders/core/desktop-gl30/multi-texture.frag:pixscape-project/shaders/core/desktop-gl30/multi-texture.frag:1295:text/plain:1
 t:pixscape-project/shaders/core/desktop-gl30/multi-texture.vert:pixscape-project/shaders/core/desktop-gl30/multi-texture.vert:364:text/plain:1
 t:pixscape-project/shaders/core/desktop-gl30/texture-array-conelight.frag:pixscape-project/shaders/core/desktop-gl30/texture-array-conelight.frag:734:text/plain:1
