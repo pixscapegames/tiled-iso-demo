@@ -1,29 +1,21 @@
 {
 "metadata": { "version": 1 },
 "componentIdentifiers": {
-	"games.pixscape.runtime.component.AssetRefComponent": "AssetRefComponent",
-	"games.pixscape.runtime.component.OrientedBoundsComponent": "OrientedBoundsComponent",
 	"games.pixscape.runtime.component.AABBComponent": "AABBComponent",
-	"games.pixscape.runtime.component.LayerComponent": "LayerComponent",
-	"games.pixscape.runtime.component.SpatialHeightComponent": "SpatialHeightComponent",
-	"games.pixscape.runtime.component.TiledLayerComponent": "TiledLayerComponent",
-	"games.pixscape.runtime.component.physics.PhysicsFixturesComponent": "PhysicsFixturesComponent",
-	"games.pixscape.runtime.component.TransformComponent": "TransformComponent",
 	"games.pixscape.runtime.component.SpatialBlocksComponent": "SpatialBlocksComponent",
-	"games.pixscape.runtime.component.AnimationComponent": "AnimationComponent",
-	"games.pixscape.runtime.component.physics.PhysicsBodyComponent": "PhysicsBodyComponent",
-	"games.pixscape.runtime.component.DimensionsComponent": "DimensionsComponent",
 	"games.pixscape.runtime.component.EntityIndexComponent": "EntityIndexComponent",
-	"games.pixscape.runtime.component.TextureRegionComponent": "TextureRegionComponent",
-	"games.pixscape.runtime.component.VisibilityComponent": "VisibilityComponent",
+	"games.pixscape.runtime.component.DimensionsComponent": "DimensionsComponent",
+	"games.pixscape.runtime.component.OrientedBoundsComponent": "OrientedBoundsComponent",
+	"games.pixscape.runtime.component.TiledLayerComponent": "TiledLayerComponent",
 	"games.pixscape.runtime.component.PixscapeIdentityComponent": "PixscapeIdentityComponent",
+	"games.pixscape.runtime.component.TransformComponent": "TransformComponent",
+	"games.pixscape.runtime.component.VisibilityComponent": "VisibilityComponent",
 	"games.pixscape.runtime.component.ParticleEmitterComponent": "ParticleEmitterComponent",
-	"games.pixscape.runtime.component.RenderMaterialComponent": "RenderMaterialComponent",
-	"games.pixscape.runtime.component.TintComponent": "TintComponent"
+	"games.pixscape.runtime.component.LayerComponent": "LayerComponent"
 },
 "entities": {
 	"0": {
-		"archetype": 11,
+		"archetype": 1,
 		"components": {
 			"LayerComponent": { "layerIndex": 3, "type": 3 },
 			"TiledLayerComponent": {
@@ -56,7 +48,7 @@
 		}
 	},
 	"2": {
-		"archetype": 19,
+		"archetype": 3,
 		"components": {
 			"LayerComponent": { "layerIndex": 1, "type": 3, "spatialEnabled": true },
 			"SpatialBlocksComponent": {
@@ -68,13 +60,6 @@
 						"width": 9.099863,
 						"depth": 0.27611732,
 						"height": 153.41284,
-						"spatialV2VolumeAuthored": true,
-						"spatialV2FootprintMinX": -1581.5845,
-						"spatialV2FootprintMinY": 2423.335,
-						"spatialV2FootprintMaxX": -381.45898,
-						"spatialV2FootprintMaxY": 3023.398,
-						"spatialV2Height": 153.41284,
-						"spatialV2RenderY": 2723.3665,
 						"linkedTileRefsAuthored": true,
 						"linkedTileRefs": [
 							{ "gx": 16, "gy": 28, "tileAssetId": 237 },
@@ -115,7 +100,7 @@
 		}
 	},
 	"3": {
-		"archetype": 11,
+		"archetype": 1,
 		"components": {
 			"LayerComponent": { "layerIndex": 2, "type": 3 },
 			"TiledLayerComponent": {
@@ -142,7 +127,7 @@
 		}
 	},
 	"4": {
-		"archetype": 11,
+		"archetype": 1,
 		"components": {
 			"LayerComponent": { "type": 3 },
 			"TiledLayerComponent": {
@@ -170,7 +155,7 @@
 		}
 	},
 	"5": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": -134.65472, "minY": 2641.665, "maxX": -84.654724, "maxY": 2691.665 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -182,7 +167,7 @@
 		}
 	},
 	"6": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": -3.8331966, "minY": 2577.0422, "maxX": 46.1668, "maxY": 2627.0422 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -194,7 +179,7 @@
 		}
 	},
 	"7": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": 122.49829, "minY": 2509.0288, "maxX": 172.49829, "maxY": 2559.0288 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -206,7 +191,7 @@
 		}
 	},
 	"8": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": 250.40576, "minY": 2447.32, "maxX": 300.40576, "maxY": 2497.32 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -218,7 +203,7 @@
 		}
 	},
 	"9": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": 372.0085, "minY": 2380.883, "maxX": 422.0085, "maxY": 2430.883 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -230,7 +215,7 @@
 		}
 	},
 	"10": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": -902.0074, "minY": 2253.6907, "maxX": -852.0074, "maxY": 2303.6907 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -242,7 +227,7 @@
 		}
 	},
 	"11": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": -773, "minY": 2191.982, "maxX": -723, "maxY": 2241.982 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -254,7 +239,7 @@
 		}
 	},
 	"12": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": -647.76855, "minY": 2128.697, "maxX": -597.76855, "maxY": 2178.697 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -266,7 +251,7 @@
 		}
 	},
 	"13": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": -516.7087, "minY": 2059.1077, "maxX": -466.70868, "maxY": 2109.1077 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -278,7 +263,7 @@
 		}
 	},
 	"14": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": -388.80112, "minY": 2002.1274, "maxX": -338.80112, "maxY": 2052.1274 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -290,7 +275,7 @@
 		}
 	},
 	"15": {
-		"archetype": 9,
+		"archetype": 4,
 		"components": {
 			"AABBComponent": { "minX": -366.38763, "minY": 2480.7354, "maxX": -316.38763, "maxY": 2530.7354 },
 			"DimensionsComponent": { "width": 50, "height": 50 },
@@ -306,50 +291,13 @@
 		"components": {
 			"LayerComponent": { "layerIndex": 4, "type": 1, "spatialEnabled": true }
 		}
-	},
-	"17": {
-		"archetype": 15,
-		"components": {
-			"AABBComponent": { "minX": -709.481, "minY": 2649.6382, "maxX": -515.57025, "maxY": 2860.6372 },
-			"AnimationComponent": {
-				"animation": "Run+Attack__a532",
-				"clips": {
-					"default": { "end": 5 }
-				},
-				"currentClip": "default",
-				"stateTime": 134.7732,
-				"frame": 3
-			},
-			"AssetRefComponent": { "assetId": 532, "atlasTag": "scene2" },
-			"DimensionsComponent": { "width": 128, "height": 128 },
-			"EntityIndexComponent": { "layerIndex": 4 },
-			"OrientedBoundsComponent": { "cx": -612.52563, "cy": 2755.1377, "ux": 1, "vx": 0, "vy": 1, "hx": 96.95538, "hy": 105.49939 },
-			"PhysicsFixturesComponent": {
-				"fixtures": [
-					{ "fixtureId": 1000076, "shapeType": 1 }
-				]
-			},
-			"PixscapeIdentityComponent": { "stableId": 506, "name": "Run+Attack__a532" },
-			"RenderMaterialComponent": {},
-			"SpatialHeightComponent": { "height": 1 },
-			"TextureRegionComponent": {},
-			"TransformComponent": {
-				"x": -612.52563,
-				"y": 2755.1377,
-				"originX": 64,
-				"originY": 64,
-				"scaleX": 1.5149279,
-				"scaleY": 1.648428,
-				"invScaleX": 0.6600974,
-				"invScaleY": 0.6066386
-			}
-		}
 	}
 },
 "archetypes": {
+	"1": [ "LayerComponent", "VisibilityComponent", "TiledLayerComponent" ],
 	"2": [ "LayerComponent", "VisibilityComponent" ],
-	"19": [ "LayerComponent", "VisibilityComponent", "TiledLayerComponent", "SpatialBlocksComponent" ],
-	"9": [
+	"3": [ "LayerComponent", "VisibilityComponent", "TiledLayerComponent", "SpatialBlocksComponent" ],
+	"4": [
 		"AABBComponent",
 		"VisibilityComponent",
 		"TransformComponent",
@@ -357,24 +305,6 @@
 		"OrientedBoundsComponent",
 		"EntityIndexComponent",
 		"ParticleEmitterComponent",
-		"PixscapeIdentityComponent"
-	],
-	"11": [ "LayerComponent", "VisibilityComponent", "TiledLayerComponent" ],
-	"15": [
-		"AnimationComponent",
-		"TextureRegionComponent",
-		"RenderMaterialComponent",
-		"AssetRefComponent",
-		"AABBComponent",
-		"VisibilityComponent",
-		"TransformComponent",
-		"PhysicsBodyComponent",
-		"PhysicsFixturesComponent",
-		"DimensionsComponent",
-		"OrientedBoundsComponent",
-		"EntityIndexComponent",
-		"TintComponent",
-		"SpatialHeightComponent",
 		"PixscapeIdentityComponent"
 	]
 }

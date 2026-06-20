@@ -6,7 +6,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputMultiplexer;
-import com.artemis.ComponentMapper;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -17,14 +16,11 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.QueryCallback;
 import com.badlogic.gdx.utils.GdxRuntimeException;
-import games.pixscape.runtime.component.AnimationComponent;
 import games.pixscape.runtime.configuration.PlatformTarget;
 import games.pixscape.runtime.engine.PixscapeEngine;
-import games.pixscape.runtime.profiling.FrameSystemProfiler;
 import games.pixscape.runtime.render.LayerStateSOA;
 import games.pixscape.runtime.service.Box2dWorldService;
 import games.pixscape.runtime.system.optional.PhysicsMouseDragSystem;
-import games.pixscape.runtime.component.physics.PhysicsRuntimeBodyComponent;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class Main extends ApplicationAdapter {
@@ -34,29 +30,10 @@ public class Main extends ApplicationAdapter {
     private static final float CAMERA_ZOOM_SPEED = 1.5f;
     private static final float CAMERA_ZOOM_MIN = 0.2f;
     private static final float CAMERA_ZOOM_MAX = 10f;
-    private static final float HERO_MOVE_ACCELERATION_PIXELS = 450f;
-    private static final float HERO_MAX_SPEED_PIXELS = 300f;
-    private static final float HERO_IDLE_DAMPING_PER_SECOND = 8f;
-    private static final float HERO_ANIMATION_PIXELS_PER_FRAME = 15f;
-    private static final float HERO_ANIMATION_STOP_SPEED_PIXELS = 5f;
-    private static final float HERO_FLIP_SPEED_PIXELS = 5f;
 
     private PixscapeEngine engine;
-    private final RuntimeProfilerConfig runtimeProfilerConfig;
-    private FrameSystemProfiler runtimeProfiler;
-    private RuntimeProfilerReporter runtimeProfilerReporter;
     @SuppressWarnings("unused")
     private Box2dWorldService box2d;
-
-    public Main() {
-        this(RuntimeProfilerConfig.DISABLED);
-    }
-
-    public Main(RuntimeProfilerConfig runtimeProfilerConfig) {
-        this.runtimeProfilerConfig = runtimeProfilerConfig != null
-                ? runtimeProfilerConfig
-                : RuntimeProfilerConfig.DISABLED;
-    }
 
     @Override
     public void create() {
@@ -66,6 +43,7 @@ public class Main extends ApplicationAdapter {
         Gdx.input.setCatchKey(Input.Keys.RIGHT, true);
         Gdx.input.setCatchKey(Input.Keys.UP, true);
         Gdx.input.setCatchKey(Input.Keys.DOWN, true);
+        DemoHeroControlSystem.catchDirectionKeys();
 
         FileHandle projectJson = Gdx.files.internal(PixscapeEngine.RUNTIME_DIR_NAME + "/project.json");
         if (!projectJson.exists()) {
@@ -81,8 +59,10 @@ public class Main extends ApplicationAdapter {
 
         engine = new PixscapeEngine()
                 .setWorldCamera(worldCamera)
-                .setConfigurationCustomizer(builder -> builder.with(dragSystem));
-        attachRuntimeProfiler();
+                .setConfigurationCustomizer(builder -> builder.with(
+                        dragSystem,
+                        new DemoHeroControlSystem(worldCamera)
+                ));
         engine.setPlatformTarget(platformTarget());
         engine.loadProject(projectJson.parent().parent());
         engine.loadScene(SCENE_NAME);
@@ -97,45 +77,16 @@ public class Main extends ApplicationAdapter {
 
     @Override
     public void render() {
-        long appFrameStartNs = 0L;
-        long engineUpdateNs = 0L;
-        long engineRenderNs = 0L;
-        if (runtimeProfilerReporter != null) {
-            appFrameStartNs = com.badlogic.gdx.utils.TimeUtils.nanoTime();
-        }
-
         float dt = Gdx.graphics.getDeltaTime();
-        if (engine != null) {
-            handleHeroControls(dt);
-            updateHeroAnimation(dt);
-            handleCameraZoom(dt);
-            centerCameraOnHero();
-        }
+        if (engine != null) handleCameraZoom(dt);
 
         Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         if (engine != null) {
-            long engineUpdateStartNs = runtimeProfilerReporter != null
-                    ? com.badlogic.gdx.utils.TimeUtils.nanoTime()
-                    : 0L;
             engine.update(dt);
-            if (runtimeProfilerReporter != null) {
-                engineUpdateNs = com.badlogic.gdx.utils.TimeUtils.nanoTime() - engineUpdateStartNs;
-            }
 
-            long engineRenderStartNs = runtimeProfilerReporter != null
-                    ? com.badlogic.gdx.utils.TimeUtils.nanoTime()
-                    : 0L;
             engine.render();
-            if (runtimeProfilerReporter != null) {
-                engineRenderNs = com.badlogic.gdx.utils.TimeUtils.nanoTime() - engineRenderStartNs;
-            }
-        }
-
-        if (runtimeProfilerReporter != null) {
-            long appFrameNs = com.badlogic.gdx.utils.TimeUtils.nanoTime() - appFrameStartNs;
-            runtimeProfilerReporter.afterFrame(dt, appFrameNs, engineUpdateNs, engineRenderNs);
         }
     }
 
@@ -152,19 +103,6 @@ public class Main extends ApplicationAdapter {
             engine.dispose();
             engine = null;
         }
-        runtimeProfiler = null;
-        runtimeProfilerReporter = null;
-    }
-
-    private void attachRuntimeProfiler() {
-        if (!runtimeProfilerConfig.enabled) {
-            return;
-        }
-
-        runtimeProfiler = new FrameSystemProfiler();
-        runtimeProfiler.setEnabled(true);
-        runtimeProfilerReporter = new RuntimeProfilerReporter(runtimeProfiler, runtimeProfilerConfig);
-        engine.setSystemProfiler(runtimeProfiler);
     }
 
     private static PlatformTarget platformTarget() {
@@ -203,134 +141,6 @@ public class Main extends ApplicationAdapter {
         cam.update();
     }
 
-    private void centerCameraOnHero() {
-        Box2dWorldService currentBox2d = box2d;
-        if (currentBox2d == null || currentBox2d.world == null || currentBox2d.isDisposed()) return;
-
-        OrthographicCamera cam = engine.getCamera();
-        if (cam == null) return;
-
-        PhysicsRuntimeBodyComponent runtimeBody = heroRuntimeBody();
-        if (runtimeBody == null || runtimeBody.body == null) return;
-
-        Vector2 heroPosition = runtimeBody.body.getPosition();
-        cam.position.set(currentBox2d.mToPx(heroPosition.x), currentBox2d.mToPx(heroPosition.y), cam.position.z);
-        cam.update();
-    }
-
-    private void handleHeroControls(float dt) {
-        Box2dWorldService currentBox2d = box2d;
-        if (currentBox2d == null || currentBox2d.world == null || currentBox2d.isDisposed()) return;
-
-        PhysicsRuntimeBodyComponent runtimeBody = heroRuntimeBody();
-        if (runtimeBody == null
-                || runtimeBody.body == null
-                || runtimeBody.body.getType() != BodyDef.BodyType.DynamicBody) {
-            return;
-        }
-
-        float dx = 0f;
-        float dy = 0f;
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) dx -= 1f;
-        if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) dx += 1f;
-        if (Gdx.input.isKeyPressed(Input.Keys.UP)) dy += 1f;
-        if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) dy -= 1f;
-
-        boolean hasInput = dx != 0f || dy != 0f;
-
-        if (dx != 0f || dy != 0f) {
-            float invLen = 1f / (float) Math.sqrt(dx * dx + dy * dy);
-            dx *= invLen;
-            dy *= invLen;
-        }
-
-        if (!hasInput) {
-            dampHeroVelocity(runtimeBody, dt);
-            return;
-        }
-
-        clampHeroVelocity(runtimeBody, currentBox2d);
-
-        float force = runtimeBody.body.getMass() * currentBox2d.pxToM(HERO_MOVE_ACCELERATION_PIXELS);
-        runtimeBody.body.applyForceToCenter(dx * force, dy * force, true);
-    }
-
-    private void dampHeroVelocity(PhysicsRuntimeBodyComponent runtimeBody, float dt) {
-        float safeDt = Math.min(dt, CAMERA_DT_MAX);
-        Vector2 velocity = runtimeBody.body.getLinearVelocity();
-        float damping = (float) Math.exp(-HERO_IDLE_DAMPING_PER_SECOND * safeDt);
-        velocity.scl(damping);
-
-        if (velocity.len2() < 0.0001f) {
-            velocity.setZero();
-        }
-
-        runtimeBody.body.setLinearVelocity(velocity);
-    }
-
-    private void clampHeroVelocity(PhysicsRuntimeBodyComponent runtimeBody, Box2dWorldService currentBox2d) {
-        Vector2 velocity = runtimeBody.body.getLinearVelocity();
-        float maxSpeed = currentBox2d.pxToM(HERO_MAX_SPEED_PIXELS);
-        if (velocity.len2() > maxSpeed * maxSpeed) {
-            runtimeBody.body.setLinearVelocity(velocity.nor().scl(maxSpeed));
-        }
-    }
-
-    private void updateHeroAnimation(float dt) {
-        Box2dWorldService currentBox2d = box2d;
-        if (currentBox2d == null || currentBox2d.world == null || currentBox2d.isDisposed()) return;
-
-        PhysicsRuntimeBodyComponent runtimeBody = heroRuntimeBody();
-        if (runtimeBody == null || runtimeBody.body == null) return;
-
-        int hero = engine.firstEntityByName("hero");
-        if (hero < 0) return;
-
-        ComponentMapper<AnimationComponent> animations = engine.mapper(AnimationComponent.class);
-        AnimationComponent animation = animations.getSafe(hero, null);
-        if (animation == null) return;
-
-        Vector2 velocity = runtimeBody.body.getLinearVelocity();
-//        updateHeroAnimationFlip(currentBox2d, animation, velocity);
-
-        float speedPixels = currentBox2d.mToPx(velocity.len());
-        if (speedPixels < HERO_ANIMATION_STOP_SPEED_PIXELS) {
-            animation.fps = 0f;
-            return;
-        }
-
-        animation.fps = 1f;
-        animation.stateTime += speedPixels * Math.min(dt, CAMERA_DT_MAX) / HERO_ANIMATION_PIXELS_PER_FRAME - Math.min(dt, CAMERA_DT_MAX);
-    }
-
-//    private void updateHeroAnimationFlip(Box2dWorldService currentBox2d,
-//                                         AnimationComponent animation,
-//                                         Vector2 velocity) {
-//        AnimationComponent.Clip clip = animation.getClip();
-//        if (clip == null) return;
-//
-//        float vxPixels = currentBox2d.mToPx(velocity.x);
-//        float vyPixels = currentBox2d.mToPx(velocity.y);
-//        if (Math.abs(vxPixels) < HERO_FLIP_SPEED_PIXELS && Math.abs(vyPixels) < HERO_FLIP_SPEED_PIXELS) {
-//            return;
-//        }
-//
-//        boolean flip = vxPixels < -HERO_FLIP_SPEED_PIXELS || vyPixels > HERO_FLIP_SPEED_PIXELS;
-//        if (clip.flipX != flip) {
-//            clip.flipX = flip;
-//            animation.frame = -1;
-//        }
-//    }
-
-    private PhysicsRuntimeBodyComponent heroRuntimeBody() {
-        int hero = engine.firstEntityByName("hero");
-        if (hero < 0) return null;
-
-        ComponentMapper<PhysicsRuntimeBodyComponent> runtimeBodies =
-                engine.mapper(PhysicsRuntimeBodyComponent.class);
-        return runtimeBodies.getSafe(hero, null);
-    }
-
     private static final class PreviewInputAdapter extends InputAdapter {
         @Override
         public boolean keyDown(int keycode) {
@@ -352,6 +162,7 @@ public class Main extends ApplicationAdapter {
                     || keycode == Input.Keys.RIGHT
                     || keycode == Input.Keys.UP
                     || keycode == Input.Keys.DOWN
+                    || DemoHeroControlSystem.isDirectionKey(keycode)
                     || keycode == Input.Keys.PLUS
                     || keycode == Input.Keys.EQUALS
                     || keycode == Input.Keys.MINUS

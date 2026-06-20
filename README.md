@@ -6,6 +6,8 @@ This repository contains a small test project using **Pixscape Runtime**.
 
 It demonstrates an isometric Tiled map with Pixscape’s **2.5D rendering features**.
 
+To move the hero, use the alphanumeric keyboard (8 -> 0 deg, 9 -> 45 deg ...)
+
 The project can run on:
 
 - Desktop

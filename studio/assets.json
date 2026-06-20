@@ -1,6 +1,6 @@
 {
 "version": 2,
-"nextId": 912,
+"nextId": 924,
 "assets": [
 	{
 		"class": "games.pixscape.studio.asset.ImageAssetMeta",
@@ -5971,96 +5971,6 @@
 		"cellY": 0
 	},
 	{
-		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
-		"id": 526,
-		"type": "ANIMATION",
-		"logicalPath": "animations/Walk",
-		"sourceRelPath": "orig/animations/Walk__a526",
-		"scope": "USER",
-		"frameCount": 8,
-		"fps": 12,
-		"currentClip": "default",
-		"clips": {
-			"default": {
-				"start": 0,
-				"end": 7,
-				"flipX": false
-			}
-		}
-	},
-	{
-		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
-		"id": 527,
-		"type": "ANIMATION",
-		"logicalPath": "animations/Idle",
-		"sourceRelPath": "orig/animations/Idle__a527",
-		"scope": "USER",
-		"frameCount": 4,
-		"fps": 12,
-		"currentClip": null,
-		"clips": {}
-	},
-	{
-		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
-		"id": 528,
-		"type": "ANIMATION",
-		"logicalPath": "animations/Idle2",
-		"sourceRelPath": "orig/animations/Idle2__a528",
-		"scope": "USER",
-		"frameCount": 4,
-		"fps": 12,
-		"currentClip": null,
-		"clips": {}
-	},
-	{
-		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
-		"id": 529,
-		"type": "ANIMATION",
-		"logicalPath": "animations/Attack 2",
-		"sourceRelPath": "orig/animations/Attack 2__a529",
-		"scope": "USER",
-		"frameCount": 4,
-		"fps": 12,
-		"currentClip": null,
-		"clips": {}
-	},
-	{
-		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
-		"id": 530,
-		"type": "ANIMATION",
-		"logicalPath": "animations/Run",
-		"sourceRelPath": "orig/animations/Run__a530",
-		"scope": "USER",
-		"frameCount": 7,
-		"fps": 12,
-		"currentClip": null,
-		"clips": {}
-	},
-	{
-		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
-		"id": 531,
-		"type": "ANIMATION",
-		"logicalPath": "animations/Attack 1",
-		"sourceRelPath": "orig/animations/Attack 1__a531",
-		"scope": "USER",
-		"frameCount": 5,
-		"fps": 12,
-		"currentClip": null,
-		"clips": {}
-	},
-	{
-		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
-		"id": 532,
-		"type": "ANIMATION",
-		"logicalPath": "animations/Run+Attack",
-		"sourceRelPath": "orig/animations/Run+Attack__a532",
-		"scope": "USER",
-		"frameCount": 6,
-		"fps": 12,
-		"currentClip": null,
-		"clips": {}
-	},
-	{
 		"class": "games.pixscape.studio.asset.TilesetAssetMeta",
 		"id": 534,
 		"type": "TILESET",
@@ -10535,6 +10445,54 @@
 		"logicalPath": "images/tree2",
 		"sourceRelPath": "orig/images/tree2__a909.png",
 		"scope": "USER"
+	},
+	{
+		"class": "games.pixscape.studio.asset.ImageAssetMeta",
+		"id": 919,
+		"type": "IMAGE",
+		"logicalPath": "images/Draw_Bow_Body_000",
+		"sourceRelPath": "orig/images/Draw_Bow_Body_000__a919.png",
+		"scope": "USER"
+	},
+	{
+		"class": "games.pixscape.studio.asset.ImageAssetMeta",
+		"id": 920,
+		"type": "IMAGE",
+		"logicalPath": "images/Draw_Bow_Body_135",
+		"sourceRelPath": "orig/images/Draw_Bow_Body_135__a920.png",
+		"scope": "USER"
+	},
+	{
+		"class": "games.pixscape.studio.asset.ImageAssetMeta",
+		"id": 921,
+		"type": "IMAGE",
+		"logicalPath": "images/Draw_Bow_Body_067",
+		"sourceRelPath": "orig/images/Draw_Bow_Body_067__a921.png",
+		"scope": "USER"
+	},
+	{
+		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
+		"id": 922,
+		"type": "ANIMATION",
+		"logicalPath": "animations/Idle",
+		"sourceRelPath": "orig/animations/Idle__a922",
+		"scope": "USER",
+		"frameCount": 128,
+		"fps": 12,
+		"currentClip": null,
+		"clips": {}
+	},
+	{
+		"class": "games.pixscape.studio.asset.AnimationAssetMeta",
+		"id": 923,
+		"type": "ANIMATION",
+		"logicalPath": "animations/run",
+		"sourceRelPath": "orig/animations/run__a923",
+		"scope": "USER",
+		"frameCount": 160,
+		"fps": 12,
+		"currentClip": null,
+		"clips": {}
 	}
 ]
 }
