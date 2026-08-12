@@ -35,6 +35,7 @@ gwt {
   sourceLevel = '11'
 
   devMode {
+    modules = ["games.pixscape.demo.GdxDefinitionSuperdev"]
     port = 8080
     startupUrl = "http://127.0.0.1:8080/index.html"
   }
@@ -80,11 +81,6 @@ dependencies {
 //// The war/ folder shouldn't be committed to version control.
 clean.delete += [file("war")]
 
-//// The compileJava task is run at the start of any GWT build; we need to clean the output directory BEFORE
-//// anything can be built into that output directory, so the rest of the build can use it.
-tasks.named("compileJava").get().dependsOn("clean")
-
-
 //// You should always use the dist task (which could be folded into the "other" group), not the build task.
 tasks.register('dist') {
   //// This can't depend on the "clean" task because that would remove things it needs.
@@ -122,12 +118,6 @@ tasks.register('dist') {
         // either remove or comment out only the "filter" line above this.
       }
       into outputPath
-    }
-    copy {
-      from("../assets") {
-        exclude 'assets.txt'
-      }
-      into "${outputPath}/assets"
     }
     copy {
       from "war"

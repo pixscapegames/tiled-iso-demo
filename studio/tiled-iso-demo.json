@@ -1,5 +1,5 @@
 {
-"projectTitle": "tiled demo",
+"projectTitle": "tiled iso demo",
 "projectFileName": "tiled-iso-demo",
 "projectDirectoryPath": "C:/Users/lauro/IdeaProjects/tiled-iso-demo/studio",
 "projectKind": "pixscape-studio-project",
@@ -7,9 +7,13 @@
 "version": "1",
 "exportRootPathDir": "C:/Users/lauro/IdeaProjects/tiled-iso-demo/assets",
 "scenes": {
-	"iso": {
-		"name": "iso",
-		"file": "scene2.json",
+	"demo": {
+		"sceneSchemaVersion": 2,
+		"name": "demo",
+		"file": "scene1.json",
+		"nextEntityStableId": 131,
+		"runtimeParticleEffectPaths": [],
+		"runtimePrefabIds": [],
 		"physicsEnabled": true,
 		"pixelsPerMeter": 100,
 		"gravityX": 0,
@@ -17,6 +21,7 @@
 		"doSleep": true,
 		"physicsParallaxX": "NaN",
 		"physicsParallaxY": "NaN",
+		"nextPhysicsShapeId": 164,
 		"ambientMulR": 1,
 		"ambientMulG": 1,
 		"ambientMulB": 1,
@@ -26,7 +31,7 @@
 		"tileHeight": 128,
 		"chunkSize": 16,
 		"mainCameraOffscreen": false,
-		"description": "",
+		"description": "Demo project using tiled maps iso ",
 		"showPhysicsFixtures": false,
 		"showPhysicsJoints": false,
 		"editorMode": "TILE",
@@ -37,51 +42,20 @@
 		"runtimeAvailability": {
 			"spriteAssetIds": [],
 			"animationAssetIds": [],
-			"particleEffectPaths": [],
-			"prefabIds": [],
+			"particleEffectPaths": [
+				"Blood.p",
+				"Flame.p"
+			],
+			"prefabIds": [
+				"snake"
+			],
 			"tiledTileAssetIds": [],
 			"tiledAnimationIds": []
 		}
-	},
-	"iso2": {
-		"name": "iso2",
-		"file": "scene3.json",
-		"physicsEnabled": true,
-		"pixelsPerMeter": 100,
-		"gravityX": 0,
-		"gravityY": 0,
-		"doSleep": true,
-		"physicsParallaxX": "NaN",
-		"physicsParallaxY": "NaN",
-		"ambientMulR": 0.768,
-		"ambientMulG": 0.768,
-		"ambientMulB": 0.8115,
-		"tiledEnabled": true,
-		"tiledProjection": "ISO",
-		"tileWidth": 256,
-		"tileHeight": 128,
-		"chunkSize": 16,
-		"mainCameraOffscreen": false,
-		"description": "",
-		"showPhysicsFixtures": false,
-		"showPhysicsJoints": false,
-		"editorMode": "TILE",
-		"ambientColorR": 0.2,
-		"ambientColorG": 0.2,
-		"ambientColorB": 0.35,
-		"ambientIntensity": 0.29,
-		"runtimeAvailability": {
-			"spriteAssetIds": [],
-			"animationAssetIds": [ 922 ],
-			"particleEffectPaths": [],
-			"prefabIds": [],
-			"tiledTileAssetIds": [ 154, 156, 211 ],
-			"tiledAnimationIds": [ 911 ]
-		}
 	}
 },
-"currentSceneName": "iso2",
-"nextSceneIndex": 4,
+"currentSceneName": "demo",
+"nextSceneIndex": 9,
 "glSamples": 0,
 "previewWidth": 1280,
 "previewHeight": 720,

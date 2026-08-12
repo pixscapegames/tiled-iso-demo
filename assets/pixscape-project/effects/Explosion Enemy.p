@@ -136,9 +136,9 @@ behind: false
 premultipliedAlpha: false
 spriteMode: random
 - Image Paths -
-/E:/workspace/Particle Park/particles/images/explosion-1__a7.png
-/E:/workspace/Particle Park/particles/images/explosion-2__a8.png
-/E:/workspace/Particle Park/particles/images/explosion-3__a9.png
+/E:/workspace/Particle Park/particles/images/explosion-1__a1289.png
+/E:/workspace/Particle Park/particles/images/explosion-2__a1290.png
+/E:/workspace/Particle Park/particles/images/explosion-3__a1291.png
 
 
 explosion
@@ -281,9 +281,9 @@ behind: false
 premultipliedAlpha: false
 spriteMode: random
 - Image Paths -
-/E:/workspace/Particle Park/particles/images/explosion-1__a7.png
-/E:/workspace/Particle Park/particles/images/explosion-2__a8.png
-/E:/workspace/Particle Park/particles/images/explosion-3__a9.png
+/E:/workspace/Particle Park/particles/images/explosion-1__a1289.png
+/E:/workspace/Particle Park/particles/images/explosion-2__a1290.png
+/E:/workspace/Particle Park/particles/images/explosion-3__a1291.png
 
 
 explosion
@@ -426,9 +426,9 @@ behind: false
 premultipliedAlpha: false
 spriteMode: random
 - Image Paths -
-/E:/workspace/Particle Park/particles/images/explosion-1__a7.png
-/E:/workspace/Particle Park/particles/images/explosion-2__a8.png
-/E:/workspace/Particle Park/particles/images/explosion-3__a9.png
+/E:/workspace/Particle Park/particles/images/explosion-1__a1289.png
+/E:/workspace/Particle Park/particles/images/explosion-2__a1290.png
+/E:/workspace/Particle Park/particles/images/explosion-3__a1291.png
 
 
 explosion
@@ -571,9 +571,9 @@ behind: false
 premultipliedAlpha: false
 spriteMode: random
 - Image Paths -
-/E:/workspace/Particle Park/particles/images/explosion-1__a7.png
-/E:/workspace/Particle Park/particles/images/explosion-2__a8.png
-/E:/workspace/Particle Park/particles/images/explosion-3__a9.png
+/E:/workspace/Particle Park/particles/images/explosion-1__a1289.png
+/E:/workspace/Particle Park/particles/images/explosion-2__a1290.png
+/E:/workspace/Particle Park/particles/images/explosion-3__a1291.png
 
 
 explosion
@@ -716,7 +716,7 @@ behind: false
 premultipliedAlpha: false
 spriteMode: random
 - Image Paths -
-explosion-1__a7.png
-explosion-2__a8.png
-explosion-3__a9.png
+explosion-1__a1289.png
+explosion-2__a1290.png
+explosion-3__a1291.png
 

@@ -10,9 +10,13 @@
 "audioDir": "audio",
 "prefabsDir": "prefabs",
 "scenes": {
-	"iso": {
-		"name": "iso",
-		"file": "scene2.json",
+	"demo": {
+		"sceneSchemaVersion": 2,
+		"name": "demo",
+		"file": "scene1.json",
+		"nextEntityStableId": 131,
+		"runtimeParticleEffectPaths": [],
+		"runtimePrefabIds": [],
 		"physicsEnabled": true,
 		"pixelsPerMeter": 100,
 		"gravityX": 0,
@@ -20,6 +24,7 @@
 		"doSleep": true,
 		"physicsParallaxX": "NaN",
 		"physicsParallaxY": "NaN",
+		"nextPhysicsShapeId": 164,
 		"ambientMulR": 1,
 		"ambientMulG": 1,
 		"ambientMulB": 1,
@@ -32,42 +37,19 @@
 		"runtimeAvailability": {
 			"sprites": [],
 			"animations": [],
-			"particles": [],
-			"prefabs": [],
+			"particles": [
+				"Blood.p",
+				"Flame.p"
+			],
+			"prefabs": [
+				"snake"
+			],
 			"tiledTiles": [],
 			"tiledAnimations": []
 		}
-	},
-	"iso2": {
-		"name": "iso2",
-		"file": "scene3.json",
-		"physicsEnabled": true,
-		"pixelsPerMeter": 100,
-		"gravityX": 0,
-		"gravityY": 0,
-		"doSleep": true,
-		"physicsParallaxX": "NaN",
-		"physicsParallaxY": "NaN",
-		"ambientMulR": 0.768,
-		"ambientMulG": 0.768,
-		"ambientMulB": 0.8115,
-		"tiledEnabled": true,
-		"tiledProjection": "ISO",
-		"tileWidth": 256,
-		"tileHeight": 128,
-		"chunkSize": 16,
-		"mainCameraOffscreen": false,
-		"runtimeAvailability": {
-			"sprites": [],
-			"animations": [],
-			"particles": [],
-			"prefabs": [],
-			"tiledTiles": [ 154, 156, 211 ],
-			"tiledAnimations": [ 911 ]
-		}
 	}
 },
-"currentSceneName": "iso2",
+"currentSceneName": "demo",
 "glSamples": 0,
 "projectKind": "pixscape-runtime-project"
 }

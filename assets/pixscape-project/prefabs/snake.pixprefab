@@ -1,0 +1,146 @@
+{
+"type": "pixscape-prefab",
+"version": 2,
+"name": "snake",
+"entities": [
+	{
+		"sourceEntityId": 28,
+		"transform": {
+			"x": -95.93151,
+			"y": 3543.4182,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 160,
+			"originY": 160
+		},
+		"entityIndex": {
+			"layerIndex": 4,
+			"zIndex": 4
+		},
+		"meta": {
+			"kind": "ANIMATION"
+		},
+		"identity": {
+			"name": "snake"
+		},
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 320,
+			"height": 320
+		},
+		"textureRegion": {
+			"u1": 0.62939453,
+			"v1": 0.34521484,
+			"u2": 0.78564453,
+			"v2": 0.50146484,
+			"pixW": 320,
+			"pixH": 320,
+			"valid": true
+		},
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1,
+			"textureHandle": 13,
+			"debugAtlasTag": "scene1"
+		},
+		"assetRef": {
+			"assetId": 1325,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": {
+			"animationAssetIds": {
+				"items": [ 1322, 1323, 1324, 1325, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+				"size": 4,
+				"ordered": true
+			},
+			"fps": 12,
+			"playing": true,
+			"loop": true,
+			"stateTime": 5404.8115,
+			"frame": 9,
+			"currentClip": "default"
+		},
+		"shaderParams": null,
+		"physicsBody": {
+			"type": 0,
+			"fixedRotation": true,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 0,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"physicsShapeId": 161,
+				"spatialBlockId": 0,
+				"spatialFootprint": false,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": -0.750701,
+					"offsetY": -0.5602245,
+					"angleDegrees": 0,
+					"radius": 0.5,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": true,
+				"categoryBits": 8,
+				"maskBits": 2,
+				"groupIndex": 0,
+				"enabled": true
+			},
+			{
+				"physicsShapeId": 163,
+				"spatialBlockId": 0,
+				"spatialFootprint": true,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": 0.050700672,
+					"offsetY": -0.14596435,
+					"angleDegrees": 0,
+					"radius": 0.30347952,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": false,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true
+			}
+		],
+		"joint": null,
+		"distanceJoint": null,
+		"revoluteJoint": null,
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	}
+]
+}

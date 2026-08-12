@@ -1,23 +1,115 @@
 {
 "animations": [
 	{
-		"assetId": 922,
-		"name": "Idle",
+		"assetId": 1302,
+		"name": "hero_run",
 		"fps": 12.0,
-		"currentClip": "default",
-		"frameCount": 128,
+		"currentClip": "run_000",
+		"frameCount": 80,
 		"clips": [
-			{ "name": "default", "start": 0, "end": 127, "flipX": false }
+			{ "name": "run_000", "start": 0, "end": 19, "flipX": false },
+			{ "name": "run_090", "start": 20, "end": 39, "flipX": false },
+			{ "name": "run_180", "start": 40, "end": 59, "flipX": false },
+			{ "name": "run_270", "start": 60, "end": 79, "flipX": false }
 		]
 	},
 	{
-		"assetId": 923,
-		"name": "run",
+		"assetId": 1303,
+		"name": "hero_idle",
+		"fps": 12.0,
+		"currentClip": "idle_000",
+		"frameCount": 64,
+		"clips": [
+			{ "name": "idle_000", "start": 0, "end": 15, "flipX": false },
+			{ "name": "idle_090", "start": 16, "end": 31, "flipX": false },
+			{ "name": "idle_180", "start": 32, "end": 47, "flipX": false },
+			{ "name": "idle_270", "start": 48, "end": 63, "flipX": false }
+		]
+	},
+	{
+		"assetId": 1304,
+		"name": "hero_attack",
+		"fps": 24.0,
+		"currentClip": "attack_000",
+		"frameCount": 96,
+		"clips": [
+			{ "name": "attack_000", "start": 0, "end": 23, "flipX": false },
+			{ "name": "attack_090", "start": 24, "end": 47, "flipX": false },
+			{ "name": "attack_180", "start": 48, "end": 71, "flipX": false },
+			{ "name": "attack_270", "start": 72, "end": 95, "flipX": false }
+		]
+	},
+	{
+		"assetId": 1305,
+		"name": "hero_hit",
+		"fps": 12.0,
+		"currentClip": "hit_000",
+		"frameCount": 64,
+		"clips": [
+			{ "name": "hit_000", "start": 0, "end": 15, "flipX": false },
+			{ "name": "hit_090", "start": 16, "end": 31, "flipX": false },
+			{ "name": "hit_180", "start": 32, "end": 47, "flipX": false },
+			{ "name": "hit_270", "start": 48, "end": 63, "flipX": false }
+		]
+	},
+	{
+		"assetId": 1306,
+		"name": "willow",
 		"fps": 12.0,
 		"currentClip": "default",
-		"frameCount": 160,
+		"frameCount": 16,
 		"clips": [
-			{ "name": "default", "start": 0, "end": 159, "flipX": false }
+			{ "name": "default", "start": 0, "end": 15, "flipX": false }
+		]
+	},
+	{
+		"assetId": 1307,
+		"name": "willow2",
+		"fps": 12.0,
+		"currentClip": "default",
+		"frameCount": 16,
+		"clips": [
+			{ "name": "default", "start": 0, "end": 15, "flipX": false }
+		]
+	},
+	{
+		"assetId": 1322,
+		"name": "snake_attack",
+		"fps": 12.0,
+		"currentClip": "attack_000",
+		"frameCount": 16,
+		"clips": [
+			{ "name": "attack_000", "start": 0, "end": 15, "flipX": false }
+		]
+	},
+	{
+		"assetId": 1323,
+		"name": "snake_death",
+		"fps": 12.0,
+		"currentClip": "default",
+		"frameCount": 16,
+		"clips": [
+			{ "name": "default", "start": 0, "end": 15, "flipX": false }
+		]
+	},
+	{
+		"assetId": 1324,
+		"name": "snake_hit",
+		"fps": 12.0,
+		"currentClip": "default",
+		"frameCount": 9,
+		"clips": [
+			{ "name": "default", "start": 0, "end": 8, "flipX": false }
+		]
+	},
+	{
+		"assetId": 1325,
+		"name": "snake_idle",
+		"fps": 12.0,
+		"currentClip": "default",
+		"frameCount": 12,
+		"clips": [
+			{ "name": "default", "start": 0, "end": 11, "flipX": false }
 		]
 	}
 ]

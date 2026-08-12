@@ -123,5 +123,5 @@ behind: false
 premultipliedAlpha: false
 spriteMode: single
 - Image Paths -
-pentagram__a67.png
+pentagram__a1310.png
 

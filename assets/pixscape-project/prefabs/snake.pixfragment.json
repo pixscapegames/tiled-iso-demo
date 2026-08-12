@@ -1,0 +1,134 @@
+{
+"metadata": { "version": 1 },
+"componentIdentifiers": {
+	"games.pixscape.runtime.component.AssetRefComponent": "AssetRefComponent",
+	"games.pixscape.runtime.component.EntityIndexComponent": "EntityIndexComponent",
+	"games.pixscape.runtime.component.AABBComponent": "AABBComponent",
+	"games.pixscape.runtime.component.DimensionsComponent": "DimensionsComponent",
+	"games.pixscape.runtime.component.physics.PhysicsShapesComponent": "PhysicsShapesComponent",
+	"games.pixscape.runtime.component.TintComponent": "TintComponent",
+	"games.pixscape.runtime.component.spatial.SpatialHeightComponent": "SpatialHeightComponent",
+	"games.pixscape.runtime.component.OrientedBoundsComponent": "OrientedBoundsComponent",
+	"games.pixscape.runtime.component.TextureRegionComponent": "TextureRegionComponent",
+	"games.pixscape.runtime.component.AnimationComponent": "AnimationComponent",
+	"games.pixscape.runtime.component.physics.PhysicsBodyComponent": "PhysicsBodyComponent",
+	"games.pixscape.runtime.component.PixscapeIdentityComponent": "PixscapeIdentityComponent",
+	"games.pixscape.runtime.component.VisibilityComponent": "VisibilityComponent",
+	"games.pixscape.runtime.component.TransformComponent": "TransformComponent",
+	"games.pixscape.runtime.component.RenderMaterialComponent": "RenderMaterialComponent"
+},
+"entities": {
+	"0": {
+		"archetype": 17,
+		"components": {
+			"AABBComponent": { "minX": 0, "minY": 0, "maxX": 0, "maxY": 0 },
+			"AnimationComponent": {
+				"animationAssetIds": {
+					"items": [ 1322, 1323, 1324, 1325, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+					"size": 4,
+					"ordered": true
+				},
+				"currentClip": "default",
+				"fps": 12,
+				"stateTime": 5404.8115,
+				"playing": true,
+				"loop": true,
+				"frame": 9
+			},
+			"AssetRefComponent": { "assetId": 1325, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 320, "height": 320 },
+			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 4 },
+			"OrientedBoundsComponent": { "cx": 0, "cy": 0, "ux": 0, "uy": 0, "vx": 0, "vy": 0, "hx": 0, "hy": 0 },
+			"PhysicsBodyComponent": {
+				"type": 0,
+				"fixedRotation": true,
+				"bullet": false,
+				"allowSleep": true,
+				"awake": true,
+				"gravityScale": 0,
+				"linearDamping": 0,
+				"angularDamping": 0
+			},
+			"PhysicsShapesComponent": {
+				"shapes": [
+					{
+						"physicsShapeId": 161,
+						"spatialBlockId": 0,
+						"spatialFootprint": false,
+						"geometry": {
+							"shapeType": 1,
+							"offsetX": -0.750701,
+							"offsetY": -0.5602245,
+							"angleDegrees": 0,
+							"radius": 0.5,
+							"halfWidth": 0.5,
+							"halfHeight": 0.5,
+							"polygonVertices": [],
+							"polygonVertexCount": 0
+						},
+						"density": 1,
+						"friction": 0.2,
+						"restitution": 0,
+						"sensor": true,
+						"categoryBits": 8,
+						"maskBits": 2,
+						"groupIndex": 0,
+						"enabled": true
+					},
+					{
+						"physicsShapeId": 163,
+						"spatialBlockId": 0,
+						"spatialFootprint": true,
+						"geometry": {
+							"shapeType": 1,
+							"offsetX": 0.050700672,
+							"offsetY": -0.14596435,
+							"angleDegrees": 0,
+							"radius": 0.30347952,
+							"halfWidth": 0.5,
+							"halfHeight": 0.5,
+							"polygonVertices": [],
+							"polygonVertexCount": 0
+						},
+						"density": 1,
+						"friction": 0.2,
+						"restitution": 0,
+						"sensor": false,
+						"categoryBits": 1,
+						"maskBits": -1,
+						"groupIndex": 0,
+						"enabled": true
+					}
+				]
+			},
+			"PixscapeIdentityComponent": { "name": "snake" },
+			"RenderMaterialComponent": { "shaderIdx": 0, "blendModeId": 1 },
+			"SpatialHeightComponent": { "altitude": 0, "height": 1 },
+			"TextureRegionComponent": {},
+			"TintComponent": { "rgba": -1 },
+			"TransformComponent": { "x": -95.93151, "y": 3543.4182, "originX": 160, "originY": 160, "rotationRad": 0, "scaleX": 1, "scaleY": 1 },
+			"VisibilityComponent": { "visible": true, "culledByFrustum": false, "inView": true, "padding": 1 }
+		}
+	}
+},
+"archetypes": {
+	"17": [
+		"TransformComponent",
+		"EntityIndexComponent",
+		"PixscapeIdentityComponent",
+		"VisibilityComponent",
+		"AABBComponent",
+		"OrientedBoundsComponent",
+		"TextureRegionComponent",
+		"DimensionsComponent",
+		"RenderMaterialComponent",
+		"AssetRefComponent",
+		"TintComponent",
+		"AnimationComponent",
+		"SpatialHeightComponent",
+		"PhysicsBodyComponent",
+		"PhysicsShapesComponent"
+	]
+},
+"schemaVersion": 2
+}
