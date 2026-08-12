@@ -4,24 +4,34 @@
 
 This repository contains a small test project using **Pixscape Runtime**.
 
-It demonstrates an isometric Tiled map with Pixscape’s **2.5D rendering features**.
+It demonstrates an isometric Tiled map with Pixscape’s **2.5D rendering features**, physics, animations, particles, prefabs, and simple combat gameplay.
 
-To move the hero, use the alphanumeric keyboard (8 -> 0 deg, 9 -> 45 deg ...)
+## Controls
+
+### Desktop / HTML
+
+* **Arrow keys** — Move the hero
+* **Space** — Attack
+
+### Android
+
+* **Swipe** — Move the hero
+* **Double tap** — Attack
 
 The project can run on:
 
-- Desktop
-- Android
-- HTML
+* Desktop
+* Android
+* HTML
 
 The project was generated with **LibGDX LiftOff**.
 
-The studio project is in the **studio** directory.
+The Pixscape Studio project is located in the **studio** directory.
 
-If you wish to modify the scene or add scenes, use Pixscape Studio free (see link below).
+If you wish to modify the scene or add new scenes, use **Pixscape Studio Free**.
 
 ## Links
 
-- Pixscape website: https://pixscape.games/
-- Pixscape Studio releases: https://github.com/pixscapegames/pixscape-studio-releases
-- Pixscape Runtime: https://github.com/pixscapegames/pixscape-runtime
+* Pixscape website: https://pixscape.games/
+* Pixscape Studio releases: https://github.com/pixscapegames/pixscape-studio-releases
+* Pixscape Runtime: https://github.com/pixscapegames/pixscape-runtime
