@@ -1072,8 +1072,8 @@
 					"size": 4
 				},
 				"currentClip": "idle_090",
-				"stateTime": 3041.5576,
-				"frame": 18
+				"stateTime": 3067.0332,
+				"frame": 20
 			},
 			"AssetRefComponent": { "assetId": 1303, "atlasTag": "scene1" },
 			"DimensionsComponent": { "width": 180, "height": 180 },
@@ -1108,14 +1108,14 @@
 					"size": 1
 				},
 				"currentClip": "default",
-				"stateTime": 13128.251,
-				"frame": 3
+				"stateTime": 13153.68,
+				"frame": 4
 			},
 			"AssetRefComponent": { "assetId": 1307, "atlasTag": "scene1" },
 			"DimensionsComponent": { "width": 512, "height": 512 },
 			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 6 },
 			"OrientedBoundsComponent": { "cx": -1156.0989, "cy": 3519.0745, "ux": 1, "vx": 0, "vy": 1, "hx": 256, "hy": 256 },
-			"PhysicsBodyComponent": { "fixedRotation": true, "gravityScale": 0 },
+			"PhysicsBodyComponent": { "type": 0, "fixedRotation": true, "gravityScale": 0 },
 			"PhysicsShapesComponent": {
 				"shapes": [
 					{
@@ -1142,14 +1142,14 @@
 					"size": 1
 				},
 				"currentClip": "default",
-				"stateTime": 13111.717,
-				"frame": 12
+				"stateTime": 13137.1455,
+				"frame": 13
 			},
 			"AssetRefComponent": { "assetId": 1306, "atlasTag": "scene1" },
 			"DimensionsComponent": { "width": 512, "height": 512 },
 			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 7 },
 			"OrientedBoundsComponent": { "cx": 473.1927, "cy": 2698.372, "ux": 1, "vx": 0, "vy": 1, "hx": 256, "hy": 256 },
-			"PhysicsBodyComponent": { "fixedRotation": true, "gravityScale": 0 },
+			"PhysicsBodyComponent": { "type": 0, "fixedRotation": true, "gravityScale": 0 },
 			"PhysicsShapesComponent": {
 				"shapes": [
 					{

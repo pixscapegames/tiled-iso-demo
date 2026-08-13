@@ -34,7 +34,7 @@
 		"description": "Demo project using tiled maps iso ",
 		"showPhysicsFixtures": false,
 		"showPhysicsJoints": false,
-		"editorMode": "TILE",
+		"editorMode": "ENTITY",
 		"ambientColorR": 0.2,
 		"ambientColorG": 0.2,
 		"ambientColorB": 0.35,
