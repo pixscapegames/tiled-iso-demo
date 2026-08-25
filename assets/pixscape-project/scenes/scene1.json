@@ -1,27 +1,27 @@
 {
 "metadata": { "version": 1 },
 "componentIdentifiers": {
-	"games.pixscape.runtime.component.physics.PhysicsFrictionJointComponent": "PhysicsFrictionJointComponent",
-	"games.pixscape.runtime.component.DimensionsComponent": "DimensionsComponent",
-	"games.pixscape.runtime.component.physics.PhysicsShapesComponent": "PhysicsShapesComponent",
-	"games.pixscape.runtime.component.spatial.SpatialHeightComponent": "SpatialHeightComponent",
-	"games.pixscape.runtime.component.OrientedBoundsComponent": "OrientedBoundsComponent",
-	"games.pixscape.runtime.component.TextureRegionComponent": "TextureRegionComponent",
-	"games.pixscape.runtime.component.TiledLayerComponent": "TiledLayerComponent",
-	"games.pixscape.runtime.component.physics.PhysicsBodyComponent": "PhysicsBodyComponent",
-	"games.pixscape.runtime.component.RenderMaterialComponent": "RenderMaterialComponent",
-	"games.pixscape.runtime.component.AssetRefComponent": "AssetRefComponent",
 	"games.pixscape.runtime.component.EntityIndexComponent": "EntityIndexComponent",
-	"games.pixscape.runtime.component.LayerComponent": "LayerComponent",
-	"games.pixscape.runtime.component.AABBComponent": "AABBComponent",
-	"games.pixscape.runtime.component.TintComponent": "TintComponent",
-	"games.pixscape.runtime.component.physics.PhysicsRevoluteJointComponent": "PhysicsRevoluteJointComponent",
-	"games.pixscape.runtime.component.AnimationComponent": "AnimationComponent",
+	"games.pixscape.runtime.component.AssetRefComponent": "AssetRefComponent",
+	"games.pixscape.runtime.component.physics.PhysicsJointComponent": "PhysicsJointComponent",
+	"games.pixscape.runtime.component.spatial.SpatialHeightComponent": "SpatialHeightComponent",
+	"games.pixscape.runtime.component.RenderMaterialComponent": "RenderMaterialComponent",
+	"games.pixscape.runtime.component.physics.PhysicsBodyComponent": "PhysicsBodyComponent",
 	"games.pixscape.runtime.component.PixscapeIdentityComponent": "PixscapeIdentityComponent",
+	"games.pixscape.runtime.component.physics.PhysicsRevoluteJointComponent": "PhysicsRevoluteJointComponent",
+	"games.pixscape.runtime.component.DimensionsComponent": "DimensionsComponent",
+	"games.pixscape.runtime.component.AABBComponent": "AABBComponent",
+	"games.pixscape.runtime.component.OrientedBoundsComponent": "OrientedBoundsComponent",
+	"games.pixscape.runtime.component.AnimationComponent": "AnimationComponent",
+	"games.pixscape.runtime.component.LayerComponent": "LayerComponent",
+	"games.pixscape.runtime.component.physics.PhysicsShapesComponent": "PhysicsShapesComponent",
+	"games.pixscape.runtime.component.TintComponent": "TintComponent",
+	"games.pixscape.runtime.component.TextureRegionComponent": "TextureRegionComponent",
+	"games.pixscape.runtime.component.physics.PhysicsFrictionJointComponent": "PhysicsFrictionJointComponent",
+	"games.pixscape.runtime.component.spatial.SpatialBlocksComponent": "SpatialBlocksComponent",
 	"games.pixscape.runtime.component.VisibilityComponent": "VisibilityComponent",
 	"games.pixscape.runtime.component.TransformComponent": "TransformComponent",
-	"games.pixscape.runtime.component.physics.PhysicsJointComponent": "PhysicsJointComponent",
-	"games.pixscape.runtime.component.spatial.SpatialBlocksComponent": "SpatialBlocksComponent"
+	"games.pixscape.runtime.component.TiledLayerComponent": "TiledLayerComponent"
 },
 "entities": {
 	"0": {
@@ -753,13 +753,13 @@
 	"9": {
 		"archetype": 6,
 		"components": {
-			"AABBComponent": { "minX": -152.6832, "minY": 3668.4265, "maxX": 186.91656, "maxY": 4327.184 },
+			"AABBComponent": { "minX": -151.05692, "minY": 3670.0527, "maxX": 188.54285, "maxY": 4328.8105 },
 			"AssetRefComponent": { "assetId": 1284, "atlasTag": "scene1" },
 			"DimensionsComponent": { "width": 256, "height": 512 },
 			"EntityIndexComponent": { "layerIndex": 5 },
 			"OrientedBoundsComponent": {
-				"cx": 17.116692,
-				"cy": 3997.8054,
+				"cx": 18.742973,
+				"cy": 3999.4316,
 				"ux": 0.9997816,
 				"uy": 0.020898966,
 				"vx": -0.020898966,
@@ -781,8 +781,8 @@
 			"RenderMaterialComponent": {},
 			"TextureRegionComponent": {},
 			"TransformComponent": {
-				"x": 17.116692,
-				"y": 3997.8054,
+				"x": 18.742973,
+				"y": 3999.4316,
 				"originX": 128,
 				"originY": 256,
 				"rotationRad": 0.02093649,
@@ -792,278 +792,21 @@
 		}
 	},
 	"10": {
-		"archetype": 6,
+		"archetype": 7,
 		"components": {
-			"AABBComponent": { "minX": -66.99156, "minY": 3700.3184, "maxX": -45.99156, "maxY": 3749.3184 },
-			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
-			"DimensionsComponent": { "width": 21, "height": 49 },
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 6 },
-			"OrientedBoundsComponent": { "cx": -56.49156, "cy": 3724.8184, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
-			"PhysicsShapesComponent": {
-				"shapes": [
-					{
-						"physicsShapeId": 138,
-						"geometry": { "shapeType": 1, "offsetX": 2.7939677E-9, "offsetY": -0.14862059, "radius": 0.11502838 },
-						"sensor": true
-					}
-				]
-			},
-			"PixscapeIdentityComponent": { "stableId": 77, "name": "chainlink" },
-			"RenderMaterialComponent": {},
-			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -56.49156, "y": 3724.8184, "originX": 10.5, "originY": 24.5 }
+			"PhysicsJointComponent": {
+				"type": 1,
+				"aEid": 21,
+				"bEid": 9,
+				"anchorAx": -0.04762268,
+				"anchorAy": 0.39889404,
+				"anchorBx": -0.87466425,
+				"anchorBy": -1.1433372
+			}
 		}
 	},
 	"11": {
-		"archetype": 6,
-		"components": {
-			"AABBComponent": { "minX": -69.18077, "minY": 3813.775, "maxX": -48.18077, "maxY": 3862.775 },
-			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
-			"DimensionsComponent": { "width": 21, "height": 49 },
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 9 },
-			"OrientedBoundsComponent": { "cx": -58.68077, "cy": 3838.275, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
-			"PhysicsShapesComponent": {
-				"shapes": [
-					{
-						"physicsShapeId": 141,
-						"geometry": { "shapeType": 1, "offsetX": -0.006461643, "offsetY": -0.14862059, "radius": 0.10742673 }
-					}
-				]
-			},
-			"PixscapeIdentityComponent": { "stableId": 78, "name": "chainlink" },
-			"RenderMaterialComponent": {},
-			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -58.68077, "y": 3838.275, "originX": 10.5, "originY": 24.5 }
-		}
-	},
-	"12": {
-		"archetype": 6,
-		"components": {
-			"AABBComponent": { "minX": -67.52184, "minY": 3735.926, "maxX": -46.521843, "maxY": 3784.926 },
-			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
-			"DimensionsComponent": { "width": 21, "height": 49 },
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 7 },
-			"OrientedBoundsComponent": { "cx": -57.021843, "cy": 3760.426, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
-			"PhysicsShapesComponent": {
-				"shapes": [
-					{
-						"physicsShapeId": 139,
-						"geometry": { "shapeType": 1, "offsetX": -0.006462364, "offsetY": -0.12923583, "radius": 0.10891243 }
-					}
-				]
-			},
-			"PixscapeIdentityComponent": { "stableId": 79, "name": "chainlink" },
-			"RenderMaterialComponent": {},
-			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -57.021843, "y": 3760.426, "originX": 10.5, "originY": 24.5 }
-		}
-	},
-	"13": {
-		"archetype": 6,
-		"components": {
-			"AABBComponent": { "minX": -66.60145, "minY": 3659.4143, "maxX": -45.601448, "maxY": 3708.4143 },
-			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
-			"DimensionsComponent": { "width": 21, "height": 49 },
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 5 },
-			"OrientedBoundsComponent": { "cx": -56.101448, "cy": 3683.9143, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
-			"PhysicsShapesComponent": {
-				"shapes": [
-					{
-						"physicsShapeId": 137,
-						"geometry": { "shapeType": 1, "offsetX": -0.012923317, "offsetY": -0.17446774, "radius": 0.10096689 },
-						"sensor": true
-					}
-				]
-			},
-			"PixscapeIdentityComponent": { "stableId": 80, "name": "chainlink" },
-			"RenderMaterialComponent": {},
-			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -56.101448, "y": 3683.9143, "originX": 10.5, "originY": 24.5 }
-		}
-	},
-	"14": {
-		"archetype": 6,
-		"components": {
-			"AABBComponent": { "minX": -68.0521, "minY": 3774.4368, "maxX": -47.0521, "maxY": 3823.4368 },
-			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
-			"DimensionsComponent": { "width": 21, "height": 49 },
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 8 },
-			"OrientedBoundsComponent": { "cx": -57.5521, "cy": 3798.9368, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
-			"PhysicsShapesComponent": {
-				"shapes": [
-					{
-						"physicsShapeId": 140,
-						"geometry": { "shapeType": 1, "offsetX": 0.0064616776, "offsetY": -0.12923583, "radius": 0.11446609 },
-						"sensor": true
-					}
-				]
-			},
-			"PixscapeIdentityComponent": { "stableId": 81, "name": "chainlink" },
-			"RenderMaterialComponent": {},
-			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -57.5521, "y": 3798.9368, "originX": 10.5, "originY": 24.5 }
-		}
-	},
-	"15": {
-		"archetype": 4,
-		"components": {
-			"AABBComponent": { "minX": -65.34873, "minY": 3618.477, "maxX": -44.348732, "maxY": 3667.477 },
-			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
-			"DimensionsComponent": { "width": 21, "height": 49 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 1 },
-			"OrientedBoundsComponent": { "cx": -54.848732, "cy": 3642.977, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
-			"PhysicsShapesComponent": {
-				"shapes": [
-					{
-						"physicsShapeId": 125,
-						"spatialFootprint": true,
-						"geometry": { "shapeType": 1, "offsetY": -0.1925, "radius": 0.101235 }
-					}
-				]
-			},
-			"PixscapeIdentityComponent": { "stableId": 72, "name": "chainlink" },
-			"RenderMaterialComponent": {},
-			"SpatialHeightComponent": { "height": 1 },
-			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -54.848732, "y": 3642.977, "originX": 10.5, "originY": 24.5 }
-		}
-	},
-	"16": {
-		"archetype": 7,
-		"components": {
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 1 },
-			"PhysicsJointComponent": {
-				"type": 1,
-				"aEid": 11,
-				"bEid": 14,
-				"anchorAx": -0.0070488737,
-				"anchorAy": -0.19042969,
-				"anchorBx": -0.018335572,
-				"anchorBy": 0.20295165
-			},
-			"PixscapeIdentityComponent": { "stableId": 82 },
-			"TransformComponent": { "x": -0.95157623, "y": 5.189453, "scaleX": 0, "scaleY": 0 }
-		}
-	},
-	"17": {
-		"archetype": 7,
-		"components": {
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 2 },
-			"PhysicsJointComponent": {
-				"type": 1,
-				"aEid": 12,
-				"bEid": 14,
-				"anchorAx": -0.008559112,
-				"anchorAy": 0.186333,
-				"anchorBx": -0.0032565307,
-				"anchorBy": -0.19877441
-			},
-			"PixscapeIdentityComponent": { "stableId": 83 },
-			"TransformComponent": { "x": -0.95157623, "y": 5.189453, "scaleX": 0, "scaleY": 0 }
-		}
-	},
-	"18": {
-		"archetype": 7,
-		"components": {
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 3 },
-			"PhysicsJointComponent": {
-				"type": 1,
-				"aEid": 10,
-				"bEid": 12,
-				"anchorAx": -0.018873444,
-				"anchorAy": 0.16328613,
-				"anchorBx": -0.013570633,
-				"anchorBy": -0.19279052
-			},
-			"PixscapeIdentityComponent": { "stableId": 84 },
-			"TransformComponent": { "x": -0.95157623, "y": 5.189453, "scaleX": 0, "scaleY": 0 }
-		}
-	},
-	"19": {
-		"archetype": 7,
-		"components": {
-			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 4 },
-			"PhysicsJointComponent": {
-				"type": 1,
-				"aEid": 10,
-				"bEid": 13,
-				"anchorAx": -0.003559189,
-				"anchorAy": -0.21560547,
-				"anchorBx": -0.0074603274,
-				"anchorBy": 0.19343506
-			},
-			"PixscapeIdentityComponent": { "stableId": 85 },
-			"TransformComponent": { "x": -0.95157623, "y": 5.189453, "scaleX": 0, "scaleY": 0 }
-		}
-	},
-	"20": {
 		"archetype": 8,
-		"components": {
-			"PhysicsJointComponent": {
-				"type": 1,
-				"aEid": 13,
-				"bEid": 15,
-				"anchorAx": 0.010863419,
-				"anchorAy": -0.23261474,
-				"anchorBx": -0.0016637421,
-				"anchorBy": 0.17675781
-			}
-		}
-	},
-	"21": {
-		"archetype": 8,
-		"components": {
-			"PhysicsJointComponent": {
-				"type": 1,
-				"aEid": 9,
-				"bEid": 11,
-				"anchorAx": -0.7969121,
-				"anchorAy": -1.3686298,
-				"anchorBx": -0.010160484,
-				"anchorBy": 0.21031982
-			}
-		}
-	},
-	"22": {
-		"archetype": 4,
-		"components": {
-			"AABBComponent": { "minX": -65.447586, "minY": 3577.2554, "maxX": -44.447586, "maxY": 3626.2554 },
-			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
-			"DimensionsComponent": { "width": 21, "height": 49 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 2 },
-			"OrientedBoundsComponent": { "cx": -54.947586, "cy": 3601.7554, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
-			"PhysicsShapesComponent": {
-				"shapes": [
-					{
-						"physicsShapeId": 127,
-						"spatialFootprint": true,
-						"geometry": { "shapeType": 1, "offsetY": -0.1925, "radius": 0.09815457 }
-					}
-				]
-			},
-			"PixscapeIdentityComponent": { "stableId": 73, "name": "chainlink" },
-			"RenderMaterialComponent": {},
-			"SpatialHeightComponent": { "height": 1 },
-			"TextureRegionComponent": {},
-			"TransformComponent": { "x": -54.947586, "y": 3601.7554, "originX": 10.5, "originY": 24.5 }
-		}
-	},
-	"23": {
-		"archetype": 8,
-		"components": {
-			"PhysicsJointComponent": {
-				"type": 1,
-				"aEid": 15,
-				"bEid": 22,
-				"anchorAx": -0.00909462,
-				"anchorAy": -0.21902099,
-				"anchorBx": -0.008106079,
-				"anchorBy": 0.1931958
-			}
-		}
-	},
-	"24": {
-		"archetype": 9,
 		"components": {
 			"AABBComponent": { "minX": -798.5766, "minY": 3422.9895, "maxX": -618.5766, "maxY": 3602.9895 },
 			"AnimationComponent": {
@@ -1072,12 +815,12 @@
 					"size": 4
 				},
 				"currentClip": "idle_090",
-				"stateTime": 3067.0332,
+				"stateTime": 4887.03,
 				"frame": 20
 			},
 			"AssetRefComponent": { "assetId": 1303, "atlasTag": "scene1" },
 			"DimensionsComponent": { "width": 180, "height": 180 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 5 },
+			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 4 },
 			"OrientedBoundsComponent": { "cx": -708.5766, "cy": 3512.9895, "ux": 1, "vx": 0, "vy": 1, "hx": 90, "hy": 90 },
 			"PhysicsBodyComponent": { "fixedRotation": true, "gravityScale": 0 },
 			"PhysicsShapesComponent": {
@@ -1098,8 +841,8 @@
 			"TransformComponent": { "x": -708.5766, "y": 3512.9895, "originX": 90, "originY": 90 }
 		}
 	},
-	"25": {
-		"archetype": 9,
+	"12": {
+		"archetype": 8,
 		"components": {
 			"AABBComponent": { "minX": -1412.0989, "minY": 3263.0745, "maxX": -900.0989, "maxY": 3775.0745 },
 			"AnimationComponent": {
@@ -1108,12 +851,12 @@
 					"size": 1
 				},
 				"currentClip": "default",
-				"stateTime": 13153.68,
-				"frame": 4
+				"stateTime": 14970.908,
+				"frame": 2
 			},
 			"AssetRefComponent": { "assetId": 1307, "atlasTag": "scene1" },
 			"DimensionsComponent": { "width": 512, "height": 512 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 6 },
+			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 5 },
 			"OrientedBoundsComponent": { "cx": -1156.0989, "cy": 3519.0745, "ux": 1, "vx": 0, "vy": 1, "hx": 256, "hy": 256 },
 			"PhysicsBodyComponent": { "type": 0, "fixedRotation": true, "gravityScale": 0 },
 			"PhysicsShapesComponent": {
@@ -1132,8 +875,8 @@
 			"TransformComponent": { "x": -1156.0989, "y": 3519.0745, "originX": 256, "originY": 256 }
 		}
 	},
-	"26": {
-		"archetype": 9,
+	"13": {
+		"archetype": 8,
 		"components": {
 			"AABBComponent": { "minX": 217.19269, "minY": 2442.372, "maxX": 729.1927, "maxY": 2954.372 },
 			"AnimationComponent": {
@@ -1142,12 +885,12 @@
 					"size": 1
 				},
 				"currentClip": "default",
-				"stateTime": 13137.1455,
-				"frame": 13
+				"stateTime": 14954.374,
+				"frame": 12
 			},
 			"AssetRefComponent": { "assetId": 1306, "atlasTag": "scene1" },
 			"DimensionsComponent": { "width": 512, "height": 512 },
-			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 7 },
+			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 6 },
 			"OrientedBoundsComponent": { "cx": 473.1927, "cy": 2698.372, "ux": 1, "vx": 0, "vy": 1, "hx": 256, "hy": 256 },
 			"PhysicsBodyComponent": { "type": 0, "fixedRotation": true, "gravityScale": 0 },
 			"PhysicsShapesComponent": {
@@ -1164,6 +907,288 @@
 			"SpatialHeightComponent": { "height": 1 },
 			"TextureRegionComponent": {},
 			"TransformComponent": { "x": 473.1927, "y": 2698.372, "originX": 256, "originY": 256 }
+		}
+	},
+	"14": {
+		"archetype": 9,
+		"components": {
+			"AABBComponent": { "minX": -1418.2834, "minY": 2578.8647, "maxX": -906.28345, "maxY": 3090.8647 },
+			"AnimationComponent": {
+				"animationAssetIds": {
+					"items": [ 1306, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+					"size": 1
+				},
+				"currentClip": "default",
+				"stateTime": 987.7314,
+				"frame": 12
+			},
+			"AssetRefComponent": { "assetId": 1306, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 512, "height": 512 },
+			"EntityIndexComponent": { "layerIndex": 4, "zIndex": 7 },
+			"OrientedBoundsComponent": { "cx": -1162.2834, "cy": 2834.8647, "ux": 1, "vx": 0, "vy": 1, "hx": 256, "hy": 256 },
+			"PixscapeIdentityComponent": { "stableId": 131, "name": "willow" },
+			"RenderMaterialComponent": {},
+			"TextureRegionComponent": {},
+			"TransformComponent": { "x": -1162.2834, "y": 2834.8647, "originX": 256, "originY": 256 }
+		}
+	},
+	"15": {
+		"archetype": 10,
+		"components": {
+			"AABBComponent": { "minX": -69.47331, "minY": 3664.545, "maxX": -48.473312, "maxY": 3713.545 },
+			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 21, "height": 49 },
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 2 },
+			"OrientedBoundsComponent": { "cx": -58.973312, "cy": 3689.045, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
+			"PhysicsShapesComponent": {
+				"shapes": [
+					{
+						"physicsShapeId": 175,
+						"geometry": { "shapeType": 1, "offsetX": -0.012923317, "offsetY": -0.17446774, "radius": 0.10096689 },
+						"sensor": true
+					}
+				]
+			},
+			"PixscapeIdentityComponent": { "stableId": 152, "name": "chainlink" },
+			"RenderMaterialComponent": {},
+			"TextureRegionComponent": {},
+			"TransformComponent": { "x": -58.973312, "y": 3689.045, "originX": 10.5, "originY": 24.5 }
+		}
+	},
+	"16": {
+		"archetype": 10,
+		"components": {
+			"AABBComponent": { "minX": -69.86342, "minY": 3705.449, "maxX": -48.86342, "maxY": 3754.449 },
+			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 21, "height": 49 },
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 4 },
+			"OrientedBoundsComponent": { "cx": -59.36342, "cy": 3729.949, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
+			"PhysicsShapesComponent": {
+				"shapes": [
+					{
+						"physicsShapeId": 176,
+						"geometry": { "shapeType": 1, "offsetX": 2.7939677E-9, "offsetY": -0.14862059, "radius": 0.11502838 },
+						"sensor": true
+					}
+				]
+			},
+			"PixscapeIdentityComponent": { "stableId": 153, "name": "chainlink" },
+			"RenderMaterialComponent": {},
+			"TextureRegionComponent": {},
+			"TransformComponent": { "x": -59.36342, "y": 3729.949, "originX": 10.5, "originY": 24.5 }
+		}
+	},
+	"17": {
+		"archetype": 10,
+		"components": {
+			"AABBComponent": { "minX": -68.2206, "minY": 3623.6077, "maxX": -47.220596, "maxY": 3672.6077 },
+			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 21, "height": 49 },
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 1 },
+			"OrientedBoundsComponent": { "cx": -57.720596, "cy": 3648.1077, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
+			"PhysicsShapesComponent": {
+				"shapes": [
+					{
+						"physicsShapeId": 177,
+						"spatialFootprint": true,
+						"geometry": { "shapeType": 1, "offsetY": -0.1925, "radius": 0.101235 }
+					}
+				]
+			},
+			"PixscapeIdentityComponent": { "stableId": 154, "name": "chainlink" },
+			"RenderMaterialComponent": {},
+			"TextureRegionComponent": {},
+			"TransformComponent": { "x": -57.720596, "y": 3648.1077, "originX": 10.5, "originY": 24.5 }
+		}
+	},
+	"18": {
+		"archetype": 10,
+		"components": {
+			"AABBComponent": { "minX": -70.39372, "minY": 3741.0566, "maxX": -49.393723, "maxY": 3790.0566 },
+			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 21, "height": 49 },
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 5 },
+			"OrientedBoundsComponent": { "cx": -59.893723, "cy": 3765.5566, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
+			"PhysicsShapesComponent": {
+				"shapes": [
+					{
+						"physicsShapeId": 178,
+						"geometry": { "shapeType": 1, "offsetX": -0.006462364, "offsetY": -0.12923583, "radius": 0.10891243 }
+					}
+				]
+			},
+			"PixscapeIdentityComponent": { "stableId": 155, "name": "chainlink" },
+			"RenderMaterialComponent": {},
+			"TextureRegionComponent": {},
+			"TransformComponent": { "x": -59.893723, "y": 3765.5566, "originX": 10.5, "originY": 24.5 }
+		}
+	},
+	"19": {
+		"archetype": 10,
+		"components": {
+			"AABBComponent": { "minX": -68.31947, "minY": 3582.386, "maxX": -47.319473, "maxY": 3631.386 },
+			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 21, "height": 49 },
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 3 },
+			"OrientedBoundsComponent": { "cx": -57.819473, "cy": 3606.886, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
+			"PhysicsShapesComponent": {
+				"shapes": [
+					{
+						"physicsShapeId": 179,
+						"spatialFootprint": true,
+						"geometry": { "shapeType": 1, "offsetY": -0.1925, "radius": 0.09815457 }
+					}
+				]
+			},
+			"PixscapeIdentityComponent": { "stableId": 156, "name": "chainlink" },
+			"RenderMaterialComponent": {},
+			"TextureRegionComponent": {},
+			"TransformComponent": { "x": -57.819473, "y": 3606.886, "originX": 10.5, "originY": 24.5 }
+		}
+	},
+	"20": {
+		"archetype": 10,
+		"components": {
+			"AABBComponent": { "minX": -70.923965, "minY": 3779.5674, "maxX": -49.923965, "maxY": 3828.5674 },
+			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 21, "height": 49 },
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 6 },
+			"OrientedBoundsComponent": { "cx": -60.423965, "cy": 3804.0674, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
+			"PhysicsShapesComponent": {
+				"shapes": [
+					{
+						"physicsShapeId": 180,
+						"geometry": { "shapeType": 1, "offsetX": 0.0064616776, "offsetY": -0.12923583, "radius": 0.11446609 },
+						"sensor": true
+					}
+				]
+			},
+			"PixscapeIdentityComponent": { "stableId": 157, "name": "chainlink" },
+			"RenderMaterialComponent": {},
+			"TextureRegionComponent": {},
+			"TransformComponent": { "x": -60.423965, "y": 3804.0674, "originX": 10.5, "originY": 24.5 }
+		}
+	},
+	"21": {
+		"archetype": 10,
+		"components": {
+			"AABBComponent": { "minX": -72.05263, "minY": 3818.9055, "maxX": -51.052628, "maxY": 3867.9055 },
+			"AssetRefComponent": { "assetId": 1285, "atlasTag": "scene1" },
+			"DimensionsComponent": { "width": 21, "height": 49 },
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 7 },
+			"OrientedBoundsComponent": { "cx": -61.552628, "cy": 3843.4055, "ux": 1, "vx": 0, "vy": 1, "hx": 10.5, "hy": 24.5 },
+			"PhysicsShapesComponent": {
+				"shapes": [
+					{
+						"physicsShapeId": 181,
+						"geometry": { "shapeType": 1, "offsetX": -0.006461643, "offsetY": -0.14862059, "radius": 0.10742673 }
+					}
+				]
+			},
+			"PixscapeIdentityComponent": { "stableId": 158, "name": "chainlink" },
+			"RenderMaterialComponent": {},
+			"TextureRegionComponent": {},
+			"TransformComponent": { "x": -61.552628, "y": 3843.4055, "originX": 10.5, "originY": 24.5 }
+		}
+	},
+	"22": {
+		"archetype": 11,
+		"components": {
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 2 },
+			"PhysicsJointComponent": {
+				"type": 1,
+				"aEid": 21,
+				"bEid": 20,
+				"anchorAx": -0.0070488737,
+				"anchorAy": -0.19042969,
+				"anchorBx": -0.018335572,
+				"anchorBy": 0.20295165
+			},
+			"PixscapeIdentityComponent": { "stableId": 159 },
+			"TransformComponent": { "x": -407.12872, "y": -575.12305, "scaleX": 0, "scaleY": 0 }
+		}
+	},
+	"23": {
+		"archetype": 11,
+		"components": {
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 3 },
+			"PhysicsJointComponent": {
+				"type": 1,
+				"aEid": 18,
+				"bEid": 20,
+				"anchorAx": -0.008559112,
+				"anchorAy": 0.186333,
+				"anchorBx": -0.0032565307,
+				"anchorBy": -0.19877441
+			},
+			"PixscapeIdentityComponent": { "stableId": 160 },
+			"TransformComponent": { "x": -407.12872, "y": -575.12305, "scaleX": 0, "scaleY": 0 }
+		}
+	},
+	"24": {
+		"archetype": 11,
+		"components": {
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 4 },
+			"PhysicsJointComponent": {
+				"type": 1,
+				"aEid": 16,
+				"bEid": 18,
+				"anchorAx": -0.018873444,
+				"anchorAy": 0.16328613,
+				"anchorBx": -0.013570633,
+				"anchorBy": -0.19279052
+			},
+			"PixscapeIdentityComponent": { "stableId": 161 },
+			"TransformComponent": { "x": -407.12872, "y": -575.12305, "scaleX": 0, "scaleY": 0 }
+		}
+	},
+	"25": {
+		"archetype": 11,
+		"components": {
+			"EntityIndexComponent": { "layerIndex": 5, "zIndex": 5 },
+			"PhysicsJointComponent": {
+				"type": 1,
+				"aEid": 16,
+				"bEid": 15,
+				"anchorAx": -0.003559189,
+				"anchorAy": -0.21560547,
+				"anchorBx": -0.0074603274,
+				"anchorBy": 0.19343506
+			},
+			"PixscapeIdentityComponent": { "stableId": 162 },
+			"TransformComponent": { "x": -407.12872, "y": -575.12305, "scaleX": 0, "scaleY": 0 }
+		}
+	},
+	"26": {
+		"archetype": 12,
+		"components": {
+			"EntityIndexComponent": { "layerIndex": 5 },
+			"PhysicsJointComponent": {
+				"type": 1,
+				"aEid": 15,
+				"bEid": 17,
+				"anchorAx": 0.010863419,
+				"anchorAy": -0.23261474,
+				"anchorBx": -0.0016637421,
+				"anchorBy": 0.17675781
+			},
+			"PixscapeIdentityComponent": { "stableId": 163 }
+		}
+	},
+	"27": {
+		"archetype": 12,
+		"components": {
+			"EntityIndexComponent": { "layerIndex": 5 },
+			"PhysicsJointComponent": {
+				"type": 1,
+				"aEid": 17,
+				"bEid": 19,
+				"anchorAx": -0.00909462,
+				"anchorAy": -0.21902099,
+				"anchorBx": -0.008106079,
+				"anchorBy": 0.1931958
+			},
+			"PixscapeIdentityComponent": { "stableId": 164 }
 		}
 	}
 },
@@ -1212,15 +1237,8 @@
 		"TintComponent",
 		"PhysicsShapesComponent"
 	],
-	"7": [
-		"EntityIndexComponent",
-		"TransformComponent",
-		"PixscapeIdentityComponent",
-		"PhysicsJointComponent",
-		"PhysicsRevoluteJointComponent"
-	],
-	"8": [ "PhysicsJointComponent", "PhysicsRevoluteJointComponent" ],
-	"9": [
+	"7": [ "PhysicsJointComponent", "PhysicsRevoluteJointComponent" ],
+	"8": [
 		"AnimationComponent",
 		"TextureRegionComponent",
 		"RenderMaterialComponent",
@@ -1236,6 +1254,43 @@
 		"TintComponent",
 		"PhysicsShapesComponent",
 		"SpatialHeightComponent"
-	]
+	],
+	"9": [
+		"AnimationComponent",
+		"TextureRegionComponent",
+		"RenderMaterialComponent",
+		"AssetRefComponent",
+		"EntityIndexComponent",
+		"TransformComponent",
+		"PixscapeIdentityComponent",
+		"DimensionsComponent",
+		"OrientedBoundsComponent",
+		"AABBComponent",
+		"VisibilityComponent",
+		"TintComponent"
+	],
+	"10": [
+		"TextureRegionComponent",
+		"RenderMaterialComponent",
+		"AssetRefComponent",
+		"EntityIndexComponent",
+		"TransformComponent",
+		"PixscapeIdentityComponent",
+		"PhysicsBodyComponent",
+		"DimensionsComponent",
+		"OrientedBoundsComponent",
+		"AABBComponent",
+		"VisibilityComponent",
+		"TintComponent",
+		"PhysicsShapesComponent"
+	],
+	"11": [
+		"EntityIndexComponent",
+		"TransformComponent",
+		"PixscapeIdentityComponent",
+		"PhysicsJointComponent",
+		"PhysicsRevoluteJointComponent"
+	],
+	"12": [ "EntityIndexComponent", "PixscapeIdentityComponent", "PhysicsJointComponent", "PhysicsRevoluteJointComponent" ]
 }
 }

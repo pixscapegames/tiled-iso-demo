@@ -1,4 +1,11 @@
 {
 "version": "1",
-"animations": []
+"animations": [
+	{
+		"name": "land_anim_54",
+		"id": 1690,
+		"frameAssetIds": [ 1394, 1408, 1422, 1423, 1409, 1395 ],
+		"frameDurationsMs": [ 100, 100, 100, 100, 100, 100 ]
+	}
+]
 }

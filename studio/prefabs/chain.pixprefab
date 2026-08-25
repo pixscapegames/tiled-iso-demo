@@ -1,0 +1,1057 @@
+{
+"type": "pixscape-prefab",
+"version": 3,
+"name": "chain",
+"entities": [
+	{
+		"sourceEntityId": 13,
+		"transform": {
+			"x": -56.101448,
+			"y": 3683.9143,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 10.5,
+			"originY": 24.5
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 1
+		},
+		"meta": {
+			"kind": "SPRITE"
+		},
+		"identity": {
+			"name": "chainlink"
+		},
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 21,
+			"height": 49
+		},
+		"quadDeform": null,
+		"textureRegion": {
+			"u1": 0.97802734,
+			"v1": 0.97558594,
+			"u2": 0.98828125,
+			"v2": 0.9995117,
+			"pixW": 21,
+			"pixH": 49,
+			"valid": true
+		},
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1,
+			"textureHandle": 15,
+			"debugAtlasTag": "scene1"
+		},
+		"assetRef": {
+			"assetId": 1285,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": {
+			"type": 2,
+			"fixedRotation": false,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 1,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"physicsShapeId": 137,
+				"spatialBlockId": 0,
+				"spatialFootprint": false,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": -0.012923317,
+					"offsetY": -0.17446774,
+					"angleDegrees": 0,
+					"radius": 0.10096689,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": true,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true
+			}
+		],
+		"joint": null,
+		"distanceJoint": null,
+		"revoluteJoint": null,
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 10,
+		"transform": {
+			"x": -56.49156,
+			"y": 3724.8184,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 10.5,
+			"originY": 24.5
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 2
+		},
+		"meta": {
+			"kind": "SPRITE"
+		},
+		"identity": {
+			"name": "chainlink"
+		},
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 21,
+			"height": 49
+		},
+		"quadDeform": null,
+		"textureRegion": {
+			"u1": 0.97802734,
+			"v1": 0.97558594,
+			"u2": 0.98828125,
+			"v2": 0.9995117,
+			"pixW": 21,
+			"pixH": 49,
+			"valid": true
+		},
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1,
+			"textureHandle": 15,
+			"debugAtlasTag": "scene1"
+		},
+		"assetRef": {
+			"assetId": 1285,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": {
+			"type": 2,
+			"fixedRotation": false,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 1,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"physicsShapeId": 138,
+				"spatialBlockId": 0,
+				"spatialFootprint": false,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": 2.7939677E-9,
+					"offsetY": -0.14862059,
+					"angleDegrees": 0,
+					"radius": 0.11502838,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": true,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true
+			}
+		],
+		"joint": null,
+		"distanceJoint": null,
+		"revoluteJoint": null,
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 15,
+		"transform": {
+			"x": -54.848732,
+			"y": 3642.977,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 10.5,
+			"originY": 24.5
+		},
+		"entityIndex": {
+			"layerIndex": 4,
+			"zIndex": 1
+		},
+		"meta": {
+			"kind": "SPRITE"
+		},
+		"identity": {
+			"name": "chainlink"
+		},
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 21,
+			"height": 49
+		},
+		"quadDeform": null,
+		"textureRegion": {
+			"u1": 0.97802734,
+			"v1": 0.97558594,
+			"u2": 0.98828125,
+			"v2": 0.9995117,
+			"pixW": 21,
+			"pixH": 49,
+			"valid": true
+		},
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1,
+			"textureHandle": 15,
+			"debugAtlasTag": "scene1"
+		},
+		"assetRef": {
+			"assetId": 1285,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": {
+			"type": 2,
+			"fixedRotation": false,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 1,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"physicsShapeId": 125,
+				"spatialBlockId": 0,
+				"spatialFootprint": true,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": 0,
+					"offsetY": -0.1925,
+					"angleDegrees": 0,
+					"radius": 0.101235,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": false,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true
+			}
+		],
+		"joint": null,
+		"distanceJoint": null,
+		"revoluteJoint": null,
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 12,
+		"transform": {
+			"x": -57.021843,
+			"y": 3760.426,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 10.5,
+			"originY": 24.5
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 3
+		},
+		"meta": {
+			"kind": "SPRITE"
+		},
+		"identity": {
+			"name": "chainlink"
+		},
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 21,
+			"height": 49
+		},
+		"quadDeform": null,
+		"textureRegion": {
+			"u1": 0.97802734,
+			"v1": 0.97558594,
+			"u2": 0.98828125,
+			"v2": 0.9995117,
+			"pixW": 21,
+			"pixH": 49,
+			"valid": true
+		},
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1,
+			"textureHandle": 15,
+			"debugAtlasTag": "scene1"
+		},
+		"assetRef": {
+			"assetId": 1285,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": {
+			"type": 2,
+			"fixedRotation": false,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 1,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"physicsShapeId": 139,
+				"spatialBlockId": 0,
+				"spatialFootprint": false,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": -0.006462364,
+					"offsetY": -0.12923583,
+					"angleDegrees": 0,
+					"radius": 0.10891243,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": false,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true
+			}
+		],
+		"joint": null,
+		"distanceJoint": null,
+		"revoluteJoint": null,
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 22,
+		"transform": {
+			"x": -54.947586,
+			"y": 3601.7554,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 10.5,
+			"originY": 24.5
+		},
+		"entityIndex": {
+			"layerIndex": 4,
+			"zIndex": 2
+		},
+		"meta": {
+			"kind": "SPRITE"
+		},
+		"identity": {
+			"name": "chainlink"
+		},
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 21,
+			"height": 49
+		},
+		"quadDeform": null,
+		"textureRegion": {
+			"u1": 0.97802734,
+			"v1": 0.97558594,
+			"u2": 0.98828125,
+			"v2": 0.9995117,
+			"pixW": 21,
+			"pixH": 49,
+			"valid": true
+		},
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1,
+			"textureHandle": 15,
+			"debugAtlasTag": "scene1"
+		},
+		"assetRef": {
+			"assetId": 1285,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": {
+			"type": 2,
+			"fixedRotation": false,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 1,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"physicsShapeId": 127,
+				"spatialBlockId": 0,
+				"spatialFootprint": true,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": 0,
+					"offsetY": -0.1925,
+					"angleDegrees": 0,
+					"radius": 0.09815457,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": false,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true
+			}
+		],
+		"joint": null,
+		"distanceJoint": null,
+		"revoluteJoint": null,
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 14,
+		"transform": {
+			"x": -57.5521,
+			"y": 3798.9368,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 10.5,
+			"originY": 24.5
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 4
+		},
+		"meta": {
+			"kind": "SPRITE"
+		},
+		"identity": {
+			"name": "chainlink"
+		},
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 21,
+			"height": 49
+		},
+		"quadDeform": null,
+		"textureRegion": {
+			"u1": 0.97802734,
+			"v1": 0.97558594,
+			"u2": 0.98828125,
+			"v2": 0.9995117,
+			"pixW": 21,
+			"pixH": 49,
+			"valid": true
+		},
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1,
+			"textureHandle": 15,
+			"debugAtlasTag": "scene1"
+		},
+		"assetRef": {
+			"assetId": 1285,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": {
+			"type": 2,
+			"fixedRotation": false,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 1,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"physicsShapeId": 140,
+				"spatialBlockId": 0,
+				"spatialFootprint": false,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": 0.0064616776,
+					"offsetY": -0.12923583,
+					"angleDegrees": 0,
+					"radius": 0.11446609,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": true,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true
+			}
+		],
+		"joint": null,
+		"distanceJoint": null,
+		"revoluteJoint": null,
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 11,
+		"transform": {
+			"x": -58.68077,
+			"y": 3838.275,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 10.5,
+			"originY": 24.5
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 5
+		},
+		"meta": {
+			"kind": "SPRITE"
+		},
+		"identity": {
+			"name": "chainlink"
+		},
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 21,
+			"height": 49
+		},
+		"quadDeform": null,
+		"textureRegion": {
+			"u1": 0.97802734,
+			"v1": 0.97558594,
+			"u2": 0.98828125,
+			"v2": 0.9995117,
+			"pixW": 21,
+			"pixH": 49,
+			"valid": true
+		},
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1,
+			"textureHandle": 15,
+			"debugAtlasTag": "scene1"
+		},
+		"assetRef": {
+			"assetId": 1285,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": {
+			"type": 2,
+			"fixedRotation": false,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 1,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"physicsShapeId": 141,
+				"spatialBlockId": 0,
+				"spatialFootprint": false,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": -0.006461643,
+					"offsetY": -0.14862059,
+					"angleDegrees": 0,
+					"radius": 0.10742673,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": false,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true
+			}
+		],
+		"joint": null,
+		"distanceJoint": null,
+		"revoluteJoint": null,
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 16,
+		"transform": {
+			"x": -0.95157623,
+			"y": 5.189453,
+			"rotationRad": 0,
+			"scaleX": 0,
+			"scaleY": 0,
+			"originX": 0,
+			"originY": 0
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 2
+		},
+		"meta": null,
+		"identity": {
+			"name": "unnamed"
+		},
+		"visibility": null,
+		"boundsFlags": null,
+		"dimensions": null,
+		"quadDeform": null,
+		"textureRegion": null,
+		"renderMaterial": null,
+		"assetRef": null,
+		"tint": null,
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": null,
+		"physicsShapes": [],
+		"joint": {
+			"type": 1,
+			"aEid": 11,
+			"bEid": 14,
+			"collideConnected": false,
+			"anchorAx": -0.0070488737,
+			"anchorAy": -0.19042969,
+			"anchorBx": -0.018335572,
+			"anchorBy": 0.20295165
+		},
+		"distanceJoint": null,
+		"revoluteJoint": {
+			"enableLimit": false,
+			"enableMotor": false,
+			"lowerAngleRad": 0,
+			"upperAngleRad": 0,
+			"motorSpeedRad": 0,
+			"maxMotorTorque": 0
+		},
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 17,
+		"transform": {
+			"x": -0.95157623,
+			"y": 5.189453,
+			"rotationRad": 0,
+			"scaleX": 0,
+			"scaleY": 0,
+			"originX": 0,
+			"originY": 0
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 3
+		},
+		"meta": null,
+		"identity": {
+			"name": "unnamed"
+		},
+		"visibility": null,
+		"boundsFlags": null,
+		"dimensions": null,
+		"quadDeform": null,
+		"textureRegion": null,
+		"renderMaterial": null,
+		"assetRef": null,
+		"tint": null,
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": null,
+		"physicsShapes": [],
+		"joint": {
+			"type": 1,
+			"aEid": 12,
+			"bEid": 14,
+			"collideConnected": false,
+			"anchorAx": -0.008559112,
+			"anchorAy": 0.186333,
+			"anchorBx": -0.0032565307,
+			"anchorBy": -0.19877441
+		},
+		"distanceJoint": null,
+		"revoluteJoint": {
+			"enableLimit": false,
+			"enableMotor": false,
+			"lowerAngleRad": 0,
+			"upperAngleRad": 0,
+			"motorSpeedRad": 0,
+			"maxMotorTorque": 0
+		},
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 18,
+		"transform": {
+			"x": -0.95157623,
+			"y": 5.189453,
+			"rotationRad": 0,
+			"scaleX": 0,
+			"scaleY": 0,
+			"originX": 0,
+			"originY": 0
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 4
+		},
+		"meta": null,
+		"identity": {
+			"name": "unnamed"
+		},
+		"visibility": null,
+		"boundsFlags": null,
+		"dimensions": null,
+		"quadDeform": null,
+		"textureRegion": null,
+		"renderMaterial": null,
+		"assetRef": null,
+		"tint": null,
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": null,
+		"physicsShapes": [],
+		"joint": {
+			"type": 1,
+			"aEid": 10,
+			"bEid": 12,
+			"collideConnected": false,
+			"anchorAx": -0.018873444,
+			"anchorAy": 0.16328613,
+			"anchorBx": -0.013570633,
+			"anchorBy": -0.19279052
+		},
+		"distanceJoint": null,
+		"revoluteJoint": {
+			"enableLimit": false,
+			"enableMotor": false,
+			"lowerAngleRad": 0,
+			"upperAngleRad": 0,
+			"motorSpeedRad": 0,
+			"maxMotorTorque": 0
+		},
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 19,
+		"transform": {
+			"x": -0.95157623,
+			"y": 5.189453,
+			"rotationRad": 0,
+			"scaleX": 0,
+			"scaleY": 0,
+			"originX": 0,
+			"originY": 0
+		},
+		"entityIndex": {
+			"layerIndex": 5,
+			"zIndex": 5
+		},
+		"meta": null,
+		"identity": {
+			"name": "unnamed"
+		},
+		"visibility": null,
+		"boundsFlags": null,
+		"dimensions": null,
+		"quadDeform": null,
+		"textureRegion": null,
+		"renderMaterial": null,
+		"assetRef": null,
+		"tint": null,
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": null,
+		"physicsShapes": [],
+		"joint": {
+			"type": 1,
+			"aEid": 10,
+			"bEid": 13,
+			"collideConnected": false,
+			"anchorAx": -0.003559189,
+			"anchorAy": -0.21560547,
+			"anchorBx": -0.0074603274,
+			"anchorBy": 0.19343506
+		},
+		"distanceJoint": null,
+		"revoluteJoint": {
+			"enableLimit": false,
+			"enableMotor": false,
+			"lowerAngleRad": 0,
+			"upperAngleRad": 0,
+			"motorSpeedRad": 0,
+			"maxMotorTorque": 0
+		},
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 20,
+		"transform": null,
+		"entityIndex": null,
+		"meta": null,
+		"identity": null,
+		"visibility": null,
+		"boundsFlags": null,
+		"dimensions": null,
+		"quadDeform": null,
+		"textureRegion": null,
+		"renderMaterial": null,
+		"assetRef": null,
+		"tint": null,
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": null,
+		"physicsShapes": [],
+		"joint": {
+			"type": 1,
+			"aEid": 13,
+			"bEid": 15,
+			"collideConnected": false,
+			"anchorAx": 0.010863419,
+			"anchorAy": -0.23261474,
+			"anchorBx": -0.0016637421,
+			"anchorBy": 0.17675781
+		},
+		"distanceJoint": null,
+		"revoluteJoint": {
+			"enableLimit": false,
+			"enableMotor": false,
+			"lowerAngleRad": 0,
+			"upperAngleRad": 0,
+			"motorSpeedRad": 0,
+			"maxMotorTorque": 0
+		},
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	},
+	{
+		"sourceEntityId": 23,
+		"transform": null,
+		"entityIndex": null,
+		"meta": null,
+		"identity": null,
+		"visibility": null,
+		"boundsFlags": null,
+		"dimensions": null,
+		"quadDeform": null,
+		"textureRegion": null,
+		"renderMaterial": null,
+		"assetRef": null,
+		"tint": null,
+		"animation": null,
+		"shaderParams": null,
+		"physicsBody": null,
+		"physicsShapes": [],
+		"joint": {
+			"type": 1,
+			"aEid": 15,
+			"bEid": 22,
+			"collideConnected": false,
+			"anchorAx": -0.00909462,
+			"anchorAy": -0.21902099,
+			"anchorBx": -0.008106079,
+			"anchorBy": 0.1931958
+		},
+		"distanceJoint": null,
+		"revoluteJoint": {
+			"enableLimit": false,
+			"enableMotor": false,
+			"lowerAngleRad": 0,
+			"upperAngleRad": 0,
+			"motorSpeedRad": 0,
+			"maxMotorTorque": 0
+		},
+		"prismaticJoint": null,
+		"wheelJoint": null,
+		"frictionJoint": null,
+		"motorJoint": null,
+		"weldJoint": null,
+		"pulleyJoint": null,
+		"gearJoint": null
+	}
+]
+}

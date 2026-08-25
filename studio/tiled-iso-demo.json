@@ -3,15 +3,15 @@
 "projectFileName": "tiled-iso-demo",
 "projectDirectoryPath": "C:/Users/lauro/IdeaProjects/tiled-iso-demo/studio",
 "projectKind": "pixscape-studio-project",
-"previewTarget": "HTML",
+"previewTarget": "DESKTOP",
 "version": "1",
-"exportRootPathDir": "C:/Users/lauro/IdeaProjects/tiled-iso-demo/assets",
+"exportRootPathDir": "C:\\Users\\lauro\\IdeaProjects\\tiled-iso-demo\\assets",
 "scenes": {
 	"demo": {
 		"sceneSchemaVersion": 2,
 		"name": "demo",
 		"file": "scene1.json",
-		"nextEntityStableId": 131,
+		"nextEntityStableId": 165,
 		"runtimeParticleEffectPaths": [],
 		"runtimePrefabIds": [],
 		"physicsEnabled": true,
@@ -21,7 +21,7 @@
 		"doSleep": true,
 		"physicsParallaxX": "NaN",
 		"physicsParallaxY": "NaN",
-		"nextPhysicsShapeId": 164,
+		"nextPhysicsShapeId": 182,
 		"ambientMulR": 1,
 		"ambientMulG": 1,
 		"ambientMulB": 1,
@@ -34,7 +34,7 @@
 		"description": "Demo project using tiled maps iso ",
 		"showPhysicsFixtures": false,
 		"showPhysicsJoints": false,
-		"editorMode": "ENTITY",
+		"editorMode": "TILE",
 		"ambientColorR": 0.2,
 		"ambientColorG": 0.2,
 		"ambientColorB": 0.35,
@@ -51,13 +51,14 @@
 			],
 			"tiledTileAssetIds": [],
 			"tiledAnimationIds": []
-		}
+		},
+		"nextPrefabInstanceId": 6
 	}
 },
 "currentSceneName": "demo",
-"nextSceneIndex": 9,
+"nextSceneIndex": 38,
 "glSamples": 0,
-"previewWidth": 1280,
-"previewHeight": 720,
+"previewWidth": 1440,
+"previewHeight": 900,
 "previewLandscape": true
 }
