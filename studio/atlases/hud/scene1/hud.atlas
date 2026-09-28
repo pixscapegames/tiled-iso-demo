@@ -1,0 +1,21 @@
+hud.png
+size: 2048, 2048
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+pma: false
+circle1__a1326
+  rotate: 0
+  bounds: 259, 72, 60, 60
+  offsets: 0, 0, 60, 60
+  index: -1
+__pixscape_internal__/__ps_internal_white_px
+  rotate: 0
+  bounds: 1, 1, 1, 1
+  offsets: 0, 0, 1, 1
+  index: -1
+__pixscape_builtin_label_font
+  rotate: 0
+  bounds: 1, 4, 256, 128
+  offsets: 0, 0, 256, 128
+  index: -1

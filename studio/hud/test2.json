@@ -1,0 +1,32 @@
+{
+"schemaVersion": 2,
+"root": {
+	"id": "root",
+	"kind": "GROUP",
+	"actor": {
+		"width": 0,
+		"height": 0
+	},
+	"visible": true,
+	"tooltip": null,
+	"windowActions": [],
+	"image": null,
+	"label": null,
+	"textraLabel": null,
+	"textButton": null,
+	"imageButton": null,
+	"imageTextButton": null,
+	"textField": null,
+	"selectBox": null,
+	"list": null,
+	"checkBox": null,
+	"slider": null,
+	"progressBar": null,
+	"container": null,
+	"scrollPane": null,
+	"window": null,
+	"dialog": null,
+	"table": null,
+	"children": []
+}
+}

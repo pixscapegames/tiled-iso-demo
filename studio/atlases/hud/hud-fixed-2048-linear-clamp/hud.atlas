@@ -1,0 +1,11 @@
+hud.png
+size:2048,2048
+filter:Linear,Linear
+__pixscape_internal__/__ps_internal_white_px
+bounds:403,400,1,1
+chainlink__a1285
+bounds:503,854,21,49
+driver__a1698
+bounds:1,403,500,500
+wheel__a1699
+bounds:1,1,400,400

@@ -1,0 +1,151 @@
+{
+"schemaVersion": 3,
+"rootSourceEntityId": 1,
+"entities": [
+	{
+		"sourceEntityId": 1,
+		"parentSourceEntityId": -1,
+		"transform": {
+			"x": 0,
+			"y": 0,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 160,
+			"originY": 160
+		},
+		"entityIndex": {
+			"zIndex": 0
+		},
+		"meta": {
+			"kind": "GAME_OBJECT"
+		},
+		"identity": {
+			"name": "Game Object"
+		},
+		"tags": null,
+		"customProperties": null,
+		"visibility": null,
+		"boundsFlags": null,
+		"dimensions": null,
+		"quadDeform": null,
+		"renderMaterial": null,
+		"assetRef": null,
+		"tint": null,
+		"animation": null,
+		"shaderParams": null,
+		"repeat": null,
+		"pointLight": null,
+		"coneLight": null,
+		"spatialHeight": null,
+		"physicsBody": null,
+		"physicsShapes": [],
+		"gameObject": {}
+	},
+	{
+		"sourceEntityId": 2,
+		"parentSourceEntityId": 1,
+		"transform": {
+			"x": 160,
+			"y": 160,
+			"rotationRad": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"originX": 160,
+			"originY": 160
+		},
+		"entityIndex": {
+			"zIndex": 0
+		},
+		"meta": {
+			"kind": "ANIMATION"
+		},
+		"identity": {
+			"name": "snake_attack"
+		},
+		"tags": null,
+		"customProperties": null,
+		"visibility": {
+			"visible": true
+		},
+		"boundsFlags": {
+			"hasAabb": true,
+			"hasObb": true
+		},
+		"dimensions": {
+			"width": 320,
+			"height": 320
+		},
+		"quadDeform": null,
+		"renderMaterial": {
+			"shaderIdx": 0,
+			"blendModeId": 1
+		},
+		"assetRef": {
+			"assetId": 1325,
+			"atlasTag": "scene1"
+		},
+		"tint": {
+			"rgba": -1
+		},
+		"animation": {
+			"animationAssetIds": {
+				"items": [ 1322, 1323, 1324, 1325, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+				"size": 4,
+				"ordered": true
+			},
+			"fps": 12,
+			"playing": true,
+			"loop": true,
+			"stateTime": 261.86542,
+			"frame": 10,
+			"currentClip": "default"
+		},
+		"shaderParams": null,
+		"repeat": null,
+		"pointLight": null,
+		"coneLight": null,
+		"spatialHeight": {
+			"altitude": 0,
+			"height": 1
+		},
+		"physicsBody": {
+			"type": 0,
+			"fixedRotation": true,
+			"bullet": false,
+			"allowSleep": true,
+			"awake": true,
+			"gravityScale": 0,
+			"linearDamping": 0,
+			"angularDamping": 0
+		},
+		"physicsShapes": [
+			{
+				"localShapeId": 1,
+				"geometry": {
+					"shapeType": 1,
+					"offsetX": -0.11946586,
+					"offsetY": -0.26240236,
+					"angleDegrees": 0,
+					"radius": 0.32157052,
+					"halfWidth": 0.5,
+					"halfHeight": 0.5,
+					"polygonVertices": [],
+					"polygonVertexCount": 0
+				},
+				"density": 1,
+				"friction": 0.2,
+				"restitution": 0,
+				"sensor": false,
+				"categoryBits": 1,
+				"maskBits": -1,
+				"groupIndex": 0,
+				"enabled": true,
+				"spatialFootprint": true
+			}
+		],
+		"gameObject": null
+	}
+],
+"joints": []
+}
