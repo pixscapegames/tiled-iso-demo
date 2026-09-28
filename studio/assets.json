@@ -1,6 +1,6 @@
 {
 "version": 3,
-"nextId": 1693,
+"nextId": 1702,
 "assets": [
 	{
 		"id": 1,
@@ -18340,6 +18340,58 @@
 		"sheetIndex": 349,
 		"cellX": 13,
 		"cellY": 24
+	},
+	{
+		"id": 1695,
+		"type": "animation",
+		"logicalPath": "animations/foutain",
+		"sourceRelPath": "orig/animations/foutain__a1695",
+		"scope": "USER",
+		"frameCount": 16,
+		"fps": 6,
+		"currentClip": "default",
+		"clips": {
+			"default": {
+				"start": 0,
+				"end": 15,
+				"flipX": false
+			}
+		}
+	},
+	{
+		"id": 1697,
+		"type": "image",
+		"logicalPath": "images/car",
+		"sourceRelPath": "orig/images/car__a1697.png",
+		"scope": "USER"
+	},
+	{
+		"id": 1698,
+		"type": "image",
+		"logicalPath": "images/driver",
+		"sourceRelPath": "orig/images/driver__a1698.png",
+		"scope": "USER"
+	},
+	{
+		"id": 1699,
+		"type": "image",
+		"logicalPath": "images/wheel",
+		"sourceRelPath": "orig/images/wheel__a1699.png",
+		"scope": "USER"
+	},
+	{
+		"id": 1700,
+		"type": "font",
+		"logicalPath": "fonts/font-export",
+		"sourceRelPath": "orig/fonts/1700/font-export.fnt",
+		"scope": "USER"
+	},
+	{
+		"id": 1701,
+		"type": "skin",
+		"logicalPath": "skins/comic-ui",
+		"sourceRelPath": "orig/skins/1701/comic-ui.json",
+		"scope": "USER"
 	}
 ]
 }

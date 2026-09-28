@@ -111,6 +111,16 @@
 		"clips": [
 			{ "name": "default", "start": 0, "end": 11, "flipX": false }
 		]
+	},
+	{
+		"assetId": 1695,
+		"name": "foutain",
+		"fps": 6.0,
+		"currentClip": "default",
+		"frameCount": 16,
+		"clips": [
+			{ "name": "default", "start": 0, "end": 15, "flipX": false }
+		]
 	}
 ]
 }

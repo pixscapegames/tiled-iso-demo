@@ -2,11 +2,12 @@ package games.pixscape.demo.system;
 
 import com.artemis.BaseSystem;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.World;
 import games.pixscape.demo.camera.CameraEffects;
 import games.pixscape.demo.util.CombatState;
 import games.pixscape.demo.util.SnakeTriggers;
 import games.pixscape.runtime.api.EntityRef;
+import games.pixscape.runtime.api.GameObjectInstance;
+import games.pixscape.runtime.api.GameObjectsAPI;
 import games.pixscape.runtime.api.ParticleRef;
 import games.pixscape.runtime.api.PhysicsAPI;
 import games.pixscape.runtime.api.PixscapeAPI;
@@ -23,7 +24,8 @@ public final class EnemySystem extends BaseSystem {
     }
 
     private static final String HERO_NAME = "hero";
-    private static final String SNAKE_PREFAB = "snake";
+    private static final String SNAKE_GAME_OBJECT = "gameobjects/snake.gameobject";
+    private static final String SNAKE_ACTOR_NAME = "snake_attack";
     private static final String SNAKE_IDLE_ANIMATION = "snake_idle";
     private static final String SNAKE_ATTACK_ANIMATION = "snake_attack";
     private static final String SNAKE_HIT_ANIMATION = "snake_hit";
@@ -34,7 +36,12 @@ public final class EnemySystem extends BaseSystem {
 
     private static final int SNAKE_ATTACK_IMPACT_FRAME = 3;
     private static final int SNAKE_HITS_BEFORE_DEATH = 5;
-    private static final int PHYSICS_LAYER_INDEX = 5;
+    private static final int SPATIAL_LAYER_INDEX = 4;
+    private static final int SNAKE_Z_INDEX = 4;
+    // The former snake prefab's actor was near (-96, 3543). The new
+    // Game Object actor is local (160, 160) to its zero-positioned root.
+    private static final float SNAKE_SPAWN_X = -256f;
+    private static final float SNAKE_SPAWN_Y = 3383f;
 
     private static final float HIT_TINT_RED = 1f;
     private static final float HIT_TINT_GREEN = 0f;
@@ -46,8 +53,10 @@ public final class EnemySystem extends BaseSystem {
     private final CameraEffects cameraEffects;
     private final SnakeTriggers triggers = new SnakeTriggers();
 
-    private World listenerWorld;
+    private com.badlogic.gdx.physics.box2d.World listenerWorld;
+    private GameObjectInstance snakeInstance;
     private EntityRef snake;
+    private boolean snakeJustSpawned;
     private SnakeState state = SnakeState.HIDDEN;
     private int snakeHitCount;
     private int snakeAttackFrameCount;
@@ -72,8 +81,18 @@ public final class EnemySystem extends BaseSystem {
     protected void processSystem() {
         bindToCurrentWorld();
 
-        if (triggers.consumeAppearance() && !snakeExists()) {
+        if (triggers.consumeAppearance() && !snakeExists()
+            && (snakeInstance == null || !snakeInstance.exists())) {
             showActors();
+        }
+
+        if (snakeInstance != null && snake == null && snakeInstance.exists()) {
+            if (snakeJustSpawned) {
+                snakeJustSpawned = false;
+            } else {
+                snake = snakeInstance.requireMember(SNAKE_ACTOR_NAME);
+                showSnake();
+            }
         }
 
         if (!snakeExists() || state == SnakeState.DEAD) {
@@ -209,16 +228,23 @@ public final class EnemySystem extends BaseSystem {
         spawnFlame(-19f, 3500f);
         spawnFlame(-224f, 3630f);
 
-        snake = api.prefabs().requireFirst(SNAKE_PREFAB, 0f, 0f);
-        showSnake();
+        snakeInstance = spawnSnake(api.gameObjects());
+        snakeJustSpawned = true;
         cameraEffects.focusCombat();
+    }
+
+    static GameObjectInstance spawnSnake(GameObjectsAPI gameObjects) {
+        GameObjectInstance instance = gameObjects.spawn(
+            SNAKE_GAME_OBJECT, SNAKE_SPAWN_X, SNAKE_SPAWN_Y);
+        instance.root().renderOrder().set(SPATIAL_LAYER_INDEX, SNAKE_Z_INDEX);
+        return instance;
     }
 
     private ParticleRef spawnFlame(float x, float y) {
         ParticleRef flame = api.particles().spawn(FLAME_EFFECT, x, y);
         flame.entity()
             .renderOrder()
-            .layerIndex(PHYSICS_LAYER_INDEX);
+            .layerIndex(SPATIAL_LAYER_INDEX);
         flame.loop(false);
         return flame;
     }
@@ -237,7 +263,7 @@ public final class EnemySystem extends BaseSystem {
 
     private void bindToCurrentWorld() {
         PhysicsAPI physics = api.physics();
-        World activeWorld = physics.isRunning()
+        com.badlogic.gdx.physics.box2d.World activeWorld = physics.isRunning()
             ? physics.box2dWorld()
             : null;
 
@@ -258,6 +284,8 @@ public final class EnemySystem extends BaseSystem {
 
     private void resetRuntimeState() {
         snake = null;
+        snakeInstance = null;
+        snakeJustSpawned = false;
         state = SnakeState.HIDDEN;
         snakeHitCount = 0;
         snakeAttackFrameCount = 0;
@@ -284,4 +312,5 @@ public final class EnemySystem extends BaseSystem {
     static boolean isFatalSnakeHit(int receivedHitCount) {
         return receivedHitCount >= SNAKE_HITS_BEFORE_DEATH;
     }
+
 }

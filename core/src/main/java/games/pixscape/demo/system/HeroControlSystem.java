@@ -39,7 +39,7 @@ public final class HeroControlSystem extends BaseSystem {
     private static final float ANIMATION_STOP_SPEED_PIXELS = 5f;
 
     private static final int HERO_ATTACK_IMPACT_FRAME = 9;
-    private static final int PHYSICS_LAYER_INDEX = 5;
+    private static final int SPATIAL_LAYER_INDEX = 4;
 
     private static final String[] RUN_CLIPS = {
         "run_000",
@@ -432,7 +432,7 @@ public final class HeroControlSystem extends BaseSystem {
         );
         bloodEffect.entity()
             .renderOrder()
-            .layerIndex(PHYSICS_LAYER_INDEX);
+            .layerIndex(SPATIAL_LAYER_INDEX);
         bloodEffect.loop(false).stop();
     }
 

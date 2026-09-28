@@ -62,6 +62,8 @@ dependencies {
   implementation "com.badlogicgames.gdx:gdx:$gdxVersion:sources"
   implementation "games.pixscape:pixscape-runtime:$pixscapeRuntimeVersion"
   implementation "games.pixscape:pixscape-runtime:$pixscapeRuntimeVersion:sources"
+  implementation "com.github.tommyettinger:textratypist:2.5.0:sources"
+  implementation "com.github.tommyettinger:regexodus:0.1.21:sources"
   implementation("net.onedaybeard.artemis:artemis-odb-gwt:$artemisOdbVersion") {
     exclude group: "com.google.gwt", module: "gwt-user"
   }
