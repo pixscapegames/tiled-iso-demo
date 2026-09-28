@@ -51,7 +51,7 @@ public class Main extends ApplicationAdapter {
     private SceneLoadHandle sceneLoad;
     private LoadingStage loadingStage;
     private LoadingSplash loadingSplash;
-    private InputProcessor androidInputProcessor;
+    private InputProcessor installedInputProcessor;
     private float coreProgress;
 
     @Override
@@ -79,9 +79,9 @@ public class Main extends ApplicationAdapter {
             );
         }
         cameraEffects = new CameraEffects();
-        HeroInput heroInput = createHeroInput();
         engine = new PixscapeEngine()
                 .setWorldCamera(worldCamera);
+        HeroInput heroInput = createHeroInput();
         PixscapeAPI api = engine.api();
         CombatState combatState = new CombatState();
         engine.setPreRenderSystemCustomizer(builder ->
@@ -94,19 +94,28 @@ public class Main extends ApplicationAdapter {
                 )
         );
         engine.loadProject(projectJson.parent().parent());
+        installInputProcessor();
         resizeWorld(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         sceneLoad = engine.beginLoadScene(SCENE_NAME);
     }
 
     private HeroInput createHeroInput() {
-        if (!isAndroid()) return new KeyboardHeroInput();
+        if (!isAndroid()) return new KeyboardHeroInput(engine::hasHudKeyboardFocus);
 
         touchHeroInput = new TouchHeroInput();
-        androidInputProcessor = new InputMultiplexer(
-            new GestureDetector(touchHeroInput)
-        );
-        Gdx.input.setInputProcessor(androidInputProcessor);
         return touchHeroInput;
+    }
+
+    private void installInputProcessor() {
+        InputProcessor worldInput = touchHeroInput == null
+            ? null : new GestureDetector(touchHeroInput);
+        installedInputProcessor = routeInput(engine.getHudInputProcessor(), worldInput);
+        Gdx.input.setInputProcessor(installedInputProcessor);
+    }
+
+    static InputProcessor routeInput(InputProcessor hudInput, InputProcessor worldInput) {
+        return worldInput == null
+            ? hudInput : new InputMultiplexer(hudInput, worldInput);
     }
 
     private void resizeWorld(int width, int height) {
@@ -203,11 +212,11 @@ public class Main extends ApplicationAdapter {
     @Override
     public void dispose() {
         sceneLoad = null;
-        if (androidInputProcessor != null
-            && Gdx.input.getInputProcessor() == androidInputProcessor) {
+        if (installedInputProcessor != null
+            && Gdx.input.getInputProcessor() == installedInputProcessor) {
             Gdx.input.setInputProcessor(null);
         }
-        androidInputProcessor = null;
+        installedInputProcessor = null;
         touchHeroInput = null;
         androidViewport = null;
         cameraEffects = null;
