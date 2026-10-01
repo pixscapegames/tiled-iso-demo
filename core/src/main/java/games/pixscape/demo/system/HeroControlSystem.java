@@ -4,6 +4,7 @@ import com.artemis.BaseSystem;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.World;
 import games.pixscape.demo.input.HeroInput;
 import games.pixscape.demo.input.KeyboardHeroInput;
 import games.pixscape.demo.util.CombatState;
@@ -20,7 +21,8 @@ public final class HeroControlSystem extends BaseSystem {
     private enum HeroState {
         FREE,
         ATTACKING,
-        HIT
+        HIT,
+        DEAD
     }
 
     private static final String HERO_NAME = "hero";
@@ -39,6 +41,7 @@ public final class HeroControlSystem extends BaseSystem {
     private static final float ANIMATION_STOP_SPEED_PIXELS = 5f;
 
     private static final int HERO_ATTACK_IMPACT_FRAME = 9;
+    private static final int HERO_HITS_BEFORE_GAME_OVER = 7;
     private static final int SPATIAL_LAYER_INDEX = 4;
 
     private static final String[] RUN_CLIPS = {
@@ -53,6 +56,7 @@ public final class HeroControlSystem extends BaseSystem {
     private final HeroInput input;
 
     private EntityRef hero;
+    private World activePhysicsWorld;
     private ParticleRef bloodEffect;
     private HeroState state = HeroState.FREE;
     private boolean attackImpactTriggered;
@@ -82,6 +86,16 @@ public final class HeroControlSystem extends BaseSystem {
         PhysicsAPI physics = api.physics();
         if (!physics.isRunning()) return;
 
+        World currentWorld = physics.box2dWorld();
+        if (activePhysicsWorld != currentWorld) {
+            activePhysicsWorld = currentWorld;
+            hero = null;
+            bloodEffect = null;
+            state = HeroState.FREE;
+            attackImpactTriggered = false;
+            combatState.reset();
+        }
+
         if (hero == null || !hero.exists()) {
             hero = api.entities().requireName(HERO_NAME);
             bloodEffect = null;
@@ -105,6 +119,10 @@ public final class HeroControlSystem extends BaseSystem {
         float dt
     ) {
         if (body.getType() != BodyDef.BodyType.DynamicBody) return;
+        if (state == HeroState.DEAD) {
+            body.setLinearVelocity(0f, 0f);
+            return;
+        }
 
         float dx = input.moveX();
         float dy = input.moveY();
@@ -120,6 +138,10 @@ public final class HeroControlSystem extends BaseSystem {
         }
 
         if (combatState.consumeHeroHitRequest()) {
+            if (isFatalHeroHit(combatState.heroHitCount())) {
+                enterDeath(body, animation);
+                return;
+            }
             enterHit(body, animation, pixelsPerMeter);
         }
 
@@ -187,6 +209,16 @@ public final class HeroControlSystem extends BaseSystem {
         state = HeroState.HIT;
         combatState.setHeroHitActive(true);
         restartBloodEffect(body, pixelsPerMeter);
+    }
+
+    private void enterDeath(Body body, AnimationFacade animation) {
+        state = HeroState.DEAD;
+        attackImpactTriggered = false;
+        animation.pause();
+        body.setLinearVelocity(0f, 0f);
+        body.setAngularVelocity(0f);
+        body.setActive(false);
+        combatState.markHeroDead();
     }
 
     private boolean updateFinishedAnimations(AnimationFacade animation) {
@@ -395,6 +427,10 @@ public final class HeroControlSystem extends BaseSystem {
 
     static boolean isEffectiveAttackDirection(String attackClip) {
         return EFFECTIVE_ATTACK_CLIP.equals(attackClip);
+    }
+
+    static boolean isFatalHeroHit(int receivedHitCount) {
+        return receivedHitCount >= HERO_HITS_BEFORE_GAME_OVER;
     }
 
     static boolean hasReachedHeroAttackImpactFrame(float stateTime, float fps) {

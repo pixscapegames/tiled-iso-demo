@@ -1,6 +1,6 @@
 {
 "version": 3,
-"nextId": 1702,
+"nextId": 1710,
 "assets": [
 	{
 		"id": 1,
@@ -14346,24 +14346,10 @@
 		"scope": "INTERNAL"
 	},
 	{
-		"id": 1319,
-		"type": "particle",
-		"logicalPath": "effects/Explosion Enemy",
-		"sourceRelPath": "orig/effects/Explosion Enemy.p",
-		"scope": "USER"
-	},
-	{
 		"id": 1320,
 		"type": "particle",
 		"logicalPath": "effects/Flame",
 		"sourceRelPath": "orig/effects/Flame.p",
-		"scope": "USER"
-	},
-	{
-		"id": 1321,
-		"type": "particle",
-		"logicalPath": "effects/Pentagram Glitchy",
-		"sourceRelPath": "orig/effects/Pentagram Glitchy.p",
 		"scope": "USER"
 	},
 	{
@@ -18391,6 +18377,27 @@
 		"type": "skin",
 		"logicalPath": "skins/comic-ui",
 		"sourceRelPath": "orig/skins/1701/comic-ui.json",
+		"scope": "USER"
+	},
+	{
+		"id": 1705,
+		"type": "image",
+		"logicalPath": "images/cloud_1",
+		"sourceRelPath": "orig/images/cloud_1__a1705.png",
+		"scope": "INTERNAL"
+	},
+	{
+		"id": 1708,
+		"type": "image",
+		"logicalPath": "images/particle-star",
+		"sourceRelPath": "orig/images/particle-star__a1708.png",
+		"scope": "INTERNAL"
+	},
+	{
+		"id": 1709,
+		"type": "particle",
+		"logicalPath": "effects/stars",
+		"sourceRelPath": "orig/effects/stars.p",
 		"scope": "USER"
 	}
 ]

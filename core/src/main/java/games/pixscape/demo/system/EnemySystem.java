@@ -15,6 +15,11 @@ import games.pixscape.runtime.api.PixscapeAPI;
 /** Shows the demo snake once, then drives its small combat state machine. */
 public final class EnemySystem extends BaseSystem {
 
+    @FunctionalInterface
+    public interface ScoreAward {
+        void award(int points, float worldX, float worldY);
+    }
+
     private enum SnakeState {
         HIDDEN,
         IDLE,
@@ -36,6 +41,7 @@ public final class EnemySystem extends BaseSystem {
 
     private static final int SNAKE_ATTACK_IMPACT_FRAME = 3;
     private static final int SNAKE_HITS_BEFORE_DEATH = 5;
+    private static final float SNAKE_DEATH_FADE_SECONDS = 0.5f;
     private static final int SPATIAL_LAYER_INDEX = 4;
     private static final int SNAKE_Z_INDEX = 4;
     // The former snake prefab's actor was near (-96, 3543). The new
@@ -51,6 +57,8 @@ public final class EnemySystem extends BaseSystem {
     private final PixscapeAPI api;
     private final CombatState combatState;
     private final CameraEffects cameraEffects;
+    private final ScoreAward scoreAwarded;
+    private final Runnable snakeDied;
     private final SnakeTriggers triggers = new SnakeTriggers();
 
     private com.badlogic.gdx.physics.box2d.World listenerWorld;
@@ -61,6 +69,7 @@ public final class EnemySystem extends BaseSystem {
     private int snakeHitCount;
     private int snakeAttackFrameCount;
     private boolean snakeAttackImpactHandled;
+    private float deathFadeRemaining = -1f;
 
 
     public EnemySystem(PixscapeAPI api, CombatState combatState) {
@@ -72,9 +81,30 @@ public final class EnemySystem extends BaseSystem {
         CombatState combatState,
         CameraEffects cameraEffects
     ) {
+        this(api, combatState, cameraEffects, (points, worldX, worldY) -> {});
+    }
+
+    public EnemySystem(
+        PixscapeAPI api,
+        CombatState combatState,
+        CameraEffects cameraEffects,
+        ScoreAward scoreAwarded
+    ) {
+        this(api, combatState, cameraEffects, scoreAwarded, () -> {});
+    }
+
+    public EnemySystem(
+        PixscapeAPI api,
+        CombatState combatState,
+        CameraEffects cameraEffects,
+        ScoreAward scoreAwarded,
+        Runnable snakeDied
+    ) {
         this.api = api;
         this.combatState = combatState;
         this.cameraEffects = cameraEffects;
+        this.scoreAwarded = scoreAwarded;
+        this.snakeDied = snakeDied;
     }
 
     @Override
@@ -95,8 +125,13 @@ public final class EnemySystem extends BaseSystem {
             }
         }
 
-        if (!snakeExists() || state == SnakeState.DEAD) {
+        if (!snakeExists()) {
             combatState.consumeHeroAttackImpact();
+            return;
+        }
+        if (state == SnakeState.DEAD) {
+            combatState.consumeHeroAttackImpact();
+            updateDeathFade();
             return;
         }
 
@@ -170,6 +205,18 @@ public final class EnemySystem extends BaseSystem {
         if (!snakeExists() || state == SnakeState.DEAD) return;
 
         snakeHitCount++;
+        Body hitBody = api.physics().body(snake);
+        float worldX;
+        float worldY;
+        if (hitBody != null) {
+            float pixelsPerMeter = api.physics().pixelsPerMeter();
+            worldX = hitBody.getPosition().x * pixelsPerMeter;
+            worldY = hitBody.getPosition().y * pixelsPerMeter;
+        } else {
+            worldX = snakeInstance.root().transform().x() + snake.transform().x();
+            worldY = snakeInstance.root().transform().y() + snake.transform().y();
+        }
+        scoreAwarded.award(10, worldX, worldY);
         if (isFatalSnakeHit(snakeHitCount)) {
             die();
             return;
@@ -213,6 +260,7 @@ public final class EnemySystem extends BaseSystem {
             .setLoop(false);
 
         state = SnakeState.DEAD;
+        deathFadeRemaining = -1f;
         snakeAttackImpactHandled = false;
         cameraEffects.releaseCombat();
 
@@ -222,6 +270,20 @@ public final class EnemySystem extends BaseSystem {
             body.setAngularVelocity(0f);
             body.setActive(false);
         }
+    }
+
+    private void updateDeathFade() {
+        if (deathFadeRemaining < 0f) {
+            if (!snake.animation().isFinished()) return;
+            deathFadeRemaining = SNAKE_DEATH_FADE_SECONDS;
+            snakeDied.run();
+            return;
+        }
+        if (deathFadeRemaining == 0f) return;
+
+        deathFadeRemaining = Math.max(0f, deathFadeRemaining - world.getDelta());
+        snake.sprite().setAlpha(deathFadeRemaining / SNAKE_DEATH_FADE_SECONDS);
+        if (deathFadeRemaining == 0f) snake.sprite().setVisible(false);
     }
 
     private void showActors() {
@@ -251,6 +313,7 @@ public final class EnemySystem extends BaseSystem {
 
     private void showSnake() {
         snakeHitCount = 0;
+        deathFadeRemaining = -1f;
         snake.sprite().setVisible(true);
         restoreSnakeTint();
         idle();
@@ -290,6 +353,7 @@ public final class EnemySystem extends BaseSystem {
         snakeHitCount = 0;
         snakeAttackFrameCount = 0;
         snakeAttackImpactHandled = false;
+        deathFadeRemaining = -1f;
         cameraEffects.reset();
         combatState.reset();
         triggers.reset();

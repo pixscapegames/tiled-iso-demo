@@ -1,0 +1,7 @@
+{
+"schemaVersion": 1,
+"documentId": "hud/menu.json",
+"skinId": "orig/skins/1701/comic-ui.json",
+"atlasId": null,
+"textureProfileId": "hud-fixed-2048-linear-clamp"
+}

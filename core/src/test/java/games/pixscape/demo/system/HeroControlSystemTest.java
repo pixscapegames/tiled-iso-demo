@@ -29,6 +29,13 @@ public class HeroControlSystemTest {
     }
 
     @Test
+    public void seventhReceivedHitEndsHeroControl() {
+        assertFalse(HeroControlSystem.isFatalHeroHit(6));
+        assertTrue(HeroControlSystem.isFatalHeroHit(7));
+        assertTrue(HeroControlSystem.isFatalHeroHit(8));
+    }
+
+    @Test
     public void mapsCardinalDirectionsToTheirRunClips() {
         assertEquals("run_000", HeroControlSystem.runClipForDirection(0f, 1f));
         assertEquals("run_090", HeroControlSystem.runClipForDirection(1f, 0f));

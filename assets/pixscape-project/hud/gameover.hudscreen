@@ -1,0 +1,7 @@
+{
+"schemaVersion": 1,
+"documentId": "hud/gameover.json",
+"skinId": "orig/skins/1701/comic-ui.json",
+"atlasId": "atlases/hud/screens/69af5bc9-2380-35a7-a165-d4805d69f7b4/hud.atlas",
+"textureProfileId": "hud-fixed-2048-linear-clamp"
+}

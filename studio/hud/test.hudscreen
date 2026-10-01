@@ -1,9 +1,0 @@
-{
-"schemaVersion": 1,
-"referenceWidth": 1920,
-"referenceHeight": 1080,
-"documentId": "hud/test.json",
-"skinId": null,
-"atlasId": null,
-"textureProfileId": "hud-fixed-2048-linear-clamp"
-}

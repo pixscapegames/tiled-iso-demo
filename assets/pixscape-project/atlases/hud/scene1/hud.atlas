@@ -4,18 +4,238 @@ format: RGBA8888
 filter: Linear, Linear
 repeat: none
 pma: false
-circle1__a1326
+hud-font-1700-page-0
   rotate: 0
-  bounds: 259, 72, 60, 60
-  offsets: 0, 0, 60, 60
+  bounds: 693, 1307, 205, 205
+  offsets: 0, 0, 205, 205
   index: -1
-__pixscape_internal__/__ps_internal_white_px
+Crimson-Roach
   rotate: 0
-  bounds: 1, 1, 1, 1
+  bounds: 1, 1012, 690, 831
+  offsets: 0, 0, 690, 831
+  index: -1
+bubble-lower-left
+  rotate: 0
+  bounds: 693, 1157, 203, 148
+  offsets: 0, 0, 203, 148
+  index: -1
+  pad: 12, 14, 20, 69
+  split: 34, 165, 33, 82
+bubble-lower-right
+  rotate: 0
+  bounds: 693, 1008, 203, 147
+  offsets: 0, 0, 203, 147
+  index: -1
+  pad: 14, 12, 20, 68
+  split: 163, 36, 33, 81
+bubble-top-left
+  rotate: 0
+  bounds: 1221, 1696, 203, 147
+  offsets: 0, 0, 203, 147
+  index: -1
+  pad: 12, 14, 66, 22
+  split: 31, 165, 79, 35
+bubble-top-right
+  rotate: 0
+  bounds: 1015, 1631, 203, 148
+  offsets: 0, 0, 203, 148
+  index: -1
+  pad: 12, 14, 66, 23
+  split: 164, 31, 79, 36
+button
+  rotate: 0
+  bounds: 1, 636, 150, 50
+  offsets: 0, 0, 150, 50
+  index: -1
+  pad: 35, 37, 8, 7
+  split: 0, 0, 0, 1
+button-highlighted
+  rotate: 0
+  bounds: 1, 585, 150, 49
+  offsets: 0, 0, 150, 49
+  index: -1
+  pad: 35, 37, 8, 6
+  split: 1, 0, 1, 0
+button-pressed
+  rotate: 0
+  bounds: 1, 534, 150, 49
+  offsets: 0, 0, 150, 49
+  index: -1
+  pad: 35, 37, 8, 6
+  split: 1, 0, 1, 0
+checkbox
+  rotate: 0
+  bounds: 1, 330, 32, 26
+  offsets: 0, 0, 32, 26
+  index: -1
+checkbox-on
+  rotate: 0
+  bounds: 1, 302, 32, 26
+  offsets: 0, 0, 32, 26
+  index: -1
+cursor
+  rotate: 0
+  bounds: 1, 56, 4, 27
+  offsets: 0, 0, 4, 27
+  index: -1
+  split: 0, 0, 0, 0
+font-button-export
+  rotate: 0
+  bounds: 1, 771, 181, 184
+  offsets: 0, 0, 181, 184
+  index: -1
+font-export
+  rotate: 0
+  bounds: 1, 383, 87, 87
+  offsets: 0, 0, 87, 87
+  index: -1
+font-title-export
+  rotate: 0
+  bounds: 693, 1514, 320, 329
+  offsets: 0, 0, 320, 329
+  index: -1
+half-tone-box
+  rotate: 0
+  bounds: 1, 472, 128, 60
+  offsets: 0, 0, 128, 60
+  index: -1
+  pad: 5, 5, 5, 5
+  split: 3, 107, 3, 3
+minus
+  rotate: 0
+  bounds: 663, 984, 26, 26
+  offsets: 0, 0, 26, 26
+  index: -1
+narration-box
+  rotate: 0
+  bounds: 1, 960, 16, 16
+  offsets: 0, 0, 16, 16
+  index: -1
+  pad: 5, 5, 5, 5
+  split: 3, 3, 3, 3
+plus
+  rotate: 0
+  bounds: 1, 184, 26, 26
+  offsets: 0, 0, 26, 26
+  index: -1
+progress-bar
+  rotate: 0
+  bounds: 361, 957, 300, 53
+  offsets: 0, 0, 300, 53
+  index: -1
+  pad: 10, 8, 0, 0
+  split: 10, 9, 11, 9
+progress-bar-knob
+  rotate: 0
+  bounds: 1, 1, 1, 53
+  offsets: 0, 0, 1, 53
+  index: -1
+radio
+  rotate: 0
+  bounds: 1, 240, 31, 26
+  offsets: 0, 0, 31, 26
+  index: -1
+radio-on
+  rotate: 0
+  bounds: 1, 212, 31, 26
+  offsets: 0, 0, 31, 26
+  index: -1
+scrollbar-horizontal
+  rotate: 0
+  bounds: 1, 358, 67, 23
+  offsets: 0, 0, 67, 23
+  index: -1
+scrollbar-vertical
+  rotate: 0
+  bounds: 1, 115, 23, 67
+  offsets: 0, 0, 23, 67
+  index: -1
+select-box
+  rotate: 0
+  bounds: 1426, 1818, 152, 25
+  offsets: 0, 0, 152, 25
+  index: -1
+  pad: 4, 24, 6, 6
+  split: 4, 19, 6, 17
+select-box-big
+  rotate: 0
+  bounds: 1580, 1804, 152, 39
+  offsets: 0, 0, 152, 39
+  index: -1
+  pad: 8, 32, 7, 6
+  split: 4, 28, 6, 31
+select-box-big-list
+  rotate: 0
+  bounds: 1, 688, 151, 54
+  offsets: 0, 0, 151, 54
+  index: -1
+  pad: 6, 7, 2, 7
+  split: 4, 5, 0, 5
+select-box-big-open
+  rotate: 0
+  bounds: 1734, 1804, 152, 39
+  offsets: 0, 0, 152, 39
+  index: -1
+  pad: 8, 32, 7, 6
+  split: 4, 28, 6, 31
+select-box-list
+  rotate: 0
+  bounds: 1888, 1783, 152, 60
+  offsets: 0, 0, 152, 60
+  index: -1
+  pad: 6, 8, 2, 8
+  split: 4, 6, 0, 6
+select-box-open
+  rotate: 0
+  bounds: 1, 744, 152, 25
+  offsets: 0, 0, 152, 25
+  index: -1
+  pad: 4, 24, 6, 6
+  split: 4, 19, 6, 17
+slider
+  rotate: 0
+  bounds: 1, 978, 358, 32
+  offsets: 0, 0, 358, 32
+  index: -1
+  pad: 0, 0, 0, 0
+  split: 155, 155, 14, 14
+slider-knob
+  rotate: 0
+  bounds: 1, 268, 32, 32
+  offsets: 0, 0, 32, 32
+  index: -1
+splitpane
+  rotate: 0
+  bounds: 1, 85, 10, 10
+  offsets: 0, 0, 10, 10
+  index: -1
+text-field
+  rotate: 0
+  bounds: 1015, 1781, 204, 62
+  offsets: 0, 0, 204, 62
+  index: -1
+  pad: 11, 26, 12, 22
+  split: 10, 70, 13, 19
+white
+  rotate: 0
+  bounds: 2042, 1842, 1, 1
   offsets: 0, 0, 1, 1
   index: -1
-__pixscape_builtin_label_font
+window
   rotate: 0
-  bounds: 1, 4, 256, 128
-  offsets: 0, 0, 256, 128
+  bounds: 1, 97, 16, 16
+  offsets: 0, 0, 16, 16
+  index: -1
+  pad: 5, 5, 5, 5
+  split: 3, 3, 3, 3
+window-no-padding
+  rotate: 0
+  bounds: 1, 97, 16, 16
+  offsets: 0, 0, 16, 16
+  index: -1
+  split: 3, 3, 3, 3
+__pixscape_internal__/__ps_internal_white_px
+  rotate: 0
+  bounds: 2042, 1842, 1, 1
+  offsets: 0, 0, 1, 1
   index: -1

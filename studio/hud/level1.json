@@ -1,0 +1,367 @@
+{
+"schemaVersion": 2,
+"root": {
+	"id": "root",
+	"kind": "TABLE",
+	"actor": {
+		"width": 0,
+		"height": 0
+	},
+	"fillParent": false,
+	"visible": true,
+	"tooltip": null,
+	"windowActions": [],
+	"image": null,
+	"label": null,
+	"textraLabel": null,
+	"textButton": null,
+	"imageButton": null,
+	"imageTextButton": null,
+	"textField": null,
+	"selectBox": null,
+	"list": null,
+	"checkBox": null,
+	"slider": null,
+	"progressBar": null,
+	"container": null,
+	"scrollPane": null,
+	"window": null,
+	"dialog": null,
+	"table": {
+		"columns": 3,
+		"rows": [
+			{
+				"cells": [
+					{
+						"id": "cell-1",
+						"colspan": 1,
+						"constraints": {
+							"minWidth": null,
+							"minHeight": null,
+							"prefWidth": null,
+							"prefHeight": null,
+							"maxWidth": null,
+							"maxHeight": null,
+							"padTop": 50,
+							"padRight": 20,
+							"padBottom": 0,
+							"padLeft": 0,
+							"fillX": false,
+							"fillY": false,
+							"expandX": true,
+							"expandY": false,
+							"uniformX": true,
+							"uniformY": false,
+							"horizontalAlign": "RIGHT",
+							"verticalAlign": "TOP"
+						},
+						"content": {
+							"id": "label-1",
+							"kind": "LABEL",
+							"actor": {
+								"width": 0,
+								"height": 0
+							},
+							"fillParent": false,
+							"visible": true,
+							"tooltip": null,
+							"windowActions": [],
+							"image": null,
+							"label": {
+								"text": "Score:",
+								"styleName": "title",
+								"fontAssetId": 1700
+							},
+							"textraLabel": null,
+							"textButton": null,
+							"imageButton": null,
+							"imageTextButton": null,
+							"textField": null,
+							"selectBox": null,
+							"list": null,
+							"checkBox": null,
+							"slider": null,
+							"progressBar": null,
+							"container": null,
+							"scrollPane": null,
+							"window": null,
+							"dialog": null,
+							"table": null,
+							"children": []
+						}
+					},
+					{
+						"id": "cell-8fe6d5d8-1a58-48eb-911d-aa14994d3224",
+						"colspan": 1,
+						"constraints": {
+							"minWidth": null,
+							"minHeight": null,
+							"prefWidth": null,
+							"prefHeight": null,
+							"maxWidth": null,
+							"maxHeight": null,
+							"padTop": 50,
+							"padRight": 0,
+							"padBottom": 0,
+							"padLeft": 0,
+							"fillX": false,
+							"fillY": false,
+							"expandX": false,
+							"expandY": false,
+							"uniformX": false,
+							"uniformY": false,
+							"horizontalAlign": "LEFT",
+							"verticalAlign": "TOP"
+						},
+						"content": {
+							"id": "container-1",
+							"kind": "CONTAINER",
+							"actor": {
+								"width": 0,
+								"height": 0
+							},
+							"fillParent": false,
+							"visible": true,
+							"tooltip": null,
+							"windowActions": [],
+							"image": null,
+							"label": null,
+							"textraLabel": null,
+							"textButton": null,
+							"imageButton": null,
+							"imageTextButton": null,
+							"textField": null,
+							"selectBox": null,
+							"list": null,
+							"checkBox": null,
+							"slider": null,
+							"progressBar": null,
+							"container": {
+								"clip": false
+							},
+							"scrollPane": null,
+							"window": null,
+							"dialog": null,
+							"table": null,
+							"children": [
+								{
+									"node": {
+										"id": "label-2",
+										"kind": "LABEL",
+										"actor": {
+											"width": 0,
+											"height": 0
+										},
+										"fillParent": false,
+										"visible": true,
+										"tooltip": null,
+										"windowActions": [],
+										"image": null,
+										"label": {
+											"text": "0",
+											"styleName": "title",
+											"fontAssetId": 1700
+										},
+										"textraLabel": null,
+										"textButton": null,
+										"imageButton": null,
+										"imageTextButton": null,
+										"textField": null,
+										"selectBox": null,
+										"list": null,
+										"checkBox": null,
+										"slider": null,
+										"progressBar": null,
+										"container": null,
+										"scrollPane": null,
+										"window": null,
+										"dialog": null,
+										"table": null,
+										"children": []
+									},
+									"placementKind": "DIRECT",
+									"cell": null,
+									"free": null
+								}
+							]
+						}
+					},
+					{
+						"id": "cell-71532577-278c-429e-88da-20c089755768",
+						"colspan": 1,
+						"constraints": {
+							"minWidth": 64,
+							"minHeight": 32,
+							"prefWidth": null,
+							"prefHeight": null,
+							"maxWidth": null,
+							"maxHeight": null,
+							"padTop": 50,
+							"padRight": 0,
+							"padBottom": 0,
+							"padLeft": 30,
+							"fillX": false,
+							"fillY": false,
+							"expandX": true,
+							"expandY": false,
+							"uniformX": true,
+							"uniformY": false,
+							"horizontalAlign": "LEFT",
+							"verticalAlign": "TOP"
+						},
+						"content": {
+							"id": "textra-label-1",
+							"kind": "TEXTRA_LABEL",
+							"actor": {
+								"width": 0,
+								"height": 0
+							},
+							"fillParent": false,
+							"visible": false,
+							"tooltip": null,
+							"windowActions": [],
+							"image": null,
+							"label": null,
+							"textraLabel": {
+								"text": "You killed the snake !",
+								"styleName": "alt",
+								"fontAssetId": 1700,
+								"typingEnabled": true
+							},
+							"textButton": null,
+							"imageButton": null,
+							"imageTextButton": null,
+							"textField": null,
+							"selectBox": null,
+							"list": null,
+							"checkBox": null,
+							"slider": null,
+							"progressBar": null,
+							"container": null,
+							"scrollPane": null,
+							"window": null,
+							"dialog": null,
+							"table": null,
+							"children": []
+						}
+					}
+				]
+			},
+			{
+				"cells": [
+					{
+						"id": "cell-662c1045-6c42-45ab-9668-bcf5c085836c",
+						"colspan": 1,
+						"constraints": {
+							"minWidth": 64,
+							"minHeight": 32,
+							"prefWidth": null,
+							"prefHeight": null,
+							"maxWidth": null,
+							"maxHeight": null,
+							"padTop": 0,
+							"padRight": 0,
+							"padBottom": 0,
+							"padLeft": 0,
+							"fillX": false,
+							"fillY": false,
+							"expandX": false,
+							"expandY": true,
+							"uniformX": false,
+							"uniformY": false,
+							"horizontalAlign": "CENTER",
+							"verticalAlign": "TOP"
+						},
+						"content": null
+					},
+					{
+						"id": "cell-bf890495-7da3-45e1-a3bd-9b098414bbbc",
+						"colspan": 1,
+						"constraints": {
+							"minWidth": 64,
+							"minHeight": 32,
+							"prefWidth": null,
+							"prefHeight": null,
+							"maxWidth": null,
+							"maxHeight": null,
+							"padTop": 0,
+							"padRight": 0,
+							"padBottom": 0,
+							"padLeft": 0,
+							"fillX": false,
+							"fillY": false,
+							"expandX": false,
+							"expandY": true,
+							"uniformX": false,
+							"uniformY": false,
+							"horizontalAlign": "CENTER",
+							"verticalAlign": "TOP"
+						},
+						"content": null
+					},
+					{
+						"id": "cell-92ae54f0-6111-457f-8bcc-695e6b33554b",
+						"colspan": 1,
+						"constraints": {
+							"minWidth": 64,
+							"minHeight": 32,
+							"prefWidth": null,
+							"prefHeight": null,
+							"maxWidth": null,
+							"maxHeight": null,
+							"padTop": 0,
+							"padRight": 0,
+							"padBottom": 0,
+							"padLeft": 0,
+							"fillX": false,
+							"fillY": false,
+							"expandX": false,
+							"expandY": true,
+							"uniformX": false,
+							"uniformY": false,
+							"horizontalAlign": "CENTER",
+							"verticalAlign": "TOP"
+						},
+						"content": {
+							"id": "textra-label-3",
+							"kind": "TEXTRA_LABEL",
+							"actor": {
+								"width": 0,
+								"height": 0
+							},
+							"fillParent": false,
+							"visible": false,
+							"tooltip": null,
+							"windowActions": [],
+							"image": null,
+							"label": null,
+							"textraLabel": {
+								"text": "You receive 50 extra points.",
+								"styleName": "alt",
+								"fontAssetId": 1700,
+								"typingEnabled": true
+							},
+							"textButton": null,
+							"imageButton": null,
+							"imageTextButton": null,
+							"textField": null,
+							"selectBox": null,
+							"list": null,
+							"checkBox": null,
+							"slider": null,
+							"progressBar": null,
+							"container": null,
+							"scrollPane": null,
+							"window": null,
+							"dialog": null,
+							"table": null,
+							"children": []
+						}
+					}
+				]
+			}
+		]
+	},
+	"children": []
+}
+}
