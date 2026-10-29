@@ -57,11 +57,11 @@ public class EnemySystemGameObjectTest {
 
         };
 
-        Assert.assertSame(instance, EnemySystem.spawnSnake(gameObjects));
+        Assert.assertSame(instance, EnemySystem.spawnSnake(gameObjects, 3));
         Assert.assertEquals(1, spawnCount[0]);
         Assert.assertEquals("gameobjects/snake.gameobject", requestedAsset[0]);
-        Assert.assertEquals(-256f, requestedPosition[0], 0f);
-        Assert.assertEquals(3383f, requestedPosition[1], 0f);
-        Assert.assertArrayEquals(new int[]{4, 4}, requestedOrder);
+        Assert.assertEquals(-95.93151f, requestedPosition[0] + 160f, 0.001f);
+        Assert.assertEquals(3543.4182f, requestedPosition[1] + 160f, 0.001f);
+        Assert.assertArrayEquals(new int[]{3, 4}, requestedOrder);
     }
 }

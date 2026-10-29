@@ -149,6 +149,13 @@ tasks.register('superDev') {
 
 tasks.compileJava.dependsOn("processResources")
 
+// The GWT preloader embeds exported assets during compilation.
+tasks.named('gwtCompile') {
+  inputs.files(rootProject.fileTree('assets') {
+    exclude '.pixscape/**', 'assets.txt'
+  }).withPropertyName('runtimeAssets').withPathSensitivity(PathSensitivity.RELATIVE)
+}
+
 java.sourceCompatibility = JavaVersion.VERSION_21
 java.targetCompatibility = JavaVersion.VERSION_21
 sourceSets.main.java.srcDirs = [ "src/main/java/" ]

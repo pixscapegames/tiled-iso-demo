@@ -1,6 +1,7 @@
 package games.pixscape.demo.util;
 
 import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
@@ -14,13 +15,13 @@ public final class SnakeTriggers implements ContactListener {
     private static final short SNAKE_ATTACK_CATEGORY = 1 << 3;      // 8
     private static final short SNAKE_SENSOR_MASK = HERO_FOOTPRINT_CATEGORY;
 
-    private int heroEntityId = -1;
+    private Body heroBody;
     private int attackSensorContacts;
     private boolean appearanceTriggered;
     private boolean appearancePending;
 
-    public void bindHero(int heroEntityId) {
-        this.heroEntityId = heroEntityId;
+    public void bindHero(Body heroBody) {
+        this.heroBody = heroBody;
     }
 
     @Override
@@ -71,7 +72,7 @@ public final class SnakeTriggers implements ContactListener {
     }
 
     public void reset() {
-        heroEntityId = -1;
+        heroBody = null;
         attackSensorContacts = 0;
         appearanceTriggered = false;
         appearancePending = false;
@@ -102,11 +103,8 @@ public final class SnakeTriggers implements ContactListener {
     }
 
     private boolean isHeroFootprint(Fixture fixture, short sensorCategory) {
-        Object userData = fixture.getBody().getUserData();
-        boolean hero = userData instanceof Integer && (Integer) userData == heroEntityId;
-
-        return hero
-            && fixture.getFilterData().categoryBits == HERO_FOOTPRINT_CATEGORY
+        return fixture.getBody() == heroBody && !fixture.isSensor()
+            && (fixture.getFilterData().categoryBits & HERO_FOOTPRINT_CATEGORY) != 0
             && (fixture.getFilterData().maskBits & sensorCategory) != 0;
     }
 }

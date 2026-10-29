@@ -19,6 +19,8 @@ apply plugin: 'io.github.fourlastor.construo'
 import io.github.fourlastor.construo.Target
 
 sourceSets.main.resources.srcDirs += [ rootProject.file('assets').path ]
+// Studio preview captures are local diagnostics, not runtime resources.
+sourceSets.main.resources.exclude '.pixscape/**'
 application.mainClass = 'games.pixscape.demo.lwjgl3.Lwjgl3Launcher'
 application.applicationName = appName
 eclipse.project.name = appName + '-lwjgl3'
@@ -29,6 +31,7 @@ if (JavaVersion.current().isJava9Compatible()) {
 }
 
 dependencies {
+  testImplementation "junit:junit:4.13.2"
   implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
   implementation "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
   implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
@@ -49,6 +52,18 @@ dependencies {
     implementation("org.lwjgl:lwjgl-opengl:$lwjgl3Version")
     implementation("org.lwjgl:lwjgl-stb:$lwjgl3Version")
   }
+}
+
+tasks.register('sceneGlSmoke', Test) {
+  description = 'Loads and captures scene1 with a real desktop GL30 context.'
+  group = 'verification'
+  testClassesDirs = sourceSets.test.output.classesDirs
+  classpath = sourceSets.test.runtimeClasspath
+  useJUnit()
+  include '**/SceneGlSmokeTest.class'
+  include '**/HeroRuntimeGlTest.class'
+  include '**/SnakeRuntimeGlTest.class'
+  workingDir = rootProject.file('assets')
 }
 
 def os = System.properties['os.name'].toLowerCase(Locale.ROOT)

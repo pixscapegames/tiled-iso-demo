@@ -42,7 +42,6 @@ public final class HeroControlSystem extends BaseSystem {
 
     private static final int HERO_ATTACK_IMPACT_FRAME = 9;
     private static final int HERO_HITS_BEFORE_GAME_OVER = 7;
-    private static final int SPATIAL_LAYER_INDEX = 4;
 
     private static final String[] RUN_CLIPS = {
         "run_000",
@@ -466,9 +465,10 @@ public final class HeroControlSystem extends BaseSystem {
             body.getPosition().x * pixelsPerMeter,
             body.getPosition().y * pixelsPerMeter
         );
+        bloodEffect.particles().setIgnoreAmbientLighting(true);
         bloodEffect.entity()
             .renderOrder()
-            .layerIndex(SPATIAL_LAYER_INDEX);
+            .layerIndex(hero.renderOrder().layerIndex());
         bloodEffect.loop(false).stop();
     }
 

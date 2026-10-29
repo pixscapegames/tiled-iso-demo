@@ -30,7 +30,7 @@ public final class EnemySystem extends BaseSystem {
 
     private static final String HERO_NAME = "hero";
     private static final String SNAKE_GAME_OBJECT = "gameobjects/snake.gameobject";
-    private static final String SNAKE_ACTOR_NAME = "snake_attack";
+    private static final String SNAKE_ACTOR_NAME = "snake";
     private static final String SNAKE_IDLE_ANIMATION = "snake_idle";
     private static final String SNAKE_ATTACK_ANIMATION = "snake_attack";
     private static final String SNAKE_HIT_ANIMATION = "snake_hit";
@@ -42,12 +42,11 @@ public final class EnemySystem extends BaseSystem {
     private static final int SNAKE_ATTACK_IMPACT_FRAME = 3;
     private static final int SNAKE_HITS_BEFORE_DEATH = 5;
     private static final float SNAKE_DEATH_FADE_SECONDS = 0.5f;
-    private static final int SPATIAL_LAYER_INDEX = 4;
     private static final int SNAKE_Z_INDEX = 4;
-    // The former snake prefab's actor was near (-96, 3543). The new
-    // Game Object actor is local (160, 160) to its zero-positioned root.
-    private static final float SNAKE_SPAWN_X = -256f;
-    private static final float SNAKE_SPAWN_Y = 3383f;
+    // Historical actor position (-95.93151, 3543.4182), minus the exported
+    // member's local (160, 160). The root has unit scale and no rotation.
+    private static final float SNAKE_SPAWN_X = -255.9315f;
+    private static final float SNAKE_SPAWN_Y = 3383.4182f;
 
     private static final float HIT_TINT_RED = 1f;
     private static final float HIT_TINT_GREEN = 0f;
@@ -287,26 +286,28 @@ public final class EnemySystem extends BaseSystem {
     }
 
     private void showActors() {
-        spawnFlame(-19f, 3500f);
-        spawnFlame(-224f, 3630f);
+        int actorLayer = api.entities().requireName(HERO_NAME).renderOrder().layerIndex();
+        spawnFlame(-19f, 3500f, actorLayer);
+        spawnFlame(-224f, 3630f, actorLayer);
 
-        snakeInstance = spawnSnake(api.gameObjects());
+        snakeInstance = spawnSnake(api.gameObjects(), actorLayer);
         snakeJustSpawned = true;
         cameraEffects.focusCombat();
     }
 
-    static GameObjectInstance spawnSnake(GameObjectsAPI gameObjects) {
+    static GameObjectInstance spawnSnake(GameObjectsAPI gameObjects, int actorLayer) {
         GameObjectInstance instance = gameObjects.spawn(
             SNAKE_GAME_OBJECT, SNAKE_SPAWN_X, SNAKE_SPAWN_Y);
-        instance.root().renderOrder().set(SPATIAL_LAYER_INDEX, SNAKE_Z_INDEX);
+        instance.root().renderOrder().set(actorLayer, SNAKE_Z_INDEX);
         return instance;
     }
 
-    private ParticleRef spawnFlame(float x, float y) {
+    private ParticleRef spawnFlame(float x, float y, int actorLayer) {
         ParticleRef flame = api.particles().spawn(FLAME_EFFECT, x, y);
+        flame.particles().setIgnoreAmbientLighting(true);
         flame.entity()
             .renderOrder()
-            .layerIndex(SPATIAL_LAYER_INDEX);
+            .layerIndex(actorLayer);
         flame.loop(false);
         return flame;
     }
@@ -336,11 +337,7 @@ public final class EnemySystem extends BaseSystem {
         resetRuntimeState();
 
         if (listenerWorld != null) {
-            int heroEntityId = api.entities()
-                .requireName(HERO_NAME)
-                .entityId();
-
-            triggers.bindHero(heroEntityId);
+            triggers.bindHero(physics.body(api.entities().requireName(HERO_NAME)));
             listenerWorld.setContactListener(triggers);
         }
     }

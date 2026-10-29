@@ -36,6 +36,7 @@
 		"shaderParams": null,
 		"repeat": null,
 		"pointLight": null,
+		"surfaceLighting": null,
 		"coneLight": null,
 		"spatialHeight": null,
 		"physicsBody": null,
@@ -46,7 +47,7 @@
 		"sourceEntityId": 2,
 		"parentSourceEntityId": 1,
 		"transform": {
-			"x": 160,
+			"x": 159.99998,
 			"y": 160,
 			"rotationRad": 0,
 			"scaleX": 1,
@@ -61,7 +62,7 @@
 			"kind": "ANIMATION"
 		},
 		"identity": {
-			"name": "snake_attack"
+			"name": "snake"
 		},
 		"tags": null,
 		"customProperties": null,
@@ -90,24 +91,73 @@
 		},
 		"animation": {
 			"animationAssetIds": {
-				"items": [ 1322, 1323, 1324, 1325, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+				"items": [ 1325, 1322, 1323, 1324, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 				"size": 4,
 				"ordered": true
 			},
 			"fps": 12,
 			"playing": true,
 			"loop": true,
-			"stateTime": 261.86542,
-			"frame": 10,
+			"stateTime": 155.310215563979,
+			"frame": 3,
 			"currentClip": "default"
 		},
 		"shaderParams": null,
 		"repeat": null,
 		"pointLight": null,
+		"surfaceLighting": null,
 		"coneLight": null,
 		"spatialHeight": {
 			"altitude": 0,
-			"height": 1
+			"rectangles": {
+				"staticRectangle": null,
+				"clips": {
+					"1322": {
+						"attack_000": {
+							"class": "games.pixscape.runtime.spatial.ActorSpatialRectangleData",
+							"width": 156.06805,
+							"height": 102.48413,
+							"x": -81.48027,
+							"y": 24.124268,
+							"pivotX": 11.487701,
+							"pivotY": 48.24878
+						}
+					},
+					"1324": {
+						"default": {
+							"class": "games.pixscape.runtime.spatial.ActorSpatialRectangleData",
+							"width": 124.47649,
+							"height": 104.207275,
+							"x": -63.674255,
+							"y": 33.888916,
+							"pivotX": 8.041336,
+							"pivotY": 45.37671
+						}
+					},
+					"1323": {
+						"default": {
+							"class": "games.pixscape.runtime.spatial.ActorSpatialRectangleData",
+							"width": 173.87396,
+							"height": 130.05469,
+							"x": -96.414276,
+							"y": 13.785156,
+							"pivotX": 9.190201,
+							"pivotY": 49.971924
+						}
+					},
+					"1325": {
+						"default": {
+							"class": "games.pixscape.runtime.spatial.ActorSpatialRectangleData",
+							"width": 127.34854,
+							"height": 92.14502,
+							"x": -52.760834,
+							"y": -26.421875,
+							"pivotX": 17.231667,
+							"pivotY": 44.228027
+						}
+					}
+				}
+			}
 		},
 		"physicsBody": {
 			"type": 0,
@@ -124,10 +174,10 @@
 				"localShapeId": 1,
 				"geometry": {
 					"shapeType": 1,
-					"offsetX": -0.11946586,
-					"offsetY": -0.26240236,
+					"offsetX": -0.022975462,
+					"offsetY": -0.20263658,
 					"angleDegrees": 0,
-					"radius": 0.32157052,
+					"radius": 0.24965212,
 					"halfWidth": 0.5,
 					"halfHeight": 0.5,
 					"polygonVertices": [],

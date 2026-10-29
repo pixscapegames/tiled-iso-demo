@@ -90,6 +90,7 @@ public class Main extends ApplicationAdapter {
     private CameraEffects cameraEffects;
     private TouchHeroInput touchHeroInput;
     private SceneLoadHandle sceneLoad;
+    private LightTravel lightTravel;
     private HudScreenRuntime menuHud;
     private HudScreenRuntime gameOverHud;
     private Actor gameOverLabel;
@@ -230,7 +231,8 @@ public class Main extends ApplicationAdapter {
 
     @Override
     public void render() {
-        float delta = Math.min(Gdx.graphics.getDeltaTime(), 0.1f);
+        float lightDelta = Gdx.graphics.getDeltaTime();
+        float delta = Math.min(lightDelta, 0.1f);
 
         switch (loadingStage) {
             case SPLASH:
@@ -256,6 +258,10 @@ public class Main extends ApplicationAdapter {
                 loadingSplash.render(delta, displayedProgress());
                 return;
             case READY:
+                // Approximate ground footprint of willow2, not the centre of its image.
+                lightTravel = new LightTravel(
+                    engine.api().entities().requireName("Point light").transform(), -1145f, 3385f);
+                lightDelta = 0f; // First frame stays at the authored starting position.
                 loadingSplash.dispose();
                 loadingSplash = null;
                 loadingStage = LoadingStage.GAMEPLAY;
@@ -278,6 +284,7 @@ public class Main extends ApplicationAdapter {
 
         Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        lightTravel.update(lightDelta);
         engine.update(delta);
         if (combatState.consumeHeroDeath()) {
             showGameOver();
@@ -311,6 +318,7 @@ public class Main extends ApplicationAdapter {
     }
 
     private void beginDemo() {
+        lightTravel = null;
         clearSnakeDeathMessages();
         clearRewardFlights(true);
         clearScorePulse();
@@ -384,7 +392,10 @@ public class Main extends ApplicationAdapter {
         }
         try {
             ParticleRef effect = engine.api().particles().spawn(REWARD_EFFECT, worldX, worldY);
-            effect.entity().renderOrder().layerIndex(4).zIndex(100);
+            effect.particles().setIgnoreAmbientLighting(true);
+            effect.entity().renderOrder()
+                .layerIndex(engine.api().entities().requireName("hero").renderOrder().layerIndex())
+                .zIndex(100);
             rewardFlights.add(new RewardFlight(ticket, effect, hud, worldX, worldY));
         } catch (RuntimeException unavailable) {
             Gdx.app.error("Reward", "HUD reward effect is unavailable.", unavailable);
@@ -597,6 +608,8 @@ public class Main extends ApplicationAdapter {
 
     @Override
     public void resize(int width, int height) {
+        // GLFW can report a zero-sized framebuffer while the window is minimized.
+        if (width <= 0 || height <= 0) return;
         if (loadingSplash != null) {
             loadingSplash.resize(width, height);
         }
