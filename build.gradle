@@ -61,6 +61,11 @@ subprojects {
   version = "$projectVersion"
   ext.appName = 'TiledIsoDemo'
   repositories {
+    // Prefer an explicitly published local Runtime, including its GWT sources.
+    mavenLocal {
+      name = 'pixscapeRuntimeLocal'
+      content { includeModule('games.pixscape', 'pixscape-runtime') }
+    }
     mavenCentral()
     // You may want to remove the following line if you have errors downloading dependencies.
     mavenLocal()
