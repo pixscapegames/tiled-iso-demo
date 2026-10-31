@@ -95,6 +95,7 @@ public class RuntimeSpawnPerformanceTest {
                 long[] call = new long[samples], following = new long[samples], allocated = new long[samples];
                 long[] nextAllocated = new long[samples];
                 long[] removal = new long[samples], removalAllocated = new long[samples];
+                long[] afterRemoval = new long[samples], afterRemovalAllocated = new long[samples];
                 GameObjectInstance[] instances = new GameObjectInstance[count];
                 for (int n = 0; n < samples; n++) {
                     long b = bytes(), t = System.nanoTime();
@@ -110,14 +111,23 @@ public class RuntimeSpawnPerformanceTest {
                     if (remove) for (GameObjectInstance instance : instances) instance.despawn();
                     tick();
                     removal[n] = System.nanoTime() - t; removalAllocated[n] = bytes() - b;
+                    b = bytes();
+                    for (int f = 0; f < 3; f++) {
+                        t = System.nanoTime(); tick();
+                        afterRemoval[n] = Math.max(afterRemoval[n], System.nanoTime() - t);
+                    }
+                    afterRemovalAllocated[n] = bytes() - b;
                 }
                 report(label + ".call.ns", call); report(label + ".next3.peak.ns", following);
                 report(label + ".call.bytes", allocated); report(label + ".next3.bytes", nextAllocated);
                 report(label + ".remove-frame.ns", removal); report(label + ".remove-frame.bytes", removalAllocated);
+                report(label + ".remove-next3.peak.ns", afterRemoval);
+                report(label + ".remove-next3.bytes", afterRemovalAllocated);
             }
             void particles(boolean lightingSetter) {
                 long[] call = new long[40], next = new long[40], allocated = new long[40];
                 long[] removal = new long[40], removalAllocated = new long[40];
+                long[] afterRemoval = new long[40], afterRemovalAllocated = new long[40];
                 for (int n = 0; n < 40; n++) {
                     long b = bytes(), t = System.nanoTime();
                     ParticleRef particle = engine.api().particles().spawn("Flame", -95, 3543);
@@ -130,11 +140,19 @@ public class RuntimeSpawnPerformanceTest {
                     b = bytes(); t = System.nanoTime();
                     particle.remove(); tick();
                     removal[n] = System.nanoTime() - t; removalAllocated[n] = bytes() - b;
+                    b = bytes();
+                    for (int f = 0; f < 3; f++) {
+                        t = System.nanoTime(); tick();
+                        afterRemoval[n] = Math.max(afterRemoval[n], System.nanoTime() - t);
+                    }
+                    afterRemovalAllocated[n] = bytes() - b;
                 }
                 String label = "particles.setter-" + lightingSetter;
                 report(label + ".call.ns", call); report(label + ".next3.peak.ns", next);
                 report(label + ".total.bytes", allocated);
                 report(label + ".remove-frame.ns", removal); report(label + ".remove-frame.bytes", removalAllocated);
+                report(label + ".remove-next3.peak.ns", afterRemoval);
+                report(label + ".remove-next3.bytes", afterRemovalAllocated);
             }
             void report(String label, long[] values) {
                 Arrays.sort(values);
