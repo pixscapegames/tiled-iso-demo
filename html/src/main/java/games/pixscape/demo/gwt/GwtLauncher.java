@@ -33,6 +33,9 @@ public class GwtLauncher extends GwtApplication {
         }
         @Override
         public ApplicationListener createApplicationListener () {
+            if ("1".equals(com.google.gwt.user.client.Window.Location.getParameter("runtimeProbe"))) {
+                return new RuntimePerformanceProbe();
+            }
             return new Main();
         }
 

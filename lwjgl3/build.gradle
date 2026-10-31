@@ -66,6 +66,18 @@ tasks.register('sceneGlSmoke', Test) {
   workingDir = rootProject.file('assets')
 }
 
+tasks.register('runtimeSpawnPerformance', Test) {
+  description = 'Measures gameplay spawning and following ECS/physics/render frames on exported demo assets.'
+  group = 'verification'
+  testClassesDirs = sourceSets.test.output.classesDirs
+  classpath = sourceSets.test.runtimeClasspath
+  useJUnit()
+  include '**/RuntimeSpawnPerformanceTest.class'
+  systemProperty 'runtime.performance', 'true'
+  workingDir = rootProject.file('assets')
+  testLogging.showStandardStreams = true
+}
+
 def os = System.properties['os.name'].toLowerCase(Locale.ROOT)
 
 run {
